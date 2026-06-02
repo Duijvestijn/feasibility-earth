@@ -100,9 +100,8 @@ export default function HomePage() {
                 Carbon Project Feasibility
               </div>
 
-              <h1 className="font-display" style={{ fontSize: 'clamp(38px, 5vw, 62px)', fontWeight: 700, color: '#fff', lineHeight: 1.08, marginBottom: 28 }}>
-                Most nature-based carbon<br />projects fail — not because<br />
-                <span style={{ color: '#86C89C' }}>of the land, but the assessment.</span>
+              <h1 className="font-display" style={{ fontSize: 'clamp(42px, 6vw, 72px)', fontWeight: 700, color: '#fff', lineHeight: 1.05, marginBottom: 28 }}>
+                Most carbon projects<br />fail at the assessment.
               </h1>
 
               <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.68)', lineHeight: 1.85, marginBottom: 16, maxWidth: 600 }}>
