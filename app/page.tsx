@@ -1,5 +1,6 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import TeamSection from '@/components/TeamSection'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -254,6 +255,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* TEAM */}
+        <TeamSection />
 
         {/* PROJECT TYPES */}
         <section className="fe-section" style={{ background: '#fff' }}>

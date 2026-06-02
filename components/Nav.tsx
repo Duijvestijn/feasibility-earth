@@ -4,10 +4,10 @@ import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 const LINKS = [
-  { href: '/how-it-works', label: 'How It Works' },
-  { href: '/use-cases',    label: 'Use Cases' },
-  { href: '/pricing',      label: 'Pricing' },
-  { href: '/faq',          label: 'FAQ' },
+  { href: '/how-it-works',  label: 'How It Works' },
+  { href: '/methodology',   label: 'Methodology' },
+  { href: '/use-cases',     label: 'Use Cases' },
+  { href: '/pricing',       label: 'Pricing' },
 ]
 
 export default function Nav() {
