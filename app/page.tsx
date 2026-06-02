@@ -100,8 +100,8 @@ export default function HomePage() {
                 Carbon Project Feasibility
               </div>
 
-              <h1 className="font-display" style={{ fontSize: 'clamp(42px, 6vw, 72px)', fontWeight: 700, color: '#fff', lineHeight: 1.05, marginBottom: 28 }}>
-                Most carbon projects<br />fail at the assessment.
+              <h1 className="font-display" style={{ fontSize: 'clamp(44px, 6.5vw, 76px)', fontWeight: 700, color: '#fff', lineHeight: 1.02, marginBottom: 28 }}>
+                Assess before<br />you invest.
               </h1>
 
               <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.68)', lineHeight: 1.85, marginBottom: 16, maxWidth: 600 }}>
