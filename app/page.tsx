@@ -10,127 +10,92 @@ const AGROFOR_IMG  = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJS
 const COOK_IMG     = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_175014_477afb67-83bf-496e-9cc3-9039d3d6b61a.png'
 const KAZ_IMG      = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_175019_8bea7c7e-6b88-419e-ab70-3a36a56c747e.png'
 
-// SVG icon components — no emojis
-function IconCalendar({ size = 20, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/>
-    </svg>
-  )
+function ArrowRight({ size = 16, color = 'currentColor' }: { size?: number; color?: string }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
 }
-function IconUsers({ size = 20, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-    </svg>
-  )
-}
-function IconStar({ size = 20, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-    </svg>
-  )
-}
-function IconCheck({ size = 16, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="20 6 9 17 4 12"/>
-    </svg>
-  )
-}
-function IconArrow({ size = 16, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-    </svg>
-  )
-}
-function IconGlobe({ size = 20, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-    </svg>
-  )
-}
-function IconDocument({ size = 20, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-    </svg>
-  )
-}
-function IconLeaf({ size = 20, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17 8C8 10 5.9 16.17 3.82 19.1c-.84 1.2-.17 2.9 1.2 2.9 2 0 3.98-2.07 5-4 1 2 2 4 5 4 6 0 8-6 8-12 0-1 0-2-1-3z"/>
-    </svg>
-  )
-}
-function IconPhone({ size = 20, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-    </svg>
-  )
-}
-function IconShield({ size = 20, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-    </svg>
-  )
+function CheckIcon({ color = '#1B4332', size = 15 }: { color?: string; size?: number }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
 }
 
-const PROCESS_STEPS = [
+const STAGES = [
   {
-    n: '01', title: 'Submit your project details',
-    day: 'Day 1',
-    body: 'Provide your land location, size, and project type. No technical expertise required — our team takes the information and determines the right approach from there.',
-    img: REFOREST_IMG,
-  },
-  {
-    n: '02', title: 'Expert analysis in progress',
-    day: 'Days 2–4',
-    body: 'A dedicated expert is assigned to your project. Using satellite data and on-the-ground experience from projects in Nigeria, Uganda, Cameroon, and Kazakhstan, we assess your land\'s full potential.',
+    num: '01',
+    tag: 'Pre-Feasibility',
+    price: '$500',
+    headline: 'Is your land eligible?',
+    sub: 'A rapid eligibility screen — before you commit to anything.',
+    body: 'We run a satellite-based eligibility check on your land and give you a clear answer: does this location have the potential for a certified carbon project? You get a written summary with the key findings and a recommendation on whether to proceed.',
+    timeline: '2–3 business days',
+    deliverable: 'Eligibility summary report',
+    includes: [
+      'Satellite screening of your land parcel',
+      'Assessment against Verra VCS, Gold Standard and Plan Vivo criteria',
+      'Preliminary CO₂ potential estimate',
+      'Clear recommendation: proceed or not',
+    ],
+    cta: 'Start eligibility check',
+    ctaHref: '/pricing#pre-feasibility',
+    accent: '#E8F5EE',
+    accentBorder: '#B8DECA',
+    accentText: '#1B4332',
     img: SAT_IMG,
   },
   {
-    n: '03', title: 'Report delivered. Expert debrief.',
-    day: 'Day 5',
-    body: 'Receive your full feasibility report. Your expert walks you through the findings on a personal call — clear conclusions, specific numbers, and a recommended path forward.',
+    num: '02',
+    tag: 'Full Feasibility Study',
+    price: '$7,500',
+    headline: 'Take it to the bank.',
+    sub: 'A complete, certification-ready feasibility study.',
+    body: 'This is the report that matters. A full in-depth analysis of your project — land history, carbon potential, methodology, certification pathway, and financial projections. Structured to satisfy investors, development finance institutions, and certification bodies.',
+    timeline: '5 business days',
+    deliverable: 'Full bankable feasibility report',
+    includes: [
+      'Complete satellite land analysis',
+      'Carbon credit potential with supporting methodology',
+      'Certification pathway recommendation',
+      'Financial projections and estimated credit value',
+      'Personal debrief call with your expert',
+      'One revision round included',
+    ],
+    cta: 'Start full feasibility study',
+    ctaHref: '/pricing#feasibility',
+    accent: '#1B4332',
+    accentBorder: '#1B4332',
+    accentText: '#fff',
+    highlight: true,
     img: AGROFOR_IMG,
   },
-]
-
-const WHY_US = [
   {
-    Icon: IconLeaf,
-    title: 'Built from real project experience',
-    body: 'Green Earth Group has developed over 149,000 verified carbon credits across four countries. Feasibility.Earth is that experience, codified — applied to your project from day one.',
-  },
-  {
-    Icon: IconUsers,
-    title: 'A dedicated expert on every study',
-    body: 'Every feasibility study is assigned to a practitioner with direct experience in the relevant project type and geography. Not a platform response — a person who has been in the field.',
-  },
-  {
-    Icon: IconCalendar,
-    title: 'Five business days, without exception',
-    body: 'We know investment decisions cannot wait months. Traditional consultancies take 3–6 months. We deliver a complete, certification-ready feasibility report in five business days.',
-  },
-  {
-    Icon: IconDocument,
-    title: 'A fraction of traditional consulting costs',
-    body: 'A large consultancy charges $25,000–$75,000 for a feasibility study and takes months. We deliver equivalent rigour — grounded in live project expertise — for $7,500 flat.',
+    num: '03',
+    tag: 'Project Development',
+    price: 'By arrangement',
+    headline: 'We become your partner.',
+    sub: 'Full development, from PDD to first credit issuance — and beyond.',
+    body: 'For projects that pass the full feasibility study, we offer to work with you through the entire development process. We bring technical, commercial, and capital resources to the table. This is not available without a completed feasibility study.',
+    timeline: '12–36 months',
+    deliverable: 'End-to-end project partnership',
+    includes: [
+      'Project Design Document (PDD) development',
+      'Certification and registration support',
+      'Carbon credit marketing and sales',
+      'Technical implementation and field supervision',
+      'Ongoing monitoring and reporting',
+      'Capital co-investment for qualifying projects',
+    ],
+    cta: 'Learn about project development',
+    ctaHref: '/pricing#development',
+    accent: '#F5ECD7',
+    accentBorder: '#D4A017',
+    accentText: '#1A1A18',
+    img: REFOREST_IMG,
   },
 ]
 
 const GEG_PROJECTS = [
-  { name: 'Sauki Clean Cookstoves',        country: 'Nigeria',    credits: '60,000',  img: COOK_IMG,     cert: 'Gold Standard' },
-  { name: 'Bulindi Agroforestry & Chimps', country: 'Uganda',     credits: '44,000',  img: AGROFOR_IMG,  cert: 'Gold Standard' },
-  { name: 'Aral Sea Afforestation',        country: 'Kazakhstan', credits: '31,250',  img: KAZ_IMG,      cert: 'Verra VCS' },
-  { name: 'Greenzone Reforestation',       country: 'Cameroon',   credits: '13,750',  img: REFOREST_IMG, cert: 'Verra VCS' },
+  { name: 'Sauki Clean Cookstoves',        country: 'Nigeria',    credits: '60,000', img: COOK_IMG,     cert: 'Gold Standard' },
+  { name: 'Bulindi Agroforestry & Chimps', country: 'Uganda',     credits: '44,000', img: AGROFOR_IMG,  cert: 'Gold Standard' },
+  { name: 'Aral Sea Afforestation',        country: 'Kazakhstan', credits: '31,250', img: KAZ_IMG,      cert: 'Verra VCS' },
+  { name: 'Greenzone Reforestation',       country: 'Cameroon',   credits: '13,750', img: REFOREST_IMG, cert: 'Verra VCS' },
 ]
 
 const USE_CASES = [
@@ -140,68 +105,63 @@ const USE_CASES = [
   { title: 'Cookstoves',     sub: 'Clean cooking technology',        img: COOK_IMG,     href: '/use-cases#cookstoves' },
 ]
 
-const GEG_BADGE = (
-  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 9, padding: '6px 16px 6px 9px', background: 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.18)', borderRadius: 100 }}>
-    <div style={{ width: 22, height: 22, borderRadius: 6, background: '#40916C', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-      <IconLeaf size={12} color="#fff" />
-    </div>
-    <span style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.85)', letterSpacing: '0.2px' }}>Powered by Green Earth Group</span>
-  </div>
-)
-
 export default function HomePage() {
   return (
     <>
       <Nav />
       <main style={{ paddingTop: 68 }}>
 
-        {/* HERO */}
-        <section style={{ position: 'relative', minHeight: '92vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+        {/* HERO — no GEG badge here */}
+        <section style={{ position: 'relative', minHeight: '88vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
             <Image src={HERO_IMG} alt="Aerial view of African landscape" fill style={{ objectFit: 'cover', objectPosition: 'center' }} priority />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,30,18,0.94) 0%, rgba(27,67,50,0.80) 55%, rgba(27,67,50,0.28) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,30,18,0.93) 0%, rgba(27,67,50,0.78) 55%, rgba(27,67,50,0.25) 100%)' }} />
           </div>
 
-          <div className="fe-wrap" style={{ position: 'relative', zIndex: 1, padding: '100px 24px 160px' }}>
-            <div style={{ maxWidth: 680 }}>
-              <div style={{ marginBottom: 30 }}>{GEG_BADGE}</div>
+          <div className="fe-wrap" style={{ position: 'relative', zIndex: 1, padding: '96px 24px 140px' }}>
+            <div style={{ maxWidth: 700 }}>
+              <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.15)', color: '#D8F3DC', border: '1px solid rgba(255,255,255,0.18)', marginBottom: 28 }}>
+                Carbon Project Feasibility Platform
+              </div>
 
               <h1 className="font-display" style={{ fontSize: 'clamp(38px, 5.5vw, 64px)', fontWeight: 700, color: '#fff', lineHeight: 1.08, marginBottom: 24 }}>
-                Is your land right<br />for a carbon project?<br />
-                <span style={{ color: '#86C89C' }}>Know in five business days.</span>
+                From land to<br />bankable carbon project.
               </h1>
 
-              <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.75)', lineHeight: 1.8, marginBottom: 36, maxWidth: 560 }}>
-                We have developed carbon projects in Nigeria, Uganda, Kazakhstan, and Cameroon. We know exactly what makes a project viable — and what prevents one from reaching certification. We put that expertise to work on your land.
+              <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.75)', lineHeight: 1.8, marginBottom: 14, maxWidth: 580 }}>
+                Start with a $500 eligibility check. Proceed to a full $7,500 feasibility study that you can take to investors and certification bodies. For the right projects, we go further — co-developing and co-investing alongside you.
+              </p>
+
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 36, maxWidth: 560 }}>
+                Built by the team that has developed 149,000 verified carbon credits across Africa and Central Asia.
               </p>
 
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Link href="/pricing" className="btn-amber" style={{ fontSize: 16, padding: '16px 34px', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-                  Start a Feasibility Study <IconArrow size={16} color="#1A1A18" />
+                <Link href="/pricing#pre-feasibility" className="btn-amber" style={{ fontSize: 15, padding: '14px 28px', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+                  Start for $500 — eligibility check <ArrowRight size={15} color="#1A1A18" />
                 </Link>
-                <Link href="/how-it-works" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '15px 26px', background: 'rgba(255,255,255,0.10)', color: '#fff', fontWeight: 600, fontSize: 15, borderRadius: 8, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.22)' }}>
-                  How it works
+                <Link href="/pricing" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '13px 24px', background: 'rgba(255,255,255,0.09)', color: '#fff', fontWeight: 600, fontSize: 15, borderRadius: 8, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.20)' }}>
+                  See all options
                 </Link>
               </div>
 
-              <p style={{ marginTop: 22, fontSize: 13, color: 'rgba(255,255,255,0.35)', letterSpacing: '0.2px' }}>
-                Verra VCS · Gold Standard · Plan Vivo · $7,500 flat fee · No fieldwork required
+              <p style={{ marginTop: 20, fontSize: 12, color: 'rgba(255,255,255,0.30)', letterSpacing: '0.2px' }}>
+                Verra VCS · Gold Standard · Plan Vivo · 50% refund if land does not qualify
               </p>
             </div>
           </div>
 
           {/* Stats bar */}
-          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 1, background: 'rgba(10,30,18,0.92)', backdropFilter: 'blur(12px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 1, background: 'rgba(10,30,18,0.92)', backdropFilter: 'blur(12px)', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
             <div className="fe-wrap">
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', padding: '22px 0' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', padding: '20px 0' }}>
                 {[
-                  { icon: <IconCalendar size={18} color="rgba(255,255,255,0.4)" />, value: '5 business days', sub: 'from submission to report' },
-                  { icon: <IconUsers size={18} color="rgba(255,255,255,0.4)" />,    value: 'Dedicated expert',  sub: 'assigned to your project' },
-                  { icon: <IconStar size={18} color="rgba(255,255,255,0.4)" />,    value: '149,000+ credits',  sub: 'developed by our team' },
+                  { value: '$500',           sub: 'Eligibility check — start here' },
+                  { value: '$7,500',          sub: 'Full bankable feasibility study' },
+                  { value: 'Full partnership', sub: 'For qualifying projects — we invest too' },
                 ].map((s, i) => (
-                  <div key={i} style={{ textAlign: 'center', borderRight: i < 2 ? '1px solid rgba(255,255,255,0.07)' : 'none', padding: '0 16px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 6 }}>{s.icon}</div>
-                    <div className="font-display" style={{ fontSize: 18, fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 3 }}>{s.value}</div>
+                  <div key={i} style={{ textAlign: 'center', borderRight: i < 2 ? '1px solid rgba(255,255,255,0.06)' : 'none', padding: '0 16px' }}>
+                    <div className="font-display" style={{ fontSize: 20, fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 4 }}>{s.value}</div>
                     <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.38)', letterSpacing: '0.2px' }}>{s.sub}</div>
                   </div>
                 ))}
@@ -210,125 +170,126 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* PROCESS */}
-        <section className="fe-section" style={{ background: '#fff' }}>
+        {/* THREE STAGES — the core of the page */}
+        <section className="fe-section" style={{ background: '#FAFAF8' }}>
           <div className="fe-wrap">
             <div style={{ textAlign: 'center', marginBottom: 60 }}>
-              <div className="fe-badge fe-badge-green" style={{ marginBottom: 16 }}>The process</div>
-              <h2 className="font-display" style={{ fontSize: 'clamp(28px,4vw,44px)', fontWeight: 700, color: '#1A1A18', marginBottom: 14 }}>
-                Three steps.<br />Five business days.
+              <div className="fe-badge fe-badge-green" style={{ marginBottom: 16 }}>How it works</div>
+              <h2 className="font-display" style={{ fontSize: 'clamp(28px,4vw,46px)', fontWeight: 700, color: '#1A1A18', marginBottom: 14 }}>
+                Three stages.<br />One clear path.
               </h2>
-              <p style={{ fontSize: 16, color: '#5C5C58', maxWidth: 480, margin: '0 auto', lineHeight: 1.75 }}>
-                You provide the land details. We provide the expertise. A clear, actionable report — with a personal debrief — in five business days.
+              <p style={{ fontSize: 16, color: '#5C5C58', maxWidth: 500, margin: '0 auto', lineHeight: 1.8 }}>
+                Begin with a low-cost eligibility screen. If the project has potential, commission a full bankable study. For the strongest projects, we become your development partner — and investor.
               </p>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-              {PROCESS_STEPS.map((step, i) => (
-                <div key={i} className="fe-card" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', overflow: 'hidden', minHeight: 280 }}>
-                  {i % 2 === 0 ? (<>
-                    <div style={{ padding: '48px 44px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
-                        <div style={{ width: 36, height: 36, borderRadius: 10, background: '#1B4332', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                          <span style={{ fontSize: 13, fontWeight: 800, color: '#fff' }}>{step.n}</span>
-                        </div>
-                        <span style={{ fontSize: 12, fontWeight: 700, color: '#40916C', letterSpacing: '1px', textTransform: 'uppercase' as const }}>{step.day}</span>
+            {/* Stage cards */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {STAGES.map((stage, i) => (
+                <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderRadius: 20, overflow: 'hidden', border: `1.5px solid ${stage.highlight ? '#1B4332' : stage.accentBorder}`, boxShadow: stage.highlight ? '0 12px 40px rgba(27,67,50,0.18)' : '0 2px 12px rgba(0,0,0,0.06)', position: 'relative' as const }}>
+                  {stage.highlight && (
+                    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'linear-gradient(90deg, #1B4332, #40916C)', zIndex: 1 }} />
+                  )}
+
+                  {/* Left: content */}
+                  <div style={{ padding: '44px 40px', background: stage.highlight ? '#1B4332' : '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+                      <div style={{ width: 36, height: 36, borderRadius: 10, background: stage.highlight ? 'rgba(255,255,255,0.12)' : stage.accent, border: `1px solid ${stage.highlight ? 'rgba(255,255,255,0.2)' : stage.accentBorder}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <span style={{ fontSize: 13, fontWeight: 800, color: stage.highlight ? '#fff' : '#1B4332' }}>{stage.num}</span>
                       </div>
-                      <h3 style={{ fontSize: 22, fontWeight: 700, color: '#1A1A18', marginBottom: 14 }}>{step.title}</h3>
-                      <p style={{ fontSize: 15, color: '#5C5C58', lineHeight: 1.8 }}>{step.body}</p>
-                    </div>
-                    <div style={{ position: 'relative' }}><Image src={step.img} alt={step.title} fill style={{ objectFit: 'cover' }} /></div>
-                  </>) : (<>
-                    <div style={{ position: 'relative' }}><Image src={step.img} alt={step.title} fill style={{ objectFit: 'cover' }} /></div>
-                    <div style={{ padding: '48px 44px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
-                        <div style={{ width: 36, height: 36, borderRadius: 10, background: '#1B4332', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                          <span style={{ fontSize: 13, fontWeight: 800, color: '#fff' }}>{step.n}</span>
-                        </div>
-                        <span style={{ fontSize: 12, fontWeight: 700, color: '#40916C', letterSpacing: '1px', textTransform: 'uppercase' as const }}>{step.day}</span>
+                      <div>
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: stage.highlight ? 'rgba(255,255,255,0.45)' : '#9CA3AF' }}>{stage.tag}</span>
                       </div>
-                      <h3 style={{ fontSize: 22, fontWeight: 700, color: '#1A1A18', marginBottom: 14 }}>{step.title}</h3>
-                      <p style={{ fontSize: 15, color: '#5C5C58', lineHeight: 1.8 }}>{step.body}</p>
+                      <div style={{ marginLeft: 'auto' }}>
+                        <span className="font-display" style={{ fontSize: 26, fontWeight: 700, color: stage.highlight ? '#F4C430' : '#1B4332' }}>{stage.price}</span>
+                      </div>
                     </div>
-                  </>)}
-                </div>
-              ))}
-            </div>
 
-            <div style={{ textAlign: 'center', marginTop: 44 }}>
-              <Link href="/pricing" className="btn-primary" style={{ fontSize: 16, padding: '14px 32px', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-                Start a study — $7,500 flat <IconArrow size={16} color="#fff" />
-              </Link>
-            </div>
-          </div>
-        </section>
+                    <h3 className="font-display" style={{ fontSize: 28, fontWeight: 700, color: stage.highlight ? '#fff' : '#1A1A18', marginBottom: 6, lineHeight: 1.15 }}>{stage.headline}</h3>
+                    <p style={{ fontSize: 14, fontWeight: 600, color: stage.highlight ? 'rgba(255,255,255,0.55)' : '#40916C', marginBottom: 16 }}>{stage.sub}</p>
+                    <p style={{ fontSize: 14, color: stage.highlight ? 'rgba(255,255,255,0.68)' : '#5C5C58', lineHeight: 1.8, marginBottom: 24 }}>{stage.body}</p>
 
-        {/* WHY US */}
-        <section className="fe-section" style={{ background: '#F5ECD7' }}>
-          <div className="fe-wrap">
-            <div style={{ textAlign: 'center', marginBottom: 52 }}>
-              <div className="fe-badge fe-badge-earth" style={{ marginBottom: 16 }}>Why work with us</div>
-              <h2 className="font-display" style={{ fontSize: 'clamp(28px,4vw,44px)', fontWeight: 700, color: '#1A1A18' }}>
-                We do not just run software.<br />We guide you through it.
-              </h2>
-            </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 9, marginBottom: 28 }}>
+                      {stage.includes.map((item, j) => (
+                        <div key={j} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                          <div style={{ width: 20, height: 20, borderRadius: 6, background: stage.highlight ? 'rgba(255,255,255,0.10)' : '#D8F3DC', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
+                            <CheckIcon color={stage.highlight ? '#86C89C' : '#1B4332'} size={11} />
+                          </div>
+                          <span style={{ fontSize: 13, color: stage.highlight ? 'rgba(255,255,255,0.72)' : '#374151', lineHeight: 1.5 }}>{item}</span>
+                        </div>
+                      ))}
+                    </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 18 }}>
-              {WHY_US.map((item, i) => (
-                <div key={i} style={{ background: '#fff', borderRadius: 16, border: '1px solid #E2DDD6', padding: '32px 28px' }}>
-                  <div style={{ width: 46, height: 46, borderRadius: 12, background: '#EBF5EE', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 18 }}>
-                    <item.Icon size={22} color="#1B4332" />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                      <Link href={stage.ctaHref} className={stage.highlight ? 'btn-amber' : 'btn-primary'} style={{ fontSize: 14, padding: '11px 22px', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                        {stage.cta} <ArrowRight size={14} color={stage.highlight ? '#1A1A18' : '#fff'} />
+                      </Link>
+                      <span style={{ fontSize: 12, color: stage.highlight ? 'rgba(255,255,255,0.35)' : '#9CA3AF' }}>{stage.timeline}</span>
+                    </div>
                   </div>
-                  <h3 style={{ fontSize: 17, fontWeight: 700, color: '#1A1A18', marginBottom: 10 }}>{item.title}</h3>
-                  <p style={{ fontSize: 14, color: '#5C5C58', lineHeight: 1.8 }}>{item.body}</p>
+
+                  {/* Right: image */}
+                  <div style={{ position: 'relative', minHeight: 300 }}>
+                    <Image src={stage.img} alt={stage.headline} fill style={{ objectFit: 'cover' }} />
+                    {!stage.highlight && (
+                      <div style={{ position: 'absolute', inset: 0, background: 'rgba(27,67,50,0.08)' }} />
+                    )}
+                    {stage.highlight && (
+                      <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,30,18,0.3)' }} />
+                    )}
+                    {/* Deliverable badge */}
+                    <div style={{ position: 'absolute', bottom: 20, left: 20, padding: '8px 14px', background: 'rgba(0,0,0,0.72)', backdropFilter: 'blur(8px)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.12)' }}>
+                      <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', fontWeight: 700, letterSpacing: '0.5px', textTransform: 'uppercase' as const, marginBottom: 2 }}>You receive</p>
+                      <p style={{ fontSize: 13, color: '#fff', fontWeight: 600 }}>{stage.deliverable}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* POWERED BY GEG */}
+        {/* OUR EXPERIENCE */}
         <section className="fe-section" style={{ background: '#1B4332', overflow: 'hidden', position: 'relative' }}>
-          <div style={{ position: 'absolute', right: -120, bottom: -120, width: 500, height: 500, borderRadius: '50%', background: 'rgba(255,255,255,0.015)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', right: -120, bottom: -100, width: 480, height: 480, borderRadius: '50%', background: 'rgba(255,255,255,0.015)', pointerEvents: 'none' }} />
           <div className="fe-wrap" style={{ position: 'relative', zIndex: 1 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
-
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center' }}>
               <div>
-                <div style={{ marginBottom: 28 }}>{GEG_BADGE}</div>
-
+                <div className="fe-badge" style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.75)', border: '1px solid rgba(255,255,255,0.14)', marginBottom: 24 }}>
+                  Built from real projects
+                </div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(26px,4vw,40px)', fontWeight: 700, color: '#fff', lineHeight: 1.15, marginBottom: 22 }}>
-                  Not a platform built in isolation.<br />Experience built in the field.
+                  We have developed some<br />of the world&apos;s most complex<br />nature-based projects.
                 </h2>
-                <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.68)', lineHeight: 1.85, marginBottom: 16 }}>
-                  Feasibility.Earth is built by Green Earth Group — one of the world&apos;s most active developers of nature-based carbon projects. We have worked in some of the most complex environments on the planet: cookstoves in rural Nigeria, agroforestry alongside chimpanzee habitats in Uganda, restoring the Aral Sea in Kazakhstan.
+                <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', lineHeight: 1.85, marginBottom: 16 }}>
+                  Cookstoves in rural Nigeria. Community agroforestry alongside chimpanzee habitats in Uganda. Large-scale afforestation on the former bed of the Aral Sea in Kazakhstan. Congo Basin reforestation in Cameroon.
                 </p>
-                <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.68)', lineHeight: 1.85, marginBottom: 32 }}>
-                  When you commission a feasibility study through us, the people reviewing your land are the same people who have developed and certified these projects.
+                <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', lineHeight: 1.85, marginBottom: 32 }}>
+                  When we assess your project, the people doing the analysis are the same people who designed, certified, and operate these projects. That experience is what you are paying for.
                 </p>
-                <Link href="/use-cases" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, color: '#86C89C', fontWeight: 700, textDecoration: 'none' }}>
-                  See our project experience <IconArrow size={14} color="#86C89C" />
+                <Link href="/use-cases" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, color: '#86C89C', fontWeight: 600, textDecoration: 'none' }}>
+                  View our project portfolio <ArrowRight size={14} color="#86C89C" />
                 </Link>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {GEG_PROJECTS.map((p, i) => (
                   <div key={i} style={{ display: 'grid', gridTemplateColumns: '72px 1fr', borderRadius: 14, overflow: 'hidden', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.09)' }}>
-                    <div style={{ position: 'relative', minHeight: 80 }}>
+                    <div style={{ position: 'relative', minHeight: 78 }}>
                       <Image src={p.img} alt={p.name} fill style={{ objectFit: 'cover' }} />
                     </div>
-                    <div style={{ padding: '16px 18px' }}>
+                    <div style={{ padding: '14px 18px' }}>
                       <p style={{ fontSize: 14, fontWeight: 700, color: '#fff', marginBottom: 3 }}>{p.name}</p>
-                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.42)', marginBottom: 10 }}>{p.country}</p>
+                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.38)', marginBottom: 8 }}>{p.country}</p>
                       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                         <span style={{ fontSize: 13, fontWeight: 700, color: '#86C89C' }}>{p.credits} credits/yr</span>
-                        <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', flexShrink: 0 }} />
-                        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>{p.cert}</span>
+                        <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(255,255,255,0.18)', flexShrink: 0 }} />
+                        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.32)' }}>{p.cert}</span>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         </section>
@@ -345,17 +306,17 @@ export default function HomePage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px,1fr))', gap: 16 }}>
               {USE_CASES.map((uc, i) => (
                 <Link key={i} href={uc.href} className="fe-card" style={{ textDecoration: 'none', display: 'block' }}>
-                  <div style={{ position: 'relative', height: 195 }}>
+                  <div style={{ position: 'relative', height: 200 }}>
                     <Image src={uc.img} alt={uc.title} fill style={{ objectFit: 'cover' }} />
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(15,35,22,0.82) 0%, transparent 55%)' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(10,30,18,0.84) 0%, transparent 55%)' }} />
                     <div style={{ position: 'absolute', bottom: 16, left: 16 }}>
                       <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', marginBottom: 3 }}>{uc.title}</h3>
-                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)' }}>{uc.sub}</p>
+                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.58)' }}>{uc.sub}</p>
                     </div>
                   </div>
                   <div style={{ padding: '14px 18px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <span style={{ fontSize: 13, color: '#5C5C58', fontWeight: 500 }}>Learn more</span>
-                    <IconArrow size={14} color="#1B4332" />
+                    <ArrowRight size={14} color="#1B4332" />
                   </div>
                 </Link>
               ))}
@@ -363,58 +324,22 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* PRICING CALLOUT */}
-        <section className="fe-section-sm" style={{ background: '#F5ECD7' }}>
-          <div className="fe-wrap" style={{ maxWidth: 840 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0 }} className="fe-card">
-              <div style={{ padding: '52px 44px', background: '#1B4332', borderRadius: '16px 0 0 16px' }}>
-                <p style={{ color: 'rgba(255,255,255,0.38)', fontSize: 11, fontWeight: 700, letterSpacing: '1.2px', textTransform: 'uppercase' as const, marginBottom: 20 }}>Feasibility Study</p>
-                <div className="font-display" style={{ fontSize: 64, fontWeight: 700, color: '#fff', lineHeight: 1, marginBottom: 6 }}>$7,500</div>
-                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 15, marginBottom: 32 }}>flat fee · no hidden costs</p>
-                <Link href="/pricing" className="btn-amber" style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: 8 }}>
-                  Start your study <IconArrow size={15} color="#1A1A18" />
-                </Link>
-                <p style={{ marginTop: 14, fontSize: 12, color: 'rgba(255,255,255,0.25)', textAlign: 'center' as const }}>50% refund if land does not qualify</p>
-              </div>
-              <div style={{ padding: '52px 40px' }}>
-                <p style={{ fontSize: 13, fontWeight: 700, color: '#5C5C58', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 26 }}>Everything included</p>
-                {[
-                  { Icon: IconCalendar, text: 'Full feasibility report in 5 business days' },
-                  { Icon: IconUsers,    text: 'Dedicated expert assigned to your project' },
-                  { Icon: IconGlobe,   text: 'Satellite land analysis across all key criteria' },
-                  { Icon: IconDocument,text: 'Certification pathway recommendation' },
-                  { Icon: IconPhone,   text: 'Personal debrief call upon report delivery' },
-                  { Icon: IconShield,  text: 'One revision round included' },
-                ].map((item, i) => (
-                  <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', marginBottom: 16 }}>
-                    <div style={{ width: 32, height: 32, borderRadius: 8, background: '#F0F0EC', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                      <item.Icon size={16} color="#1B4332" />
-                    </div>
-                    <span style={{ fontSize: 14, color: '#374151', lineHeight: 1.55, paddingTop: 6 }}>{item.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
-        <section style={{ background: 'linear-gradient(150deg, #0A1E11 0%, #1B4332 100%)', padding: '104px 0', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', right: -120, top: -100, width: 500, height: 500, borderRadius: '50%', background: 'rgba(255,255,255,0.02)', pointerEvents: 'none' }} />
+        <section style={{ background: 'linear-gradient(150deg, #0A1E11 0%, #1B4332 100%)', padding: '100px 0', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', right: -100, top: -80, width: 440, height: 440, borderRadius: '50%', background: 'rgba(255,255,255,0.02)', pointerEvents: 'none' }} />
           <div className="fe-wrap" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
-            <div style={{ marginBottom: 28, display: 'inline-block' }}>{GEG_BADGE}</div>
             <h2 className="font-display" style={{ fontSize: 'clamp(28px,5vw,52px)', fontWeight: 700, color: '#fff', lineHeight: 1.12, marginBottom: 20 }}>
-              Find out what your land<br />could be worth.
+              Start with $500.<br />Find out what your land could become.
             </h2>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.60)', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px', lineHeight: 1.8 }}>
-              A real expert — with experience from some of the world&apos;s most significant nature-based carbon projects — guides you from submission to report. Five business days.
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.58)', marginBottom: 42, maxWidth: 520, margin: '0 auto 42px', lineHeight: 1.8 }}>
+              An eligibility check takes 2–3 business days and tells you whether there is a real project here. If there is, a full feasibility study gives you something you can take to investors and certification bodies. And for the right projects, we go all the way.
             </p>
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/pricing" className="btn-amber" style={{ fontSize: 16, padding: '16px 38px', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-                Start a Feasibility Study <IconArrow size={16} color="#1A1A18" />
+              <Link href="/pricing#pre-feasibility" className="btn-amber" style={{ fontSize: 16, padding: '16px 36px', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+                Start eligibility check — $500 <ArrowRight size={16} color="#1A1A18" />
               </Link>
-              <Link href="/how-it-works" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '15px 28px', background: 'rgba(255,255,255,0.08)', color: '#fff', fontWeight: 600, fontSize: 15, borderRadius: 8, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.16)' }}>
-                See how it works
+              <Link href="/pricing" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '15px 28px', background: 'rgba(255,255,255,0.08)', color: '#fff', fontWeight: 600, fontSize: 15, borderRadius: 8, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.15)' }}>
+                View all options
               </Link>
             </div>
           </div>
