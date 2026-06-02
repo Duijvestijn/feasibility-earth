@@ -78,3 +78,11 @@ body {
 
 @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
 .fe-fade-up { animation: fadeUp .6s ease forwards; }
+
+/* Footer link hover (avoids onMouseEnter in Server Components) */
+.fe-footer-link { color: rgba(255,255,255,0.7); text-decoration: none; transition: color .15s; }
+.fe-footer-link:hover { color: #fff; }
+
+/* Nav link hover */
+.fe-nav-link { color: #5C5C58; text-decoration: none; padding: 8px 14px; border-radius: 8px; transition: color .15s, background .15s; }
+.fe-nav-link:hover { color: #1B4332; background: #F0EDE8; }

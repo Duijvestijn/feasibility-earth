@@ -28,45 +28,41 @@ export default function Footer() {
 
           {/* Platform */}
           <div>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Platform</p>
-            {['How It Works', 'Pricing', 'Use Cases', 'FAQ'].map(l => (
-              <Link key={l} href={`/${l.toLowerCase().replace(/ /g, '-')}`} style={{ display: 'block', fontSize: 14, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', marginBottom: 10, transition: 'color .15s' }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = '#fff'}
-              onMouseLeave={e => (e.target as HTMLElement).style.color = 'rgba(255,255,255,0.7)'}>
-                {l}
-              </Link>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Platform</p>
+            {[
+              { href: '/how-it-works', label: 'How It Works' },
+              { href: '/pricing',      label: 'Pricing' },
+              { href: '/use-cases',    label: 'Use Cases' },
+              { href: '/faq',          label: 'FAQ' },
+            ].map(l => (
+              <Link key={l.href} href={l.href} className="fe-footer-link" style={{ display: 'block', fontSize: 14, marginBottom: 10 }}>{l.label}</Link>
             ))}
           </div>
 
           {/* Project types */}
           <div>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Project Types</p>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Project Types</p>
             {['Reforestation', 'Agroforestry', 'ARR Projects', 'Cookstoves'].map(l => (
-              <Link key={l} href="/use-cases" style={{ display: 'block', fontSize: 14, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', marginBottom: 10, transition: 'color .15s' }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = '#fff'}
-              onMouseLeave={e => (e.target as HTMLElement).style.color = 'rgba(255,255,255,0.7)'}>
-                {l}
-              </Link>
+              <Link key={l} href="/use-cases" className="fe-footer-link" style={{ display: 'block', fontSize: 14, marginBottom: 10 }}>{l}</Link>
             ))}
           </div>
 
           {/* Contact */}
           <div>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Contact</p>
-            <a href="mailto:feasibility@green.earth" style={{ display: 'block', fontSize: 14, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', marginBottom: 10 }}>feasibility@green.earth</a>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Contact</p>
+            <a href="mailto:feasibility@green.earth" className="fe-footer-link" style={{ display: 'block', fontSize: 14, marginBottom: 10 }}>feasibility@green.earth</a>
             <p style={{ fontSize: 13, lineHeight: 1.6, marginTop: 16 }}>A Green Earth Group platform</p>
-            <Link href="https://green.earth" target="_blank" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 8, fontSize: 13, color: '#40916C', textDecoration: 'none', fontWeight: 600 }}>
+            <Link href="https://green.earth" target="_blank" className="fe-footer-link" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 8, fontSize: 13, color: '#40916C', fontWeight: 600 }}>
               green.earth →
             </Link>
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 24, display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
           <p style={{ fontSize: 13 }}>© 2026 Feasibility.Earth · Green Earth Group N.V.</p>
           <div style={{ display: 'flex', gap: 24 }}>
-            <Link href="/privacy" style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Privacy</Link>
-            <Link href="/terms" style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Terms</Link>
+            <Link href="/privacy" className="fe-footer-link" style={{ fontSize: 13 }}>Privacy</Link>
+            <Link href="/terms"   className="fe-footer-link" style={{ fontSize: 13 }}>Terms</Link>
           </div>
         </div>
       </div>
