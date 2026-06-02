@@ -122,15 +122,19 @@ export default function PricingPage() {
             <div id="development" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', borderRadius: 16, border: '1px solid #E2DDD6', overflow: 'hidden', background: '#fff' }}>
               <div style={{ padding: '40px 36px', background: '#F5ECD7', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid #E2DDD6' }}>
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: '#6B4226', marginBottom: 12 }}>Stage 03</span>
-                <div className="font-display" style={{ fontSize: 36, fontWeight: 700, color: '#1A1A18', lineHeight: 1.1, marginBottom: 6 }}>By arrangement</div>
-                <p style={{ fontSize: 15, color: '#6B4226', fontWeight: 600, marginBottom: 24 }}>Full Project Development</p>
-                <p style={{ fontSize: 13, color: '#5C5C58', lineHeight: 1.7, marginBottom: 24 }}>
-                  Only available following a completed feasibility study. We work alongside you — or take the lead — on full project development. For qualifying projects, we invest capital.
+                <div className="font-display" style={{ fontSize: 32, fontWeight: 700, color: '#1A1A18', lineHeight: 1.1, marginBottom: 6 }}>By arrangement</div>
+                <p style={{ fontSize: 15, color: '#6B4226', fontWeight: 600, marginBottom: 16 }}>Project Development</p>
+                <p style={{ fontSize: 13, color: '#5C5C58', lineHeight: 1.7, marginBottom: 8 }}>
+                  Full development support and, for qualifying projects, capital co-investment.
                 </p>
-                <a href="mailto:feasibility@green.earth" className="btn-primary" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14, textDecoration: 'none' }}>
+                <div style={{ padding: '12px 14px', background: 'rgba(27,67,50,0.06)', borderRadius: 9, marginBottom: 20 }}>
+                  <p style={{ fontSize: 11, fontWeight: 700, color: '#1B4332', letterSpacing: '0.5px', textTransform: 'uppercase' as const, marginBottom: 6 }}>Investment criteria</p>
+                  <p style={{ fontSize: 12, color: '#374151', lineHeight: 1.65 }}>We consider co-investment in projects with demonstrated net present value, low permanence risk, and a clear path to first credit issuance. Assessment is made following the full feasibility study. The study is the filter.</p>
+                </div>
+                <a href="/contact" className="btn-primary" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14, textDecoration: 'none' }}>
                   Discuss your project <ArrowRight size={14} color="#fff" />
                 </a>
-                <p style={{ marginTop: 12, fontSize: 11, color: '#9CA3AF', textAlign: 'center' as const }}>Requires completed feasibility study</p>
+                <p style={{ marginTop: 10, fontSize: 11, color: '#9CA3AF', textAlign: 'center' as const }}>Only available after completed feasibility study</p>
               </div>
               <div style={{ padding: '40px 40px' }}>
                 <p style={{ fontSize: 13, fontWeight: 700, color: '#5C5C58', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 22 }}>What we bring to your project</p>
@@ -161,13 +165,22 @@ export default function PricingPage() {
               </div>
             </div>
 
-            {/* Context note */}
-            <div style={{ marginTop: 18, padding: '18px 24px', background: '#F5ECD7', borderRadius: 12, display: 'flex', alignItems: 'flex-start', gap: 14 }}>
-              <div style={{ width: 30, height: 30, borderRadius: 8, background: '#E8D5B0', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B4226" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            {/* ROI anchor */}
+            <div style={{ marginTop: 18, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+              <div style={{ padding: '18px 20px', background: '#FEF9EE', borderRadius: 12, border: '1px solid #FDDEA5' }}>
+                <p style={{ fontSize: 10, fontWeight: 700, color: '#92400E', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 6 }}>Cost of a failed project</p>
+                <p style={{ fontSize: 24, fontWeight: 800, color: '#1A1A18', fontFamily: 'Fraunces, Georgia, serif', lineHeight: 1.1, marginBottom: 6 }}>$150k–$500k</p>
+                <p style={{ fontSize: 12, color: '#92400E', lineHeight: 1.6 }}>Typical wasted spend when a project fails at PDD validation — plus 18–24 months of lost time. (Source: VCM practitioner data)</p>
               </div>
-              <p style={{ fontSize: 14, color: '#6B4226', lineHeight: 1.75 }}>
-                Traditional feasibility studies from large consultancies cost <strong>$25,000–$75,000 and take 3–6 months</strong>. Our full study delivers equivalent rigour — grounded in active project experience across four countries — in five business days. And unlike a consultancy, we can become your development partner on the other side of it.
+              <div style={{ padding: '18px 20px', background: '#EBF5EE', borderRadius: 12, border: '1px solid #C5E8D3' }}>
+                <p style={{ fontSize: 10, fontWeight: 700, color: '#1B4332', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 6 }}>Our full study</p>
+                <p style={{ fontSize: 24, fontWeight: 800, color: '#1B4332', fontFamily: 'Fraunces, Georgia, serif', lineHeight: 1.1, marginBottom: 6 }}>$7,500</p>
+                <p style={{ fontSize: 12, color: '#2D6A4F', lineHeight: 1.6 }}>Identifies the same failure modes before you commit development capital. Approximately 1.5–5% of the risk it eliminates.</p>
+              </div>
+            </div>
+            <div style={{ marginTop: 10, padding: '14px 18px', background: '#F9FAFB', borderRadius: 10, border: '1px solid #E2DDD6' }}>
+              <p style={{ fontSize: 13, color: '#5C5C58', lineHeight: 1.7 }}>
+                Traditional consultancies charge <strong>$25,000–$75,000</strong> and take 3–6 months for equivalent depth. We apply the same methodology standards in five business days — and unlike a consultancy, we can co-develop and co-invest in projects that clear our assessment.
               </p>
             </div>
           </div>

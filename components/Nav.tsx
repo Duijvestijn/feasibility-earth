@@ -8,6 +8,7 @@ const LINKS = [
   { href: '/methodology',   label: 'Methodology' },
   { href: '/use-cases',     label: 'Use Cases' },
   { href: '/pricing',       label: 'Pricing' },
+  { href: '/contact',       label: 'Contact' },
 ]
 
 export default function Nav() {
