@@ -3,31 +3,47 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const SATELLITE_IMG = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_175009_19fc6154-aab5-4955-b5dc-d16dcac477c1.png'
-const REFOREST_IMG  = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_175000_427a09a9-a320-4d6c-81ef-2c43cd4b7f9e.png'
-const AGROFOR_IMG   = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_175005_e7dfbf54-39e5-4de4-b11d-58227004bf11.png'
+const SAT_IMG      = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_175009_19fc6154-aab5-4955-b5dc-d16dcac477c1.png'
+const REFOREST_IMG = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_175000_427a09a9-a320-4d6c-81ef-2c43cd4b7f9e.png'
+const AGROFOR_IMG  = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_175005_e7dfbf54-39e5-4de4-b11d-58227004bf11.png'
 
 const STEPS = [
   {
-    n: '01', title: 'Submit Your Project',
-    sub: 'Fill in the intake form',
-    body: 'Provide your land coordinates (GeoJSON, KML or GPS points), project type, approximate area in hectares, and contact information. No fieldwork required at this stage.',
-    details: ['Land location (country, region, coordinates)', 'Project type (reforestation, agroforestry, ARR, cookstoves)', 'Approximate land area in hectares', 'Current land use and ownership status'],
-    img: SATELLITE_IMG, time: '~15 minutes',
+    day: 'Day 1', n: '01', title: 'You tell us about your land',
+    sub: 'Simple intake — 15 minutes of your time',
+    body: 'Fill in our intake form. Where is your land? How large? What type of project do you have in mind — planting trees, agroforestry, or something else? You don\'t need to be an expert. We\'ll ask the right questions and take it from there.',
+    checklist: [
+      'Your land location (country, region, GPS or coordinates)',
+      'Approximate size in hectares',
+      'Current state of the land (forests, farms, bare land)',
+      'Your goal — carbon credits, biodiversity, both?',
+    ],
+    img: SAT_IMG,
   },
   {
-    n: '02', title: 'Automated Eligibility Check',
-    sub: 'Instant satellite screening',
-    body: 'Our system runs an automated eligibility screen using satellite imagery and global datasets. We check additionality (was the land already forested?), baseline carbon stock, protected area overlaps, and land use history going back 10+ years.',
-    details: ['NDVI time-series analysis (10-year baseline)', 'Protected area and carbon registry overlap check', 'Additionality screening per VCS/GS methodology', 'Preliminary CO₂ potential estimate'],
-    img: REFOREST_IMG, time: '< 2 minutes',
+    day: 'Days 2–4', n: '02', title: 'Our experts go to work',
+    sub: 'Satellite data + 10 years of field experience',
+    body: 'A dedicated expert is assigned to your project. They analyse your land using satellite imagery, regional land databases, and the knowledge we\'ve built over a decade developing projects in Nigeria, Uganda, Cameroon and Kazakhstan. We look at what the land has been, what it is now, and what it could become.',
+    checklist: [
+      'Satellite analysis of land condition and history',
+      'Assessment of how many carbon credits your project could generate',
+      'Review of which certification (Verra VCS, Gold Standard, Plan Vivo) fits best',
+      'Identification of any risks or barriers — before they become expensive problems',
+    ],
+    img: REFOREST_IMG,
   },
   {
-    n: '03', title: 'Full Feasibility Report',
-    sub: 'Delivered within 24 hours',
-    body: 'A certified carbon methodology specialist reviews the automated output and produces a full feasibility report. The report includes CO₂ potential (tonnes/year), project viability score, recommended certification pathway, and estimated credit value at current market prices.',
-    details: ['Carbon stock baseline and increment model', 'Estimated annual CO₂ credits (tCO₂e)', 'Certification pathway recommendation', 'Market value estimate at current CO₂ prices'],
-    img: AGROFOR_IMG, time: '24 hours',
+    day: 'Day 5', n: '03', title: 'You get your report — and a call',
+    sub: 'Plain language. Clear next steps.',
+    body: 'We deliver your full feasibility report and schedule a personal call to walk you through it. You\'ll know exactly whether your project is viable, what it could be worth, and what to do next. No jargon. No loose ends.',
+    checklist: [
+      'Is the project viable? Clear yes or no.',
+      'How many carbon credits could it generate per year?',
+      'What certification path is recommended?',
+      'What are the estimated costs and timeline to get there?',
+      'What is the next step — and we can help with that too.',
+    ],
+    img: AGROFOR_IMG,
   },
 ]
 
@@ -37,75 +53,71 @@ export default function HowItWorksPage() {
       <Nav />
       <main style={{ paddingTop: 68 }}>
 
-        {/* Hero */}
         <section style={{ background: 'linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%)', padding: '80px 0 64px' }}>
           <div className="fe-wrap">
-            <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.15)', color: '#D8F3DC', border: '1px solid rgba(255,255,255,0.2)', marginBottom: 20 }}>Process</div>
-            <h1 className="font-display" style={{ fontSize: 'clamp(32px,5vw,56px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 16 }}>
-              From land to report<br />in 24 hours
+            <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.15)', color: '#D8F3DC', border: '1px solid rgba(255,255,255,0.2)', marginBottom: 20 }}>
+              Simple process
+            </div>
+            <h1 className="font-display" style={{ fontSize: 'clamp(32px,5vw,54px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 16 }}>
+              Three steps.<br />Five business days.
             </h1>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', maxWidth: 520, lineHeight: 1.7 }}>
-              Three automated steps replace what used to take 3–6 months and cost $75,000+. Here&apos;s exactly how it works.
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.72)', maxWidth: 520, lineHeight: 1.75 }}>
+              You don&apos;t need to be an expert. You just need to tell us about your land. Our team handles the rest — and guides you through every step.
             </p>
           </div>
         </section>
 
-        {/* Steps */}
         <section className="fe-section" style={{ background: '#fff' }}>
           <div className="fe-wrap">
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 80 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 64 }}>
               {STEPS.map((step, i) => (
                 <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }}>
                   {i % 2 === 0 ? (<>
                     <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 20 }}>
-                        <div className="font-display" style={{ fontSize: 56, fontWeight: 700, color: '#E8DDD0', lineHeight: 1 }}>{step.n}</div>
-                        <div>
-                          <p style={{ fontSize: 12, fontWeight: 700, color: '#40916C', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: 4 }}>{step.sub}</p>
-                          <h2 style={{ fontSize: 26, fontWeight: 700, color: '#1A1A18' }}>{step.title}</h2>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 6 }}>
+                        <div style={{ width: 36, height: 36, borderRadius: 10, background: '#D8F3DC', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <span style={{ fontSize: 15, fontWeight: 800, color: '#1B4332' }}>{step.n}</span>
                         </div>
+                        <span style={{ fontSize: 13, fontWeight: 700, color: '#40916C', textTransform: 'uppercase' as const, letterSpacing: '0.8px' }}>{step.day}</span>
                       </div>
-                      <p style={{ fontSize: 15, color: '#5C5C58', lineHeight: 1.7, marginBottom: 24 }}>{step.body}</p>
-                      <div style={{ background: '#F5ECD7', borderRadius: 12, padding: '18px 20px', marginBottom: 16 }}>
-                        <p style={{ fontSize: 12, fontWeight: 700, color: '#6B4226', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: 10 }}>What we check:</p>
-                        {step.details.map((d, j) => (
-                          <div key={j} style={{ display: 'flex', gap: 8, marginBottom: 6 }}>
-                            <span style={{ color: '#1B4332', fontWeight: 700, fontSize: 13 }}>✓</span>
-                            <span style={{ fontSize: 13, color: '#5C5C58' }}>{d}</span>
+                      <h2 style={{ fontSize: 26, fontWeight: 700, color: '#1A1A18', marginBottom: 6, marginTop: 10 }}>{step.title}</h2>
+                      <p style={{ fontSize: 13, color: '#40916C', fontWeight: 600, marginBottom: 16 }}>{step.sub}</p>
+                      <p style={{ fontSize: 15, color: '#5C5C58', lineHeight: 1.8, marginBottom: 22 }}>{step.body}</p>
+                      <div style={{ background: '#F5ECD7', borderRadius: 12, padding: '18px 20px' }}>
+                        <p style={{ fontSize: 12, fontWeight: 700, color: '#6B4226', textTransform: 'uppercase' as const, letterSpacing: '0.8px', marginBottom: 12 }}>What we cover:</p>
+                        {step.checklist.map((item, j) => (
+                          <div key={j} style={{ display: 'flex', gap: 9, marginBottom: 8 }}>
+                            <span style={{ color: '#1B4332', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>✓</span>
+                            <span style={{ fontSize: 14, color: '#374151', lineHeight: 1.5 }}>{item}</span>
                           </div>
                         ))}
                       </div>
-                      <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 16px', background: '#D8F3DC', borderRadius: 100 }}>
-                        <span style={{ fontSize: 13, fontWeight: 700, color: '#1B4332' }}>⏱ {step.time}</span>
-                      </div>
                     </div>
-                    <div style={{ position: 'relative', height: 360, borderRadius: 16, overflow: 'hidden' }}>
+                    <div style={{ position: 'relative', height: 380, borderRadius: 16, overflow: 'hidden' }}>
                       <Image src={step.img} alt={step.title} fill style={{ objectFit: 'cover' }} />
                     </div>
                   </>) : (<>
-                    <div style={{ position: 'relative', height: 360, borderRadius: 16, overflow: 'hidden' }}>
+                    <div style={{ position: 'relative', height: 380, borderRadius: 16, overflow: 'hidden' }}>
                       <Image src={step.img} alt={step.title} fill style={{ objectFit: 'cover' }} />
                     </div>
                     <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 20 }}>
-                        <div className="font-display" style={{ fontSize: 56, fontWeight: 700, color: '#E8DDD0', lineHeight: 1 }}>{step.n}</div>
-                        <div>
-                          <p style={{ fontSize: 12, fontWeight: 700, color: '#40916C', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: 4 }}>{step.sub}</p>
-                          <h2 style={{ fontSize: 26, fontWeight: 700, color: '#1A1A18' }}>{step.title}</h2>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 6 }}>
+                        <div style={{ width: 36, height: 36, borderRadius: 10, background: '#D8F3DC', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <span style={{ fontSize: 15, fontWeight: 800, color: '#1B4332' }}>{step.n}</span>
                         </div>
+                        <span style={{ fontSize: 13, fontWeight: 700, color: '#40916C', textTransform: 'uppercase' as const, letterSpacing: '0.8px' }}>{step.day}</span>
                       </div>
-                      <p style={{ fontSize: 15, color: '#5C5C58', lineHeight: 1.7, marginBottom: 24 }}>{step.body}</p>
-                      <div style={{ background: '#F5ECD7', borderRadius: 12, padding: '18px 20px', marginBottom: 16 }}>
-                        <p style={{ fontSize: 12, fontWeight: 700, color: '#6B4226', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: 10 }}>What we deliver:</p>
-                        {step.details.map((d, j) => (
-                          <div key={j} style={{ display: 'flex', gap: 8, marginBottom: 6 }}>
-                            <span style={{ color: '#1B4332', fontWeight: 700, fontSize: 13 }}>✓</span>
-                            <span style={{ fontSize: 13, color: '#5C5C58' }}>{d}</span>
+                      <h2 style={{ fontSize: 26, fontWeight: 700, color: '#1A1A18', marginBottom: 6, marginTop: 10 }}>{step.title}</h2>
+                      <p style={{ fontSize: 13, color: '#40916C', fontWeight: 600, marginBottom: 16 }}>{step.sub}</p>
+                      <p style={{ fontSize: 15, color: '#5C5C58', lineHeight: 1.8, marginBottom: 22 }}>{step.body}</p>
+                      <div style={{ background: '#F5ECD7', borderRadius: 12, padding: '18px 20px' }}>
+                        <p style={{ fontSize: 12, fontWeight: 700, color: '#6B4226', textTransform: 'uppercase' as const, letterSpacing: '0.8px', marginBottom: 12 }}>What you receive:</p>
+                        {step.checklist.map((item, j) => (
+                          <div key={j} style={{ display: 'flex', gap: 9, marginBottom: 8 }}>
+                            <span style={{ color: '#1B4332', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>✓</span>
+                            <span style={{ fontSize: 14, color: '#374151', lineHeight: 1.5 }}>{item}</span>
                           </div>
                         ))}
-                      </div>
-                      <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 16px', background: '#D8F3DC', borderRadius: 100 }}>
-                        <span style={{ fontSize: 13, fontWeight: 700, color: '#1B4332' }}>⏱ {step.time}</span>
                       </div>
                     </div>
                   </>)}
@@ -115,12 +127,17 @@ export default function HowItWorksPage() {
           </div>
         </section>
 
-        {/* CTA */}
         <section className="fe-section-sm" style={{ background: '#F5ECD7', textAlign: 'center' }}>
           <div className="fe-wrap">
-            <h2 className="font-display" style={{ fontSize: 36, fontWeight: 700, color: '#1A1A18', marginBottom: 14 }}>Ready to start?</h2>
-            <p style={{ fontSize: 16, color: '#5C5C58', marginBottom: 28 }}>$7,500 flat fee · Full report in 24 hours · No fieldwork needed</p>
-            <Link href="/pricing" className="btn-primary" style={{ fontSize: 16, padding: '14px 32px' }}>Start a Feasibility Study →</Link>
+            <h2 className="font-display" style={{ fontSize: 34, fontWeight: 700, color: '#1A1A18', marginBottom: 12 }}>
+              Ready to get started?
+            </h2>
+            <p style={{ fontSize: 16, color: '#5C5C58', marginBottom: 28, maxWidth: 420, margin: '0 auto 28px' }}>
+              $7,500 flat fee. Full report in 5 business days. A real expert guides you through it.
+            </p>
+            <Link href="/pricing" className="btn-primary" style={{ fontSize: 16, padding: '14px 36px' }}>
+              Start your study →
+            </Link>
           </div>
         </section>
 
