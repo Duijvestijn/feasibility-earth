@@ -104,17 +104,14 @@ export default function HomePage() {
                 Assess before<br />you invest.
               </h1>
 
-              <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.68)', lineHeight: 1.85, marginBottom: 16, maxWidth: 600 }}>
-                The voluntary carbon market has a documented quality problem. Flawed feasibility work is costing developers certifications, costing corporates credibility, and costing investors capital.
-              </p>
-              <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)', lineHeight: 1.85, marginBottom: 40, maxWidth: 600, fontWeight: 500 }}>
-                Our team has developed and certified 149,000 carbon credits across Africa and Central Asia. We assess projects the same way we develop them — and we know exactly what the market is now demanding.
+              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.70)', lineHeight: 1.75, marginBottom: 36, maxWidth: 560 }}>
+                Bad feasibility work is costing developers certifications and investors capital. We have developed 149,000 certified credits in Africa and Central Asia. We assess projects the same way we build them.
               </p>
 
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Link href="/pricing" className="btn-primary" style={{ fontSize: 15, padding: '15px 30px', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-                  Tell us about your project <Arrow size={15} color="#fff" />
-                </Link>
+                <a href="https://app.feasibility.earth" target="_blank" rel="noopener noreferrer" className="btn-amber" style={{ fontSize: 15, padding: '15px 32px', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+                  Start assessment now <Arrow size={15} color="#1A1A18" />
+                </a>
                 <Link href="/how-it-works" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 24px', background: 'rgba(255,255,255,0.08)', color: '#fff', fontWeight: 600, fontSize: 15, borderRadius: 8, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.16)' }}>
                   How we work
                 </Link>
