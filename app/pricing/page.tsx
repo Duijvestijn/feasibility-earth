@@ -86,34 +86,72 @@ export default function PricingPage() {
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Stage 02</span>
                 <div className="font-display" style={{ fontSize: 52, fontWeight: 700, color: '#fff', lineHeight: 1, marginBottom: 6 }}>$7,500</div>
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', fontWeight: 600, marginBottom: 6 }}>Full Feasibility Study</p>
-                <p style={{ fontSize: 13, color: '#F4C430', fontWeight: 700, marginBottom: 24 }}>Bankable. Certification-ready.</p>
-                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 28 }}>A complete in-depth study you can take to investors, DFIs, and certification bodies. Delivered in 5 business days.</p>
-                <Link href="https://app.feasibility.earth" target="_blank" className="btn-amber" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14 }}>
+                <p style={{ fontSize: 13, color: '#F4C430', fontWeight: 700, marginBottom: 16 }}>Bankable. Certification-ready.</p>
+
+                {/* Report size callout */}
+                <div style={{ padding: '14px 16px', background: 'rgba(255,255,255,0.08)', borderRadius: 10, marginBottom: 20, border: '1px solid rgba(255,255,255,0.12)' }}>
+                  <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', fontFamily: 'Fraunces, Georgia, serif', marginBottom: 2 }}>70+ page report</p>
+                  <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.50)' }}>Everything assessed remotely — no site visit required</p>
+                </div>
+
+                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 24 }}>A complete in-depth study structured for investors, DFIs, and certification bodies. Delivered in 5 business days.</p>
+                <Link href="/contact" className="btn-amber" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14, textDecoration: 'none' }}>
                   Start full study <ArrowRight size={14} color="#1A1A18" />
                 </Link>
                 <p style={{ marginTop: 12, fontSize: 11, color: 'rgba(255,255,255,0.22)', textAlign: 'center' as const }}>50% refund if land does not qualify</p>
               </div>
-              <div style={{ padding: '44px 40px' }}>
-                <p style={{ fontSize: 13, fontWeight: 700, color: '#5C5C58', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 22 }}>Everything included</p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 28px' }}>
-                  {[
-                    'Complete satellite land analysis',
-                    'Carbon credit potential with supporting methodology',
-                    'Certification pathway recommendation',
-                    'Financial projections and estimated credit value',
-                    'Dedicated expert assigned to your project',
-                    'Personal debrief call upon delivery',
-                    'One revision round included',
-                    'Report structured for investor and DFI use',
-                    'Delivered in 5 business days',
-                  ].map((item, i) => (
-                    <div key={i} style={{ display: 'flex', gap: 9, alignItems: 'flex-start' }}>
-                      <div style={{ width: 18, height: 18, borderRadius: 5, background: '#EBF5EE', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
-                        <CheckIcon color="#1B4332" size={10} />
-                      </div>
-                      <span style={{ fontSize: 13, color: '#374151', lineHeight: 1.55 }}>{item}</span>
+
+              <div style={{ padding: '36px 36px' }}>
+                <p style={{ fontSize: 12, fontWeight: 700, color: '#5C5C58', letterSpacing: '1px', textTransform: 'uppercase' as const, marginBottom: 20 }}>What the 70+ page report covers</p>
+
+                {[
+                  {
+                    section: 'Land & Baseline Analysis',
+                    items: ['10-year satellite land use history', 'NDVI vegetation index & biomass mapping', 'Deforestation rate analysis vs. regional benchmarks', 'Existing carbon stock estimation'],
+                  },
+                  {
+                    section: 'Additionality Assessment',
+                    items: ['Regulatory surplus test (current legislation)', 'Financial & investment barrier analysis', 'Performance benchmark vs. comparable activities', 'Additionality risk rating with evidence'],
+                  },
+                  {
+                    section: 'Carbon Potential',
+                    items: ['Annual CO₂ sequestration / avoidance estimate', 'Confidence ranges & sensitivity analysis', 'Projection over full project lifetime', 'Credit volume at scenario market prices'],
+                  },
+                  {
+                    section: 'Certification & Compliance',
+                    items: ['Recommended standard (Verra VCS, Gold Standard, Plan Vivo)', 'Gap analysis vs. current methodology requirements', 'Applicability conditions assessment', 'fNRB / baseline methodology validation'],
+                  },
+                  {
+                    section: 'Risk Register',
+                    items: ['Permanence risk & buffer pool estimate', 'Leakage risk assessment', 'Socioeconomic & political risk', 'Land ownership & tenure review'],
+                  },
+                  {
+                    section: 'Financial Projections',
+                    items: ['Revenue model at bear / base / bull carbon prices', 'Development cost estimates', 'Timeline to first credit issuance', 'Net present value range'],
+                  },
+                  {
+                    section: 'Development Pathway',
+                    items: ['Recommended next steps to PDD', 'Estimated PDD development cost & timeline', 'VVB engagement roadmap', 'MRV framework outline'],
+                  },
+                ].map((group, i) => (
+                  <div key={i} style={{ marginBottom: 16 }}>
+                    <p style={{ fontSize: 11, fontWeight: 700, color: '#1B4332', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 8, paddingBottom: 6, borderBottom: '1px solid #E8E4DF' }}>{group.section}</p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                      {group.items.map((item, j) => (
+                        <div key={j} style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
+                          <div style={{ width: 16, height: 16, borderRadius: 4, background: '#EBF5EE', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
+                            <CheckIcon color="#1B4332" size={9} />
+                          </div>
+                          <span style={{ fontSize: 12.5, color: '#374151', lineHeight: 1.5 }}>{item}</span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+                ))}
+
+                <div style={{ marginTop: 18, padding: '12px 14px', background: '#F0FDF4', borderRadius: 10, border: '1px solid #C5E8D3' }}>
+                  <p style={{ fontSize: 12, fontWeight: 700, color: '#1B4332', marginBottom: 3 }}>All remote. No site visit required.</p>
+                  <p style={{ fontSize: 12, color: '#2D6A4F', lineHeight: 1.6 }}>Every section of this report is produced using satellite data, regional databases, and methodology expertise. You do not need to arrange fieldwork — we handle the full technical assessment remotely.</p>
                 </div>
               </div>
             </div>
