@@ -59,13 +59,13 @@ export default function HowItWorksPage() {
         <section style={{ background: 'linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%)', padding: '80px 0 64px' }}>
           <div className="fe-wrap">
             <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.15)', color: '#D8F3DC', border: '1px solid rgba(255,255,255,0.2)', marginBottom: 20 }}>
-              Simple process
+              How it works
             </div>
-            <h1 className="font-display" style={{ fontSize: 'clamp(32px,5vw,54px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 16 }}>
-              Three steps.<br />Five business days.
+            <h1 className="font-display" style={{ fontSize: 'clamp(30px,5vw,52px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 16 }}>
+              From land details to a 70+ page<br />report you can count on.
             </h1>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.72)', maxWidth: 520, lineHeight: 1.75 }}>
-              You don&apos;t need to be an expert. You just need to tell us about your land. Our team handles the rest — and guides you through every step.
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.72)', maxWidth: 540, lineHeight: 1.75 }}>
+              You tell us about the land. We run a comprehensive independent assessment — every material factor checked remotely, no site visit required — and deliver a bankable report your team, investors, and certification bodies can rely on.
             </p>
           </div>
         </section>
@@ -136,7 +136,7 @@ export default function HowItWorksPage() {
               Ready to get started?
             </h2>
             <p style={{ fontSize: 16, color: '#5C5C58', marginBottom: 28, maxWidth: 420, margin: '0 auto 28px' }}>
-              $7,500 flat fee. Full report in 5 business days. A real expert guides you through it.
+              A 70+ page independent feasibility report — everything assessed remotely. $7,500 flat fee.
             </p>
             <Link href="/pricing" className="btn-primary" style={{ fontSize: 16, padding: '14px 36px' }}>
               Start your study →

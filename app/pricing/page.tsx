@@ -28,13 +28,13 @@ export default function PricingPage() {
         <section style={{ background: 'linear-gradient(150deg, #0A1E11 0%, #1B4332 100%)', padding: '88px 0 68px', textAlign: 'center' }}>
           <div className="fe-wrap">
             <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.12)', color: '#D8F3DC', border: '1px solid rgba(255,255,255,0.16)', marginBottom: 22 }}>
-              Clear, staged pricing
+              Services
             </div>
-            <h1 className="font-display" style={{ fontSize: 'clamp(32px,5vw,54px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 18 }}>
-              Start at $500.<br />Scale to a full project partnership.
+            <h1 className="font-display" style={{ fontSize: 'clamp(30px,5vw,52px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 18 }}>
+              A 70+ page independent report<br />you can count on.
             </h1>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.62)', maxWidth: 540, margin: '0 auto', lineHeight: 1.8 }}>
-              A low-cost eligibility check, a bankable full feasibility study, and for the right projects — a complete development partnership including capital investment.
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.62)', maxWidth: 560, margin: '0 auto', lineHeight: 1.8 }}>
+              If your land has real carbon potential, you need to know exactly how much — and have the documentation to prove it to investors, certification bodies, and development partners. That is what we produce.
             </p>
           </div>
         </section>
@@ -46,7 +46,7 @@ export default function PricingPage() {
             {/* Tier 1: Pre-Feasibility */}
             <div id="pre-feasibility" style={{ marginBottom: 20, display: 'grid', gridTemplateColumns: '1fr 2fr', borderRadius: 16, border: '1px solid #D4E9DC', overflow: 'hidden', background: '#fff' }}>
               <div style={{ padding: '40px 36px', background: '#EBF5EE', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid #D4E9DC' }}>
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: '#40916C', marginBottom: 12 }}>Stage 01</span>
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: '#40916C', marginBottom: 12 }}>Step 01</span>
                 <div className="font-display" style={{ fontSize: 52, fontWeight: 700, color: '#1B4332', lineHeight: 1, marginBottom: 6 }}>$500</div>
                 <p style={{ fontSize: 15, color: '#40916C', fontWeight: 600, marginBottom: 24 }}>Eligibility Check</p>
                 <p style={{ fontSize: 13, color: '#5C5C58', lineHeight: 1.7, marginBottom: 24 }}>Is your land eligible for a carbon project? A clear answer in 2–3 business days.</p>
@@ -79,11 +79,8 @@ export default function PricingPage() {
             {/* Tier 2: Full Feasibility */}
             <div id="feasibility" style={{ marginBottom: 20, display: 'grid', gridTemplateColumns: '1fr 2fr', borderRadius: 16, border: '2px solid #1B4332', overflow: 'hidden', background: '#fff', boxShadow: '0 12px 40px rgba(27,67,50,0.14)', position: 'relative' as const }}>
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'linear-gradient(90deg, #1B4332, #40916C)' }} />
-              <div style={{ position: 'absolute', top: 16, right: 20 }}>
-                <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.8px', textTransform: 'uppercase' as const, padding: '4px 12px', borderRadius: 100, background: '#1B4332', color: '#fff' }}>Most popular</span>
-              </div>
               <div style={{ padding: '44px 36px', background: '#1B4332', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid rgba(255,255,255,0.1)' }}>
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Stage 02</span>
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Step 02</span>
                 <div className="font-display" style={{ fontSize: 52, fontWeight: 700, color: '#fff', lineHeight: 1, marginBottom: 6 }}>$7,500</div>
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', fontWeight: 600, marginBottom: 6 }}>Full Feasibility Study</p>
                 <p style={{ fontSize: 13, color: '#F4C430', fontWeight: 700, marginBottom: 16 }}>Bankable. Certification-ready.</p>
@@ -159,7 +156,7 @@ export default function PricingPage() {
             {/* Tier 3: Project Development */}
             <div id="development" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', borderRadius: 16, border: '1px solid #E2DDD6', overflow: 'hidden', background: '#fff' }}>
               <div style={{ padding: '40px 36px', background: '#F5ECD7', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid #E2DDD6' }}>
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: '#6B4226', marginBottom: 12 }}>Stage 03</span>
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: '#6B4226', marginBottom: 12 }}>Step 03</span>
                 <div className="font-display" style={{ fontSize: 32, fontWeight: 700, color: '#1A1A18', lineHeight: 1.1, marginBottom: 6 }}>By arrangement</div>
                 <p style={{ fontSize: 15, color: '#6B4226', fontWeight: 600, marginBottom: 16 }}>Project Development</p>
                 <p style={{ fontSize: 13, color: '#5C5C58', lineHeight: 1.7, marginBottom: 8 }}>

@@ -164,12 +164,12 @@ export default function HomePage() {
 
               {/* Sticky left */}
               <div style={{ position: 'sticky', top: 96 }}>
-                <div className="fe-badge fe-badge-green" style={{ marginBottom: 18 }}>Our services</div>
+                <div className="fe-badge fe-badge-green" style={{ marginBottom: 18 }}>What we deliver</div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(24px,3vw,36px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.25, marginBottom: 18 }}>
-                  From first assessment to full project development.
+                  A 70+ page report you can take to investors and certification bodies.
                 </h2>
                 <p style={{ fontSize: 15, color: '#5C5C58', lineHeight: 1.85, marginBottom: 28 }}>
-                  Three services at different stages of commitment. Start with an eligibility assessment. If the project is sound, commission the full bankable study. For the strongest projects, we develop and invest alongside you.
+                  If your project has real carbon potential, you need more than an estimate. Our full feasibility study documents every material factor — land, additionality, carbon potential, risk, financials — in a format built for the scrutiny it will face. Start with a $500 eligibility check. If it qualifies, we produce the full report.
                 </p>
                 <Link href="/pricing" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, color: '#1B4332', fontWeight: 700, textDecoration: 'none' }}>
                   Pricing and full scope <Arrow size={14} color="#1B4332" />
