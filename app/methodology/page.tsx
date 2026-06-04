@@ -147,7 +147,7 @@ export default function MethodologyPage() {
                 Our feasibility assessment covers seven distinct areas of analysis, each producing a dedicated report section. Every section is built from project-specific satellite data and expert analysis — not from standard templates applied to generic regional inputs. Below is what each section contains, where the data comes from, and why it matters.
               </p>
               {/* Report overview stats */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 2 }}>
+              <div className="fe-stats-4" style={{ gap: 2 }}>
                 {[
                   { value: '70+', label: 'pages per report' },
                   { value: '7', label: 'assessment areas' },
@@ -167,7 +167,7 @@ export default function MethodologyPage() {
         {/* Why methodology matters — brief */}
         <section style={{ background: '#0F1E13', padding: '48px 0' }}>
           <div className="fe-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, alignItems: 'center' }}>
+            <div className="fe-2col-equal" style={{ alignItems: 'center' }}>
               <div>
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.9, marginBottom: 16 }}>
                   Forestry carbon projects have been documented to overcredit by 5–14× their stated value due to incorrect baseline assumptions. For cookstoves, systematic use of fNRB values of 80%+ against a regional benchmark of 25–35% has produced over-crediting documented at 6× average by UC Berkeley (Nature Sustainability, 2024).
@@ -223,7 +223,7 @@ export default function MethodologyPage() {
                     </div>
 
                     {/* Subsections */}
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                    <div className="fe-subsection-grid">
                       {section.subsections.map((sub, i) => (
                         <div key={i} style={{ padding: '16px 18px', borderRadius: 10, background: '#FAFAF8', border: '1px solid #E8E4DF' }}>
                           <div style={{ display: 'flex', gap: 8, alignItems: 'flex-start', marginBottom: 8 }}>
@@ -246,7 +246,7 @@ export default function MethodologyPage() {
         {/* Standards */}
         <section className="fe-section" style={{ background: '#1B4332' }}>
           <div className="fe-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center' }}>
+            <div className="fe-2col-equal" style={{ alignItems: 'center' }}>
               <div>
                 <div className="fe-badge" style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.12)', marginBottom: 22 }}>
                   Current standards
@@ -291,7 +291,7 @@ export default function MethodologyPage() {
                 Specific differences from standard<br />desk-based assessment practice
               </h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+            <div className="fe-comparison-grid">
               {[
                 {
                   standard: 'Country or regional average deforestation rates',

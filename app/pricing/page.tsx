@@ -44,7 +44,7 @@ export default function PricingPage() {
           <div className="fe-wrap" style={{ maxWidth: 1000 }}>
 
             {/* Tier 1: Pre-Feasibility */}
-            <div id="pre-feasibility" style={{ marginBottom: 20, display: 'grid', gridTemplateColumns: '1fr 2fr', borderRadius: 16, border: '1px solid #D4E9DC', overflow: 'hidden', background: '#fff' }}>
+            <div id="pre-feasibility" className="fe-tier-card" style={{ marginBottom: 20, border: '1px solid #D4E9DC', background: '#fff' }}>
               <div style={{ padding: '40px 36px', background: '#EBF5EE', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid #D4E9DC' }}>
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: '#40916C', marginBottom: 12 }}>Step 01</span>
                 <div className="font-display" style={{ fontSize: 52, fontWeight: 700, color: '#1B4332', lineHeight: 1, marginBottom: 6 }}>$500</div>
@@ -56,7 +56,7 @@ export default function PricingPage() {
               </div>
               <div style={{ padding: '40px 40px' }}>
                 <p style={{ fontSize: 13, fontWeight: 700, color: '#5C5C58', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 22 }}>What is included</p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 28px' }}>
+                <div className="fe-subsection-grid" style={{ gap: '10px 28px' }}>
                   {[
                     'Satellite screening of your land parcel',
                     'Assessment against Verra VCS, Gold Standard and Plan Vivo criteria',
@@ -77,7 +77,7 @@ export default function PricingPage() {
             </div>
 
             {/* Tier 2: Full Feasibility */}
-            <div id="feasibility" style={{ marginBottom: 20, display: 'grid', gridTemplateColumns: '1fr 2fr', borderRadius: 16, border: '2px solid #1B4332', overflow: 'hidden', background: '#fff', boxShadow: '0 12px 40px rgba(27,67,50,0.14)', position: 'relative' as const }}>
+            <div id="feasibility" className="fe-tier-card" style={{ marginBottom: 20, border: '2px solid #1B4332', background: '#fff', boxShadow: '0 12px 40px rgba(27,67,50,0.14)', position: 'relative' as const }}>
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'linear-gradient(90deg, #1B4332, #40916C)' }} />
               <div style={{ padding: '44px 36px', background: '#1B4332', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid rgba(255,255,255,0.1)' }}>
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Step 02</span>
@@ -154,7 +154,7 @@ export default function PricingPage() {
             </div>
 
             {/* Tier 3: Project Development */}
-            <div id="development" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', borderRadius: 16, border: '1px solid #E2DDD6', overflow: 'hidden', background: '#fff' }}>
+            <div id="development" className="fe-tier-card" style={{ border: '1px solid #E2DDD6', background: '#fff' }}>
               <div style={{ padding: '40px 36px', background: '#F5ECD7', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid #E2DDD6' }}>
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: '#6B4226', marginBottom: 12 }}>Step 03</span>
                 <div className="font-display" style={{ fontSize: 32, fontWeight: 700, color: '#1A1A18', lineHeight: 1.1, marginBottom: 6 }}>By arrangement</div>
@@ -173,7 +173,7 @@ export default function PricingPage() {
               </div>
               <div style={{ padding: '40px 40px' }}>
                 <p style={{ fontSize: 13, fontWeight: 700, color: '#5C5C58', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 22 }}>What we bring to your project</p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 28px' }}>
+                <div className="fe-subsection-grid" style={{ gap: '10px 28px' }}>
                   {[
                     'Project Design Document (PDD) development',
                     'Certification and registration support',
@@ -201,7 +201,7 @@ export default function PricingPage() {
             </div>
 
             {/* ROI anchor */}
-            <div style={{ marginTop: 18, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+            <div className="fe-roi-grid" style={{ marginTop: 18 }}>
               <div style={{ padding: '18px 20px', background: '#FEF9EE', borderRadius: 12, border: '1px solid #FDDEA5' }}>
                 <p style={{ fontSize: 10, fontWeight: 700, color: '#92400E', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 6 }}>Cost of a failed project</p>
                 <p style={{ fontSize: 24, fontWeight: 800, color: '#1A1A18', fontFamily: 'Fraunces, Georgia, serif', lineHeight: 1.1, marginBottom: 6 }}>$150k–$500k</p>

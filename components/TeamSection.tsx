@@ -38,10 +38,10 @@ export default function TeamSection() {
   return (
     <section style={{ background: '#FAFAF8', padding: '96px 0', borderTop: '1px solid #E8E4DF' }}>
       <div className="fe-wrap">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 60, alignItems: 'flex-start' }}>
+        <div className="fe-2col" style={{ alignItems: 'flex-start' }}>
 
           {/* Left: framing */}
-          <div style={{ position: 'sticky', top: 96 }}>
+          <div className="fe-sticky-left">
             <div className="fe-badge fe-badge-green" style={{ marginBottom: 18 }}>Who assesses your project</div>
             <h2 className="font-display" style={{ fontSize: 'clamp(24px,3.5vw,36px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.25, marginBottom: 16 }}>
               The people, not the platform.

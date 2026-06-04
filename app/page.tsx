@@ -87,7 +87,7 @@ export default function HomePage() {
       <main style={{ paddingTop: 68 }}>
 
         {/* HERO — financial risk framing, not sustainability virtue */}
-        <section style={{ position: 'relative', minHeight: '90vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+        <section className="fe-hero" style={{ position: 'relative', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
             <Image src={HERO_IMG} alt="Nature-based carbon project landscape" fill style={{ objectFit: 'cover', objectPosition: 'center' }} priority />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(6,18,10,0.95) 0%, rgba(18,50,32,0.82) 50%, rgba(27,67,50,0.20) 100%)' }} />
@@ -157,10 +157,10 @@ export default function HomePage() {
         {/* WHAT WE DO — outcome framing, sticky left panel */}
         <section className="fe-section" style={{ background: '#FAFAF8' }}>
           <div className="fe-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 64, alignItems: 'flex-start' }}>
+            <div className="fe-2col" style={{ alignItems: 'flex-start' }}>
 
               {/* Sticky left */}
-              <div style={{ position: 'sticky', top: 96 }}>
+              <div className="fe-sticky-left">
                 <div className="fe-badge fe-badge-green" style={{ marginBottom: 18 }}>What we deliver</div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(24px,3vw,36px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.25, marginBottom: 18 }}>
                   A 70+ page report you can take to investors and certification bodies.
@@ -178,7 +178,7 @@ export default function HomePage() {
                 {STAGES.map((stage, i) => (
                   <div key={i} style={{ borderRadius: 16, border: stage.highlight ? '2px solid #1B4332' : '1px solid #E2DDD6', overflow: 'hidden', background: '#fff', boxShadow: stage.highlight ? '0 8px 32px rgba(27,67,50,0.12)' : '0 1px 6px rgba(0,0,0,0.04)' }}>
                     {stage.highlight && <div style={{ height: 3, background: 'linear-gradient(90deg, #1B4332, #40916C)' }} />}
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 260 }}>
+                    <div className="fe-stage-card-inner">
                       <div style={{ padding: '36px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
                           <div style={{ width: 30, height: 30, borderRadius: 8, background: stage.highlight ? '#1B4332' : '#EBF5EE', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -211,7 +211,7 @@ export default function HomePage() {
         <section className="fe-section" style={{ background: '#1B4332', overflow: 'hidden', position: 'relative' }}>
           <div style={{ position: 'absolute', right: -120, bottom: -100, width: 480, height: 480, borderRadius: '50%', background: 'rgba(255,255,255,0.012)', pointerEvents: 'none' }} />
           <div className="fe-wrap" style={{ position: 'relative', zIndex: 1 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+            <div className="fe-2col-equal" style={{ alignItems: 'center' }}>
               <div>
                 <div className="fe-badge" style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.10)', marginBottom: 24 }}>
                   Track record
@@ -258,7 +258,7 @@ export default function HomePage() {
         {/* PROJECT TYPES */}
         <section className="fe-section" style={{ background: '#fff' }}>
           <div className="fe-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 60, alignItems: 'center' }}>
+            <div className="fe-2col" style={{ alignItems: 'center' }}>
               <div>
                 <div className="fe-badge fe-badge-green" style={{ marginBottom: 16 }}>Scope</div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(24px,3vw,36px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.25, marginBottom: 16 }}>
@@ -268,7 +268,7 @@ export default function HomePage() {
                   We assess reforestation, agroforestry, ARR, and cookstove projects against Verra VCS, Gold Standard, and Plan Vivo. Each type has distinct methodology requirements. Our team has direct development experience across all four.
                 </p>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+              <div className="fe-usecase-grid">
                 {USE_CASES.map((uc, i) => (
                   <Link key={i} href={uc.href} className="fe-card" style={{ textDecoration: 'none', display: 'block' }}>
                     <div style={{ position: 'relative', height: 170 }}>

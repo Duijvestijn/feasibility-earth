@@ -74,7 +74,7 @@ export default function HowItWorksPage() {
           <div className="fe-wrap">
             <div style={{ display: 'flex', flexDirection: 'column', gap: 64 }}>
               {STEPS.map((step, i) => (
-                <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }}>
+                <div key={i} className="fe-2col-equal" style={{ alignItems: 'center' }}>
                   {i % 2 === 0 ? (<>
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 6 }}>

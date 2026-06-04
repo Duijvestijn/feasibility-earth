@@ -86,3 +86,175 @@ body {
 /* Nav link hover */
 .fe-nav-link { color: #5C5C58; text-decoration: none; padding: 8px 14px; border-radius: 8px; transition: color .15s, background .15s; }
 .fe-nav-link:hover { color: #1B4332; background: #F0EDE8; }
+
+/* ── Mobile responsive utilities ─────────────────────────────────── */
+
+/* Section padding reduced on mobile */
+@media(max-width: 640px) {
+  .fe-section    { padding: 56px 0; }
+  .fe-section-sm { padding: 40px 0; }
+  .fe-wrap { padding: 0 18px; }
+}
+
+/* Responsive 2-col grids: stack on mobile, side-by-side on desktop */
+.fe-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media(min-width: 768px) {
+  .fe-2col          { grid-template-columns: 1fr 2fr; gap: 64px; }
+  .fe-2col-equal    { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .fe-2col-rev      { grid-template-columns: 2fr 1fr; gap: 64px; }
+  .fe-2col-narrow   { grid-template-columns: 1fr 1.5fr; gap: 48px; }
+}
+.fe-2col-equal  { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.fe-2col-rev    { display: grid; grid-template-columns: 1fr; gap: 32px; }
+.fe-2col-narrow { display: grid; grid-template-columns: 1fr; gap: 28px; }
+
+/* Stats bars: stack on mobile */
+.fe-stats-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+@media(min-width: 480px) { .fe-stats-3 { grid-template-columns: repeat(3, 1fr); } }
+
+.fe-stats-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media(min-width: 640px) { .fe-stats-4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* Sticky left panel: only sticky on desktop */
+.fe-sticky-left { position: relative; top: auto; }
+@media(min-width: 768px) { .fe-sticky-left { position: sticky; top: 96px; } }
+
+/* Step/stage card image: hide on mobile to save space */
+.fe-card-image-mobile-hide { display: none; }
+@media(min-width: 640px) { .fe-card-image-mobile-hide { display: block; } }
+
+/* Process step cards: single column always, alt left/right on desktop only */
+.fe-step-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid #E2DDD6;
+  background: #fff;
+  overflow: hidden;
+}
+@media(min-width: 768px) {
+  .fe-step-card { display: grid; min-height: 260px; }
+  .fe-step-card-normal { grid-template-columns: 1fr 1fr; }
+  .fe-step-card-alt    { grid-template-columns: 1fr 1fr; }
+}
+
+/* Pricing tier card: stack panel on mobile */
+.fe-tier-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+}
+@media(min-width: 768px) {
+  .fe-tier-card { display: grid; grid-template-columns: 1fr 2fr; }
+}
+
+/* Methodology subsections: 2col on desktop only */
+.fe-subsection-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media(min-width: 640px) {
+  .fe-subsection-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Comparison grid: single col on mobile */
+.fe-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media(min-width: 768px) {
+  .fe-comparison-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Contact form grid: stack on mobile */
+.fe-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+@media(min-width: 480px) {
+  .fe-form-row { grid-template-columns: 1fr 1fr; }
+}
+
+/* Team cards: always 1col on mobile, auto-fit on desktop */
+.fe-team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+@media(min-width: 640px) {
+  .fe-team-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+}
+
+/* Hero: reduce min-height on mobile */
+.fe-hero { min-height: 85vh; }
+@media(max-width: 640px) { .fe-hero { min-height: 100svh; } }
+
+/* ROI comparison: stack on mobile */
+.fe-roi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media(min-width: 480px) {
+  .fe-roi-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Pricing tier: left panel full-width on mobile */
+@media(max-width: 767px) {
+  .fe-tier-card > div:first-child { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1); }
+}
+
+/* How-it-works: hide image on mobile (show text first) */
+@media(max-width: 767px) {
+  .fe-2col-equal > div[style*="height: 380"] { display: none; }
+  .fe-2col-equal > div[style*="height: 340"] { display: none; }
+}
+
+/* Methodology header row: readable on mobile */
+@media(max-width: 640px) {
+  .fe-stats-4 { grid-template-columns: 1fr 1fr; }
+}
+
+/* Nav: prevent overflow on small screens */
+@media(max-width: 380px) {
+  .fe-wrap { padding: 0 14px; }
+}
+
+/* Use case cards: 2 cols on mobile, 4 on desktop */
+.fe-usecase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media(min-width: 768px) {
+  .fe-usecase-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Stage cards on homepage: always full-width */
+.fe-stage-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+.fe-stage-card-inner {
+  display: flex;
+  flex-direction: column;
+}
+@media(min-width: 768px) {
+  .fe-stage-card-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 280px; }
+}

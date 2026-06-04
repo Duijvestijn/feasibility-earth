@@ -43,7 +43,7 @@ export default function ContactPage() {
 
         <section className="fe-section" style={{ background: '#FAFAF8' }}>
           <div className="fe-wrap" style={{ maxWidth: 860 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 52, alignItems: 'flex-start' }}>
+            <div className="fe-2col-equal" style={{ alignItems: 'flex-start' }}>
 
               {/* Form side */}
               <div>
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 {/* HubSpot form embed — replace with real HubSpot form ID when configured */}
                 <div style={{ background: '#fff', borderRadius: 16, border: '1px solid #E2DDD6', padding: '32px 28px' }}>
                   <form style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+                    <div className="fe-form-row">
                       <div>
                         <label style={{ fontSize: 12, fontWeight: 700, color: '#374151', display: 'block', marginBottom: 6, letterSpacing: '0.3px' }}>First name</label>
                         <input type="text" placeholder="Your first name" style={{ width: '100%', padding: '11px 14px', borderRadius: 8, border: '1px solid #D1D5DB', fontSize: 14, color: '#1A1A18', outline: 'none', boxSizing: 'border-box' as const }} />
