@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import NewsletterForm from '@/components/NewsletterForm'
 
 export const metadata: Metadata = {
   title: 'Insights — Feasibility.Earth',
@@ -48,7 +49,6 @@ export default function InsightsPage() {
         <section style={{ background: 'linear-gradient(150deg, #060E08 0%, #1B4332 100%)', padding: '80px 0 64px' }}>
           <div className="fe-wrap">
             <div style={{ maxWidth: 600 }}>
-              <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.10)', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.14)', marginBottom: 22 }}>Insights</div>
               <h1 className="font-display" style={{ fontSize: 'clamp(30px,5vw,50px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 16 }}>
                 Practical analysis from practitioners.
               </h1>
@@ -80,6 +80,19 @@ export default function InsightsPage() {
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section style={{ background: 'linear-gradient(150deg, #060E08 0%, #1B4332 100%)', padding: '64px 0' }}>
+          <div className="fe-wrap" style={{ maxWidth: 640 }}>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#40916C', letterSpacing: '0.6px', textTransform: 'uppercase', marginBottom: 12 }}>New analysis, when we publish it</p>
+            <h2 className="font-display" style={{ fontSize: 'clamp(22px,3.5vw,32px)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 10 }}>
+              Stay current on feasibility methodology.
+            </h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, marginBottom: 28 }}>
+              We publish new analysis when something is worth saying — not on a forced schedule. No filler.
+            </p>
+            <NewsletterForm variant="dark" />
           </div>
         </section>
 

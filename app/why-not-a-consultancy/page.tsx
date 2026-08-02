@@ -59,9 +59,6 @@ export default function WhyNotConsultancyPage() {
 
         <section style={{ background: 'linear-gradient(150deg, #060E08 0%, #1B4332 100%)', padding: '80px 0 64px' }}>
           <div className="fe-wrap" style={{ maxWidth: 680 }}>
-            <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.10)', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.14)', marginBottom: 22 }}>
-              An honest comparison
-            </div>
             <h1 className="font-display" style={{ fontSize: 'clamp(28px,5vw,50px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 18 }}>
               Why not use a large consultancy?
             </h1>

@@ -51,7 +51,6 @@ export default function UseCasesPage() {
 
         <section style={{ background: 'linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%)', padding: '80px 0 64px' }}>
           <div className="fe-wrap">
-            <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.15)', color: '#D8F3DC', border: '1px solid rgba(255,255,255,0.2)', marginBottom: 20 }}>Supported project types</div>
             <h1 className="font-display" style={{ fontSize: 'clamp(32px,5vw,56px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 16 }}>Works for all major<br />nature-based projects</h1>
             <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', maxWidth: 500, lineHeight: 1.7 }}>Feasibility.Earth supports all four main project categories. Eligibility criteria, CO₂ methodologies, and certification standards are built in.</p>
           </div>

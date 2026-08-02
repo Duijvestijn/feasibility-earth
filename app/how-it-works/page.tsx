@@ -58,9 +58,6 @@ export default function HowItWorksPage() {
 
         <section style={{ background: 'linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%)', padding: '80px 0 64px' }}>
           <div className="fe-wrap">
-            <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.15)', color: '#D8F3DC', border: '1px solid rgba(255,255,255,0.2)', marginBottom: 20 }}>
-              How it works
-            </div>
             <h1 className="font-display" style={{ fontSize: 'clamp(30px,5vw,52px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 16 }}>
               From land details to a 70+ page<br />report you can count on.
             </h1>
@@ -90,7 +87,7 @@ export default function HowItWorksPage() {
                         <p style={{ fontSize: 12, fontWeight: 700, color: '#6B4226', textTransform: 'uppercase' as const, letterSpacing: '0.8px', marginBottom: 12 }}>What we cover:</p>
                         {step.checklist.map((item, j) => (
                           <div key={j} style={{ display: 'flex', gap: 9, marginBottom: 8 }}>
-                            <span style={{ color: '#1B4332', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>✓</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1B4332" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}><polyline points="20 6 9 17 4 12"/></svg>
                             <span style={{ fontSize: 14, color: '#374151', lineHeight: 1.5 }}>{item}</span>
                           </div>
                         ))}
@@ -117,7 +114,7 @@ export default function HowItWorksPage() {
                         <p style={{ fontSize: 12, fontWeight: 700, color: '#6B4226', textTransform: 'uppercase' as const, letterSpacing: '0.8px', marginBottom: 12 }}>What you receive:</p>
                         {step.checklist.map((item, j) => (
                           <div key={j} style={{ display: 'flex', gap: 9, marginBottom: 8 }}>
-                            <span style={{ color: '#1B4332', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>✓</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1B4332" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}><polyline points="20 6 9 17 4 12"/></svg>
                             <span style={{ fontSize: 14, color: '#374151', lineHeight: 1.5 }}>{item}</span>
                           </div>
                         ))}

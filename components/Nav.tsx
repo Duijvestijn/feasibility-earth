@@ -8,6 +8,7 @@ const LINKS = [
   { href: '/methodology',   label: 'Methodology' },
   { href: '/insights',      label: 'Insights' },
   { href: '/pricing',       label: 'Pricing' },
+  { href: '/open-call',     label: 'Open Call', highlight: true },
   { href: '/contact',       label: 'Contact' },
 ]
 
@@ -27,18 +28,18 @@ export default function Nav() {
               <circle cx="12" cy="10" r="3" fill="white"/>
             </svg>
           </div>
-          <span style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 18, fontWeight: 700, color: '#1B4332', letterSpacing: '-0.3px' }}>
+          <span style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif", fontSize: 18, fontWeight: 700, color: '#1B4332', letterSpacing: '-0.3px' }}>
             feasibility<span style={{ color: '#40916C' }}>.earth</span>
           </span>
         </Link>
 
         {/* Desktop links */}
-        <ul style={{ display: 'flex', listStyle: 'none', gap: 2, flex: 1 }} className="hidden md:flex">
+        <ul style={{ listStyle: 'none', gap: 2, flex: 1 }} className="hidden md:flex">
           {LINKS.map(l => {
             const active = pathname === l.href
             return (
               <li key={l.href}>
-                <Link href={l.href} className="fe-nav-link" style={{ fontWeight: active ? 700 : 500, color: active ? '#1B4332' : undefined, background: active ? '#EBF5EE' : undefined }}>
+                <Link href={l.href} className="fe-nav-link" style={{ fontWeight: active ? 700 : 500, color: l.highlight ? '#D4A017' : active ? '#1B4332' : undefined, background: active ? '#EBF5EE' : undefined }}>
                   {l.label}
                 </Link>
               </li>
@@ -47,7 +48,7 @@ export default function Nav() {
         </ul>
 
         {/* CTA */}
-        <div style={{ marginLeft: 'auto', display: 'flex', gap: 10, alignItems: 'center' }} className="hidden md:flex">
+        <div style={{ marginLeft: 'auto', gap: 10, alignItems: 'center' }} className="hidden md:flex">
           <Link href="https://app.feasibility.earth" target="_blank" className="btn-outline" style={{ padding: '9px 18px', fontSize: 14 }}>Log in</Link>
           <Link href="/pricing" className="btn-primary" style={{ padding: '10px 18px', fontSize: 14 }}>Start a Study</Link>
         </div>
@@ -64,7 +65,7 @@ export default function Nav() {
       {open && (
         <div style={{ borderTop: '1px solid #E2DDD6', background: '#FAFAF8', padding: '16px 24px 24px' }}>
           {LINKS.map(l => (
-            <Link key={l.href} href={l.href} onClick={() => setOpen(false)} style={{ display: 'block', padding: '12px 0', fontSize: 15, fontWeight: 500, color: '#1A1A18', textDecoration: 'none', borderBottom: '1px solid #F0EDE8' }}>{l.label}</Link>
+            <Link key={l.href} href={l.href} onClick={() => setOpen(false)} style={{ display: 'block', padding: '12px 0', fontSize: 15, fontWeight: 500, color: l.highlight ? '#D4A017' : '#1A1A18', textDecoration: 'none', borderBottom: '1px solid #F0EDE8' }}>{l.label}</Link>
           ))}
           <div style={{ display: 'flex', gap: 10, marginTop: 20, flexWrap: 'wrap' }}>
             <Link href="https://app.feasibility.earth" target="_blank" className="btn-outline" style={{ flex: 1, justifyContent: 'center', fontSize: 14 }}>Log in</Link>

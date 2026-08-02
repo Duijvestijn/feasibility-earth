@@ -24,7 +24,7 @@ export default function ArticlePage() {
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><polyline points="15 18 9 12 15 6"/></svg>
                 Insights
               </Link>
-              <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: 13 }}>/</span>
+              <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: 13 }}>/</span>
               <span className="fe-badge" style={{ background: 'rgba(216,243,220,0.12)', color: '#86C89C', border: '1px solid rgba(134,200,156,0.2)', fontSize: 10 }}>Certification</span>
             </div>
             <h1 className="font-display" style={{ fontSize: 'clamp(26px,4vw,44px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 18 }}>

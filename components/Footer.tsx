@@ -15,7 +15,7 @@ export default function Footer() {
                   <circle cx="12" cy="10" r="3" fill="rgba(255,255,255,0.5)"/>
                 </svg>
               </div>
-              <span style={{ fontFamily: 'Fraunces, Georgia, serif', fontSize: 17, fontWeight: 700, color: '#fff' }}>feasibility.earth</span>
+              <span style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif", fontSize: 17, fontWeight: 700, color: '#fff' }}>feasibility.earth</span>
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.75, maxWidth: 210, color: 'rgba(255,255,255,0.5)' }}>
               From land to bankable carbon project — eligibility, feasibility, and full project development.
@@ -43,9 +43,11 @@ export default function Footer() {
           <div>
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1.1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.32)', marginBottom: 16 }}>Platform</p>
             {[
-              { href: '/how-it-works', label: 'How It Works' },
-              { href: '/use-cases',    label: 'Use Cases' },
-              { href: '/faq',          label: 'FAQ' },
+              { href: '/how-it-works',  label: 'How It Works' },
+              { href: '/methodology',   label: 'Methodology' },
+              { href: '/insights',      label: 'Insights' },
+              { href: '/use-cases',     label: 'Use Cases' },
+              { href: '/faq',           label: 'FAQ' },
             ].map(l => (
               <Link key={l.href} href={l.href} className="fe-footer-link" style={{ display: 'block', fontSize: 13, marginBottom: 10 }}>{l.label}</Link>
             ))}
@@ -55,6 +57,7 @@ export default function Footer() {
           <div>
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1.1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.32)', marginBottom: 16 }}>Contact</p>
             <a href="mailto:feasibility@green.earth" className="fe-footer-link" style={{ display: 'block', fontSize: 13, marginBottom: 10 }}>feasibility@green.earth</a>
+            <Link href="/open-call" className="fe-footer-link" style={{ display: 'block', fontSize: 13, marginBottom: 10, color: '#F4C430' }}>Submit a project — Open Call</Link>
             <a href="https://green.earth" target="_blank" rel="noopener noreferrer" className="fe-footer-link" style={{ display: 'block', fontSize: 13 }}>green.earth</a>
           </div>
         </div>
@@ -75,8 +78,8 @@ export default function Footer() {
           </Link>
 
           <div style={{ display: 'flex', gap: 20 }}>
-            <Link href="/privacy" className="fe-footer-link" style={{ fontSize: 12 }}>Privacy</Link>
-            <Link href="/terms"   className="fe-footer-link" style={{ fontSize: 12 }}>Terms</Link>
+            <Link href="/faq"     className="fe-footer-link" style={{ fontSize: 12 }}>FAQ</Link>
+            <Link href="/contact" className="fe-footer-link" style={{ fontSize: 12 }}>Contact</Link>
           </div>
         </div>
       </div>

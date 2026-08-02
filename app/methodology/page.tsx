@@ -139,7 +139,6 @@ export default function MethodologyPage() {
         <section style={{ background: 'linear-gradient(150deg, #060E08 0%, #1B4332 100%)', padding: '88px 0 72px' }}>
           <div className="fe-wrap">
             <div style={{ maxWidth: 760 }}>
-              <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.10)', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.14)', marginBottom: 24 }}>Methodology</div>
               <h1 className="font-display" style={{ fontSize: 'clamp(30px,5vw,52px)', fontWeight: 700, color: '#fff', lineHeight: 1.08, marginBottom: 22 }}>
                 What our 70+ page report<br />actually contains — and how<br />we produce it.
               </h1>
@@ -188,7 +187,6 @@ export default function MethodologyPage() {
         <section className="fe-section" style={{ background: '#FAFAF8' }}>
           <div className="fe-wrap">
             <div style={{ marginBottom: 48 }}>
-              <div className="fe-badge fe-badge-green" style={{ marginBottom: 16 }}>Report structure</div>
               <h2 className="font-display" style={{ fontSize: 'clamp(26px,4vw,40px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.2 }}>
                 Seven sections. Every material factor covered.
               </h2>
@@ -248,9 +246,6 @@ export default function MethodologyPage() {
           <div className="fe-wrap">
             <div className="fe-2col-equal" style={{ alignItems: 'center' }}>
               <div>
-                <div className="fe-badge" style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.12)', marginBottom: 22 }}>
-                  Current standards
-                </div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(24px,3.5vw,36px)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 20 }}>
                   Assessed against standards as they are today — not as they were.
                 </h2>
@@ -286,7 +281,6 @@ export default function MethodologyPage() {
         <section className="fe-section" style={{ background: '#fff' }}>
           <div className="fe-wrap" style={{ maxWidth: 820 }}>
             <div style={{ textAlign: 'center', marginBottom: 44 }}>
-              <div className="fe-badge fe-badge-green" style={{ marginBottom: 14 }}>Where our methodology differs</div>
               <h2 className="font-display" style={{ fontSize: 'clamp(24px,3.5vw,38px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.2 }}>
                 Specific differences from standard<br />desk-based assessment practice
               </h2>

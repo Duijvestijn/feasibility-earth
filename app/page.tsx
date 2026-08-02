@@ -3,6 +3,12 @@ import Footer from '@/components/Footer'
 import TeamSection from '@/components/TeamSection'
 import Link from 'next/link'
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Feasibility.Earth — Carbon Project Feasibility for Serious Developers',
+  description: 'Expert-led carbon project prefeasibility assessments. 70+ page bankable report in 5 business days. Built by practitioners with certified project experience worldwide. Verra VCS · Gold Standard · Plan Vivo.',
+}
 
 const HERO_IMG     = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_174959_337ef494-c1ed-43ed-8479-6f10ccf3680e.png'
 const SAT_IMG      = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_175009_19fc6154-aab5-4955-b5dc-d16dcac477c1.png'
@@ -96,16 +102,12 @@ export default function HomePage() {
           <div className="fe-wrap" style={{ position: 'relative', zIndex: 1, padding: '100px 24px 100px' }}>
             <div style={{ maxWidth: 720 }}>
 
-              <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.10)', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.14)', marginBottom: 36, letterSpacing: '0.3px' }}>
-                Carbon Project Feasibility
-              </div>
-
               <h1 className="font-display" style={{ fontSize: 'clamp(44px, 6.5vw, 76px)', fontWeight: 700, color: '#fff', lineHeight: 1.02, marginBottom: 28 }}>
                 Assess before<br />you invest.
               </h1>
 
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.70)', lineHeight: 1.75, marginBottom: 36, maxWidth: 560 }}>
-                Bad feasibility work is costing developers certifications and investors capital. We have developed 149,000 certified credits in Africa and Central Asia. We assess projects the same way we build them.
+                Bad feasibility work is costing developers certifications and investors capital. We are active across Africa, Asia, and Latin America — and we assess projects the same way we build them.
               </p>
 
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
@@ -117,7 +119,10 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <p style={{ marginTop: 22, fontSize: 12, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.3px' }}>
+              <p style={{ marginTop: 16, fontSize: 11, color: 'rgba(255,255,255,0.45)', letterSpacing: '0.2px' }}>
+                Opens app.feasibility.earth — self-service, takes 15 minutes
+              </p>
+              <p style={{ marginTop: 10, fontSize: 12, color: 'rgba(255,255,255,0.55)', letterSpacing: '0.3px' }}>
                 Verra VCS · Gold Standard · Plan Vivo · Eligibility assessment from $500 · Full study from $7,500
               </p>
             </div>
@@ -128,9 +133,6 @@ export default function HomePage() {
         <section className="fe-section" style={{ background: '#0F2016' }}>
           <div className="fe-wrap">
             <div style={{ maxWidth: 680, marginBottom: 52 }}>
-              <div className="fe-badge" style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.55)', border: '1px solid rgba(255,255,255,0.10)', marginBottom: 20 }}>
-                Why this matters
-              </div>
               <h2 className="font-display" style={{ fontSize: 'clamp(26px,4vw,40px)', fontWeight: 700, color: '#fff', lineHeight: 1.18, marginBottom: 16 }}>
                 The quality crisis in carbon markets starts at feasibility.
               </h2>
@@ -147,7 +149,7 @@ export default function HomePage() {
                   </div>
                   <h3 style={{ fontSize: 17, fontWeight: 700, color: '#fff', lineHeight: 1.35, marginBottom: 12 }}>{item.headline}</h3>
                   <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.52)', lineHeight: 1.8, marginBottom: 16 }}>{item.body}</p>
-                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.25)', fontStyle: 'italic' }}>{item.source}</p>
+                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', fontStyle: 'italic' }}>{item.source}</p>
                 </div>
               ))}
             </div>
@@ -161,7 +163,6 @@ export default function HomePage() {
 
               {/* Sticky left */}
               <div className="fe-sticky-left">
-                <div className="fe-badge fe-badge-green" style={{ marginBottom: 18 }}>What we deliver</div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(24px,3vw,36px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.25, marginBottom: 18 }}>
                   A 70+ page report you can take to investors and certification bodies.
                 </h2>
@@ -213,9 +214,6 @@ export default function HomePage() {
           <div className="fe-wrap" style={{ position: 'relative', zIndex: 1 }}>
             <div className="fe-2col-equal" style={{ alignItems: 'center' }}>
               <div>
-                <div className="fe-badge" style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.10)', marginBottom: 24 }}>
-                  Track record
-                </div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(24px,3.5vw,38px)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 22 }}>
                   We assess projects the same way we develop them.
                 </h2>
@@ -238,11 +236,11 @@ export default function HomePage() {
                     </div>
                     <div style={{ padding: '14px 18px' }}>
                       <p style={{ fontSize: 14, fontWeight: 700, color: '#fff', marginBottom: 3 }}>{p.name}</p>
-                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', marginBottom: 8 }}>{p.country}</p>
+                      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: 8 }}>{p.country}</p>
                       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                         <span style={{ fontSize: 13, fontWeight: 600, color: '#86C89C' }}>{p.credits} credits/yr</span>
                         <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(255,255,255,0.15)', flexShrink: 0 }} />
-                        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.30)' }}>{p.cert}</span>
+                        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)' }}>{p.cert}</span>
                       </div>
                     </div>
                   </div>
@@ -255,12 +253,29 @@ export default function HomePage() {
         {/* TEAM */}
         <TeamSection />
 
+        {/* OPEN CALL BANNER */}
+        <section style={{ background: '#F4C430', padding: '24px 0' }}>
+          <div className="fe-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+              <div style={{ width: 36, height: 36, borderRadius: 9, background: 'rgba(0,0,0,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.94-1.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 15z"/></svg>
+              </div>
+              <div>
+                <p style={{ fontSize: 15, fontWeight: 700, color: '#1A1A18' }}>Green Earth is actively seeking carbon projects.</p>
+                <p style={{ fontSize: 13, color: 'rgba(0,0,0,0.55)' }}>Submit yours through Feasibility.Earth — free assessment, no commitment required.</p>
+              </div>
+            </div>
+            <Link href="/open-call" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 22px', background: '#1B4332', color: '#fff', fontWeight: 700, fontSize: 14, borderRadius: 8, textDecoration: 'none', flexShrink: 0 }}>
+              View open call <Arrow size={14} color="#fff" />
+            </Link>
+          </div>
+        </section>
+
         {/* PROJECT TYPES */}
         <section className="fe-section" style={{ background: '#fff' }}>
           <div className="fe-wrap">
             <div className="fe-2col" style={{ alignItems: 'center' }}>
               <div>
-                <div className="fe-badge fe-badge-green" style={{ marginBottom: 16 }}>Scope</div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(24px,3vw,36px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.25, marginBottom: 16 }}>
                   Four project types. All major standards.
                 </h2>
@@ -301,14 +316,14 @@ export default function HomePage() {
               We will tell you honestly whether it has merit, what the risks are, and what it would take to develop it. Our team has been through this process — on both sides of the assessment.
             </p>
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/pricing" className="btn-amber" style={{ fontSize: 15, padding: '15px 34px', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-                Get in touch <Arrow size={15} color="#1A1A18" />
+              <Link href="/contact" className="btn-amber" style={{ fontSize: 15, padding: '15px 34px', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+                Tell us about your project <Arrow size={15} color="#1A1A18" />
               </Link>
               <Link href="/how-it-works" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 26px', background: 'rgba(255,255,255,0.07)', color: '#fff', fontWeight: 600, fontSize: 15, borderRadius: 8, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.12)' }}>
                 How we work
               </Link>
             </div>
-            <p style={{ marginTop: 28, fontSize: 12, color: 'rgba(255,255,255,0.22)' }}>
+            <p style={{ marginTop: 28, fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>
               Eligibility assessment from $500 · Full feasibility study from $7,500 · Project development by arrangement
             </p>
           </div>

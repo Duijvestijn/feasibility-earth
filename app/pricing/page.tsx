@@ -27,9 +27,6 @@ export default function PricingPage() {
 
         <section style={{ background: 'linear-gradient(150deg, #0A1E11 0%, #1B4332 100%)', padding: '88px 0 68px', textAlign: 'center' }}>
           <div className="fe-wrap">
-            <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.12)', color: '#D8F3DC', border: '1px solid rgba(255,255,255,0.16)', marginBottom: 22 }}>
-              Services
-            </div>
             <h1 className="font-display" style={{ fontSize: 'clamp(30px,5vw,52px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 18 }}>
               A 70+ page independent report<br />you can count on.
             </h1>
@@ -53,6 +50,9 @@ export default function PricingPage() {
                 <Link href="https://app.feasibility.earth" target="_blank" className="btn-primary" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14 }}>
                   Start eligibility check <ArrowRight size={14} color="#fff" />
                 </Link>
+                <p style={{ fontSize: 11, color: '#40916C', marginTop: 10, textAlign: 'center' as const, letterSpacing: '0.2px' }}>
+                  Opens app.feasibility.earth — takes 15 minutes
+                </p>
               </div>
               <div style={{ padding: '40px 40px' }}>
                 <p style={{ fontSize: 13, fontWeight: 700, color: '#5C5C58', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 22 }}>What is included</p>
@@ -87,15 +87,16 @@ export default function PricingPage() {
 
                 {/* Report size callout */}
                 <div style={{ padding: '14px 16px', background: 'rgba(255,255,255,0.08)', borderRadius: 10, marginBottom: 20, border: '1px solid rgba(255,255,255,0.12)' }}>
-                  <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', fontFamily: 'Fraunces, Georgia, serif', marginBottom: 2 }}>70+ page report</p>
+                  <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', fontFamily: "'Bricolage Grotesque', system-ui, sans-serif", marginBottom: 2 }}>70+ page report</p>
                   <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.50)' }}>Everything assessed remotely — no site visit required</p>
                 </div>
 
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 24 }}>A complete in-depth study structured for investors, DFIs, and certification bodies. Delivered in 5 business days.</p>
                 <Link href="/contact" className="btn-amber" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14, textDecoration: 'none' }}>
-                  Start full study <ArrowRight size={14} color="#1A1A18" />
+                  Request a full study <ArrowRight size={14} color="#1A1A18" />
                 </Link>
-                <p style={{ marginTop: 12, fontSize: 11, color: 'rgba(255,255,255,0.22)', textAlign: 'center' as const }}>50% refund if land does not qualify</p>
+                <p style={{ marginTop: 10, fontSize: 11, color: 'rgba(255,255,255,0.65)', textAlign: 'center' as const }}>Our team reviews your project and follows up within 1 business day</p>
+                <p style={{ marginTop: 6, fontSize: 11, color: 'rgba(255,255,255,0.45)', textAlign: 'center' as const }}>50% refund if land does not qualify</p>
               </div>
 
               <div style={{ padding: '36px 36px' }}>
@@ -204,12 +205,12 @@ export default function PricingPage() {
             <div className="fe-roi-grid" style={{ marginTop: 18 }}>
               <div style={{ padding: '18px 20px', background: '#FEF9EE', borderRadius: 12, border: '1px solid #FDDEA5' }}>
                 <p style={{ fontSize: 10, fontWeight: 700, color: '#92400E', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 6 }}>Cost of a failed project</p>
-                <p style={{ fontSize: 24, fontWeight: 800, color: '#1A1A18', fontFamily: 'Fraunces, Georgia, serif', lineHeight: 1.1, marginBottom: 6 }}>$150k–$500k</p>
+                <p style={{ fontSize: 24, fontWeight: 800, color: '#1A1A18', fontFamily: "'Bricolage Grotesque', system-ui, sans-serif", lineHeight: 1.1, marginBottom: 6 }}>$150k–$500k</p>
                 <p style={{ fontSize: 12, color: '#92400E', lineHeight: 1.6 }}>Typical wasted spend when a project fails at PDD validation — plus 18–24 months of lost time. (Source: VCM practitioner data)</p>
               </div>
               <div style={{ padding: '18px 20px', background: '#EBF5EE', borderRadius: 12, border: '1px solid #C5E8D3' }}>
                 <p style={{ fontSize: 10, fontWeight: 700, color: '#1B4332', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 6 }}>Our full study</p>
-                <p style={{ fontSize: 24, fontWeight: 800, color: '#1B4332', fontFamily: 'Fraunces, Georgia, serif', lineHeight: 1.1, marginBottom: 6 }}>$7,500</p>
+                <p style={{ fontSize: 24, fontWeight: 800, color: '#1B4332', fontFamily: "'Bricolage Grotesque', system-ui, sans-serif", lineHeight: 1.1, marginBottom: 6 }}>$7,500</p>
                 <p style={{ fontSize: 12, color: '#2D6A4F', lineHeight: 1.6 }}>Identifies the same failure modes before you commit development capital. Approximately 1.5–5% of the risk it eliminates.</p>
               </div>
             </div>

@@ -18,7 +18,7 @@ const FAQS = [
     items: [
       {
         q: 'What is Feasibility.Earth?',
-        a: 'Feasibility.Earth is an expert-led feasibility assessment service for nature-based carbon projects. We combine satellite analysis with direct field experience — our team has developed and certified 149,000 carbon credits across Africa and Central Asia — to produce rigorous eligibility and feasibility assessments for reforestation, agroforestry, ARR, and cookstove projects.'
+        a: 'Feasibility.Earth is an expert-led feasibility assessment service for nature-based carbon projects. We combine satellite analysis with direct field experience — our team has developed and certified projects across Africa, Asia, and Latin America — to produce rigorous eligibility and feasibility assessments for reforestation, agroforestry, ARR, and cookstove projects.'
       },
       {
         q: 'Who uses Feasibility.Earth?',
@@ -107,7 +107,6 @@ export default function FAQPage() {
 
         <section style={{ background: 'linear-gradient(150deg, #060E08 0%, #1B4332 100%)', padding: '80px 0 64px' }}>
           <div className="fe-wrap">
-            <div className="fe-badge" style={{ background: 'rgba(216,243,220,0.10)', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.14)', marginBottom: 22 }}>FAQ</div>
             <h1 className="font-display" style={{ fontSize: 'clamp(30px,5vw,50px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 16 }}>
               Common questions
             </h1>
