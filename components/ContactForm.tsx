@@ -10,6 +10,7 @@ const labelStyle = { fontSize: 12, fontWeight: 700, color: '#374151', display: '
 
 export default function ContactForm() {
   const [fields, setFields] = useState({ firstName: '', lastName: '', email: '', organisation: '', role: '', message: '' })
+  const [newsletter, setNewsletter] = useState(false)
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
   function set(key: string) {
@@ -24,7 +25,7 @@ export default function ContactForm() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(fields),
+        body: JSON.stringify({ ...fields, newsletter }),
       })
       setStatus(res.ok ? 'success' : 'error')
     } catch {
@@ -83,6 +84,17 @@ export default function ContactForm() {
           <label style={labelStyle}>Tell us about your project *</label>
           <textarea required placeholder="Location, land size, project type, number of projects — whatever you know at this stage" rows={5} value={fields.message} onChange={set('message')} style={{ ...inputStyle, resize: 'vertical' }} />
         </div>
+        <label style={{ display: 'flex', gap: 10, alignItems: 'flex-start', cursor: 'pointer' }}>
+          <input
+            type="checkbox"
+            checked={newsletter}
+            onChange={e => setNewsletter(e.target.checked)}
+            style={{ marginTop: 3, accentColor: '#1B4332', flexShrink: 0, width: 15, height: 15 }}
+          />
+          <span style={{ fontSize: 13, color: '#5C5C58', lineHeight: 1.6 }}>
+            Keep me updated — I would like to receive methodology insights and analysis from Feasibility.Earth.
+          </span>
+        </label>
         {status === 'error' && (
           <p style={{ fontSize: 13, color: '#DC2626', background: '#FEF2F2', padding: '10px 14px', borderRadius: 8, margin: 0 }}>
             Something went wrong — please try again or email us at feasibility@green.earth

@@ -47,6 +47,42 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Feasibility.Earth',
+              url: 'https://feasibility.earth',
+              logo: 'https://feasibility.earth/favicon.svg',
+              description: 'Expert-led feasibility studies for nature-based carbon projects. Eligibility assessment, bankable full studies, and full project development — backed by practitioners with certified project experience worldwide.',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                email: 'feasibility@green.earth',
+                contactType: 'customer service',
+                availableLanguage: 'English',
+              },
+              sameAs: ['https://green.earth'],
+              offers: [
+                {
+                  '@type': 'Offer',
+                  name: 'Eligibility Check',
+                  price: '500',
+                  priceCurrency: 'USD',
+                  description: 'Satellite screening and eligibility assessment for carbon project land parcels.',
+                },
+                {
+                  '@type': 'Offer',
+                  name: 'Full Feasibility Study',
+                  price: '7500',
+                  priceCurrency: 'USD',
+                  description: '70+ page bankable feasibility report covering all material carbon project factors.',
+                },
+              ],
+            }),
+          }}
+        />
         {children}
         <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8515463.js"></script>
       </body>

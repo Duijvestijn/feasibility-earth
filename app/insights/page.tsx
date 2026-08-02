@@ -15,6 +15,22 @@ function Arrow({ size = 14, color = 'currentColor' }: { size?: number; color?: s
 
 const ARTICLES = [
   {
+    slug: 'satellite-data-carbon-project-assessment',
+    tag: 'Methodology',
+    title: 'How Satellite Data Replaced Site Visits in Carbon Project Feasibility',
+    excerpt: 'Ten years ago, a credible feasibility assessment required field teams for weeks. Today, the same analysis — in most cases a more accurate one — is produced remotely in days. Here is what changed, what satellite data actually measures, and why this matters for project economics.',
+    readTime: '5 min',
+    date: 'August 2026',
+  },
+  {
+    slug: 'verra-vcs-vs-gold-standard-plan-vivo',
+    tag: 'Certification',
+    title: 'Verra VCS, Gold Standard, or Plan Vivo: Which Standard Fits Your Carbon Project?',
+    excerpt: 'Choosing the wrong certification standard at the feasibility stage is one of the most common and most correctable mistakes in carbon project development. The choice determines your methodology, buyer pool, and development timeline. Here is how to decide.',
+    readTime: '7 min',
+    date: 'July 2026',
+  },
+  {
     slug: 'why-carbon-projects-fail-feasibility',
     tag: 'Methodology',
     title: 'Why Nature-Based Carbon Projects Fail — and What a Rigorous Feasibility Assessment Should Catch',
