@@ -28,7 +28,7 @@ export default function PricingPage() {
         <section style={{ background: 'linear-gradient(150deg, #0A1E11 0%, #1B4332 100%)', padding: '88px 0 68px', textAlign: 'center' }}>
           <div className="fe-wrap">
             <h1 className="font-display" style={{ fontSize: 'clamp(30px,5vw,52px)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: 18 }}>
-              A 70+ page independent report<br />you can count on.
+              A 70+ page expert pre-feasibility report.
             </h1>
             <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.62)', maxWidth: 560, margin: '0 auto', lineHeight: 1.8 }}>
               If your land has real carbon potential, you need to know exactly how much — and have the documentation to prove it to investors, certification bodies, and development partners. That is what we produce.
@@ -83,12 +83,12 @@ export default function PricingPage() {
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Step 02</span>
                 <div className="font-display" style={{ fontSize: 52, fontWeight: 700, color: '#fff', lineHeight: 1, marginBottom: 6 }}>$7,500</div>
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', fontWeight: 600, marginBottom: 6 }}>Full Feasibility Study</p>
-                <p style={{ fontSize: 13, color: '#F4C430', fontWeight: 700, marginBottom: 16 }}>Bankable. Certification-ready.</p>
+                <p style={{ fontSize: 13, color: '#F4C430', fontWeight: 700, marginBottom: 16 }}>Investor-ready. Methodology-aligned.</p>
 
                 {/* Report size callout */}
                 <div style={{ padding: '14px 16px', background: 'rgba(255,255,255,0.08)', borderRadius: 10, marginBottom: 20, border: '1px solid rgba(255,255,255,0.12)' }}>
                   <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', fontFamily: "'Bricolage Grotesque', system-ui, sans-serif", marginBottom: 2 }}>70+ page report</p>
-                  <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.50)' }}>Everything assessed remotely — no site visit required</p>
+                  <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.50)' }}>Core analysis via satellite data and regional databases</p>
                 </div>
 
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 24 }}>A complete in-depth study structured for investors, DFIs, and certification bodies. Delivered in 5 business days.</p>
@@ -148,8 +148,8 @@ export default function PricingPage() {
                 ))}
 
                 <div style={{ marginTop: 18, padding: '12px 14px', background: '#F0FDF4', borderRadius: 10, border: '1px solid #C5E8D3' }}>
-                  <p style={{ fontSize: 12, fontWeight: 700, color: '#1B4332', marginBottom: 3 }}>All remote. No site visit required.</p>
-                  <p style={{ fontSize: 12, color: '#2D6A4F', lineHeight: 1.6 }}>Every section of this report is produced using satellite data, regional databases, and methodology expertise. You do not need to arrange fieldwork — we handle the full technical assessment remotely.</p>
+                  <p style={{ fontSize: 12, fontWeight: 700, color: '#1B4332', marginBottom: 3 }}>Primarily remote. Field validation identified where needed.</p>
+                  <p style={{ fontSize: 12, color: '#2D6A4F', lineHeight: 1.6 }}>The core assessment is performed using satellite data and regional databases. Where material data gaps exist that would affect the outcome, we identify the specific field validation steps required before development or certification can proceed.</p>
                 </div>
               </div>
             </div>

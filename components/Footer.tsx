@@ -18,7 +18,7 @@ export default function Footer() {
               <span style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif", fontSize: 17, fontWeight: 700, color: '#fff' }}>feasibility.earth</span>
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.75, maxWidth: 210, color: 'rgba(255,255,255,0.5)' }}>
-              From land to bankable carbon project — eligibility, feasibility, and full project development.
+              From land to certified carbon project — eligibility screening, pre-feasibility studies, and full project development.
             </p>
             <div style={{ marginTop: 14, display: 'flex', gap: 6, flexWrap: 'wrap' }}>
               {['Verra VCS', 'Gold Standard', 'Plan Vivo'].map(tag => (
@@ -78,6 +78,8 @@ export default function Footer() {
           </Link>
 
           <div style={{ display: 'flex', gap: 20 }}>
+            <Link href="/privacy" className="fe-footer-link" style={{ fontSize: 12 }}>Privacy</Link>
+            <Link href="/terms"   className="fe-footer-link" style={{ fontSize: 12 }}>Terms</Link>
             <Link href="/faq"     className="fe-footer-link" style={{ fontSize: 12 }}>FAQ</Link>
             <Link href="/contact" className="fe-footer-link" style={{ fontSize: 12 }}>Contact</Link>
           </div>

@@ -2,21 +2,26 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 
+const OG_IMAGE = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_174959_337ef494-c1ed-43ed-8479-6f10ccf3680e.png'
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://feasibility.earth'),
   title: 'Feasibility.Earth — Carbon Project Feasibility for Serious Developers',
-  description: 'Expert-led feasibility studies for nature-based carbon projects. Eligibility assessment, bankable full studies, and full project development — backed by practitioners with certified project experience worldwide.',
+  description: 'Expert-led carbon project pre-feasibility assessments. Eligibility screening from $500, full feasibility study from $7,500, and project development partnership — backed by practitioners with certified project experience worldwide.',
   keywords: 'carbon project feasibility study, nature-based solutions, Verra VCS, Gold Standard, carbon credit development, reforestation feasibility, agroforestry carbon, cookstove carbon credits',
   openGraph: {
     title: 'Feasibility.Earth — Know What Your Land Is Capable Of',
-    description: 'Expert-led feasibility studies for nature-based carbon projects. From eligibility assessment to full project development — backed by proven field experience.',
+    description: 'Expert-led carbon project pre-feasibility assessments. From eligibility screening to full study and project development — backed by proven field experience.',
     url: 'https://feasibility.earth',
     siteName: 'Feasibility.Earth',
     type: 'website',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Feasibility.Earth — Carbon project pre-feasibility assessment' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Feasibility.Earth',
-    description: 'Expert-led feasibility studies for nature-based carbon projects.',
+    description: 'Expert-led carbon project pre-feasibility assessments. Eligibility from $500, full study from $7,500.',
+    images: [OG_IMAGE],
   },
   icons: {
     icon: '/favicon.svg',
@@ -56,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: 'Feasibility.Earth',
               url: 'https://feasibility.earth',
               logo: 'https://feasibility.earth/favicon.svg',
-              description: 'Expert-led feasibility studies for nature-based carbon projects. Eligibility assessment, bankable full studies, and full project development — backed by practitioners with certified project experience worldwide.',
+              description: 'Expert-led carbon project pre-feasibility assessments. Eligibility screening, full feasibility study, and project development — backed by practitioners with certified project experience worldwide.',
               contactPoint: {
                 '@type': 'ContactPoint',
                 email: 'feasibility@green.earth',
@@ -77,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   name: 'Full Feasibility Study',
                   price: '7500',
                   priceCurrency: 'USD',
-                  description: '70+ page bankable feasibility report covering all material carbon project factors.',
+                  description: '70+ page pre-feasibility report covering all material carbon project factors: land, additionality, carbon potential, risk, financials, and development pathway.',
                 },
               ],
             }),

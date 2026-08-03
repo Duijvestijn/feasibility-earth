@@ -84,7 +84,7 @@ body {
 .fe-footer-link:hover { color: #fff; }
 
 /* Nav link hover */
-.fe-nav-link { color: #5C5C58; text-decoration: none; padding: 8px 14px; border-radius: 8px; transition: color .15s, background .15s; }
+.fe-nav-link { color: #5C5C58; text-decoration: none; padding: 8px 14px; border-radius: 8px; transition: color .15s, background .15s; white-space: nowrap; }
 .fe-nav-link:hover { color: #1B4332; background: #F0EDE8; }
 
 /* Focus-visible — keyboard navigation */

@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Open Call — Submit Your Carbon Project to Green Earth',
-  description: 'Green Earth is actively seeking carbon projects across all types and geographies. Submit your project through Feasibility.Earth — free, no commitment, 5 business days.',
+  description: 'Green Earth is actively seeking carbon projects to co-develop. Submit yours through Feasibility.Earth — we review every submission and reach out directly if it fits our pipeline.',
 }
 
 function Arrow({ size = 14, color = 'currentColor' }: { size?: number; color?: string }) {
@@ -25,8 +25,8 @@ const WHAT_WE_LOOK_FOR = [
 ]
 
 const WHAT_HAPPENS_NEXT = [
-  { step: '01', title: 'Submit via Feasibility.Earth', body: 'Run your project through our assessment platform. It is free. You get a 70+ page prefeasibility study within 5 business days. Keep it regardless of what we decide.' },
-  { step: '02', title: 'We review your results', body: 'Our project team reviews the feasibility output. We assess partnership fit, development path, and commercial terms — usually within one week of receiving the report.' },
+  { step: '01', title: 'Submit via Feasibility.Earth', body: 'Submit your project through our platform. Green Earth reviews every complete submission against our development criteria — land type, geography, scale, and carbon potential. No assessment fee.' },
+  { step: '02', title: 'We review your submission', body: 'Our project team reviews your submission against our development criteria — geography, project type, scale, and carbon potential. We do this within one week of receiving it.' },
   { step: '03', title: 'We reach out directly', body: 'If the project meets our criteria, we contact you to discuss the next stage: a full feasibility study, PDD development, or a direct development partnership.' },
   { step: '04', title: 'Partnership terms', body: 'We structure each engagement differently — co-development, offtake, equity, or a simple service contract. We adapt to what makes sense for the project.' },
 ]
@@ -41,7 +41,6 @@ export default function OpenCallPage() {
 
         {/* ── HERO ── */}
         <section style={{ background: 'linear-gradient(150deg, #060E08 0%, #1B4332 60%, #2D6A4F 100%)', padding: '96px 0 80px', position: 'relative', overflow: 'hidden' }}>
-          {/* Background texture dots */}
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '32px 32px', pointerEvents: 'none' }} />
 
           <div className="fe-wrap" style={{ position: 'relative' }}>
@@ -52,7 +51,7 @@ export default function OpenCallPage() {
                     Open Call — Green Earth Group
                   </span>
                   <span className="fe-badge" style={{ background: 'rgba(244,196,48,0.18)', color: '#F4C430', border: '1px solid rgba(244,196,48,0.3)' }}>
-                    Free to submit
+                    Open for submissions
                   </span>
                 </div>
                 <h1 className="font-display" style={{ fontSize: 'clamp(34px,5.5vw,60px)', fontWeight: 700, color: '#fff', lineHeight: 1.08, marginBottom: 24, letterSpacing: '-0.5px' }}>
@@ -63,11 +62,11 @@ export default function OpenCallPage() {
                 </p>
                 <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
                   <Link href="https://app.feasibility.earth" target="_blank" className="btn-amber" style={{ fontSize: 16, padding: '15px 32px' }}>
-                    Submit your project — it is free <Arrow size={16} color="#1A1A18" />
+                    Submit your project <Arrow size={16} color="#1A1A18" />
                   </Link>
                 </div>
                 <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.60)', marginTop: 14, letterSpacing: '0.2px' }}>
-                  70+ page prefeasibility report · 5 business days · No commitment required
+                  Expert project screening · No formal RFP · No commitment required
                 </p>
               </div>
 
@@ -94,7 +93,7 @@ export default function OpenCallPage() {
               {[
                 { label: 'Not a formal RFP', sub: 'No RFP document, no procurement committee, no six-month response cycle.' },
                 { label: 'Open to all project types', sub: 'If the methodology exists and the land is real, submit it. We will tell you if it does not fit.' },
-                { label: 'Free assessment included', sub: 'Every submission goes through Feasibility.Earth at no cost. You keep the report.' },
+                { label: 'No submission fee', sub: 'No assessment fee to submit. Projects selected for deeper evaluation receive a full prefeasibility assessment at Green Earth\'s cost — yours to keep.' },
                 { label: 'Direct response', sub: 'Our project team reviews and contacts you personally — not a form auto-reply.' },
               ].map((item, i) => (
                 <div key={i} style={{ background: '#fff', padding: '28px 24px' }}>
@@ -107,8 +106,8 @@ export default function OpenCallPage() {
               ))}
             </div>
             <p style={{ fontSize: 13, color: '#9CA3AF', lineHeight: 1.7, marginTop: 20, textAlign: 'center' }}>
-              The Open Call is for projects seeking Green Earth as a development partner — the feasibility assessment is free in this context.{' '}
-              If you need an independent study for your own use (investor presentations, certification preparation, or due diligence), that is our{' '}
+              The Open Call is Green Earth&apos;s project sourcing pipeline. Green Earth covers the assessment cost because it is evaluating projects for potential co-development — not offering a public service.{' '}
+              If you need an independent study for your own use (investor presentations, certification preparation, or due diligence), see our{' '}
               <Link href="/pricing" style={{ color: '#1B4332', textDecoration: 'underline' }}>paid service starting at $500</Link>.
             </p>
           </div>
@@ -189,7 +188,7 @@ export default function OpenCallPage() {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 48 }}>
               {[
-                { title: 'Prefeasibility', body: 'Free through Feasibility.Earth. You walk away with a 70+ page expert report regardless of what we decide.' },
+                { title: 'Prefeasibility', body: 'Projects selected for deeper evaluation receive a full prefeasibility assessment at Green Earth\'s cost — the same study available through our paid service.' },
                 { title: 'Full feasibility', body: 'We take this on jointly. We fund the full study against a future revenue share or equity position.' },
                 { title: 'PDD development', body: 'If the project passes full feasibility, we can co-develop the Project Design Document under VCS, GS, or Plan Vivo.' },
                 { title: 'Carbon offtake', body: 'For projects we develop, we structure offtake arrangements directly — connecting your credits to our buyer network.' },
@@ -204,7 +203,7 @@ export default function OpenCallPage() {
 
             <div style={{ textAlign: 'center' }}>
               <Link href="https://app.feasibility.earth" target="_blank" className="btn-amber" style={{ fontSize: 16, padding: '16px 36px' }}>
-                Start your free assessment <Arrow size={16} color="#1A1A18" />
+                Submit your project <Arrow size={16} color="#1A1A18" />
               </Link>
               <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.60)', marginTop: 16 }}>
                 No sales call required to start. Submit the project, get the report, then talk.
@@ -257,10 +256,10 @@ export default function OpenCallPage() {
               Have a project? Submit it.
             </h2>
             <p style={{ fontSize: 17, color: '#5C5C58', lineHeight: 1.75, marginBottom: 36 }}>
-              The assessment is free. You get a 70+ page expert report within 5 business days. If it is a fit for us, we will be in touch.
+              Green Earth reviews every complete submission. Projects matching our development criteria receive a full prefeasibility assessment — at our cost. If it is a fit, we will reach out directly.
             </p>
             <Link href="https://app.feasibility.earth" target="_blank" className="btn-primary" style={{ fontSize: 16, padding: '16px 36px' }}>
-              Start free assessment <Arrow size={16} color="#fff" />
+              Submit your project <Arrow size={16} color="#fff" />
             </Link>
             <p style={{ fontSize: 13, color: '#9CA3AF', marginTop: 16 }}>
               Questions? <Link href="/contact" style={{ color: '#1B4332', fontWeight: 600, textDecoration: 'none' }}>Contact our project team</Link>

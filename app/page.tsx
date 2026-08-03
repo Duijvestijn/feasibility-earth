@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Feasibility.Earth — Carbon Project Feasibility for Serious Developers',
-  description: 'Expert-led carbon project prefeasibility assessments. 70+ page bankable report in 5 business days. Built by practitioners with certified project experience worldwide. Verra VCS · Gold Standard · Plan Vivo.',
+  description: 'Expert-led carbon project pre-feasibility assessments. Eligibility assessment from $500, full study from $7,500. Verra VCS · Gold Standard · Plan Vivo. Built by practitioners with certified project experience worldwide.',
 }
 
 const HERO_IMG     = 'https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260602_174959_337ef494-c1ed-43ed-8479-6f10ccf3680e.png'
@@ -40,7 +40,7 @@ const STAGES = [
     headline: 'A study built to withstand the scrutiny it will face.',
     body: 'Our full feasibility study is structured for the standards required by investors, development finance institutions, and international certification bodies — Verra VCS, Gold Standard, Plan Vivo. It is not a template exercise. It is built on the same methodology we apply to our own projects, by the same people who develop them.',
     img: AGROFOR_IMG,
-    outcome: 'A 70+ page bankable report — land analysis, additionality, carbon potential, risk register, financial projections, and development roadmap. All remote, no site visit.',
+    outcome: 'A 70+ page pre-feasibility report — land analysis, additionality, carbon potential, risk register, financial projections, and development roadmap. Structured for investor review and certification pathway planning. All remote, no site visit.',
     highlight: true,
   },
   {
@@ -226,6 +226,9 @@ export default function HomePage() {
                 <Link href="/use-cases" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, color: '#86C89C', fontWeight: 600, textDecoration: 'none' }}>
                   View our project portfolio <Arrow size={14} color="#86C89C" />
                 </Link>
+                <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', lineHeight: 1.6, marginTop: 20 }}>
+                  Credit volumes are estimated annual potential. Registry status and verified issuance volumes vary by project and development stage.
+                </p>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -238,7 +241,7 @@ export default function HomePage() {
                       <p style={{ fontSize: 14, fontWeight: 700, color: '#fff', marginBottom: 3 }}>{p.name}</p>
                       <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: 8 }}>{p.country}</p>
                       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-                        <span style={{ fontSize: 13, fontWeight: 600, color: '#86C89C' }}>{p.credits} credits/yr</span>
+                        <span style={{ fontSize: 13, fontWeight: 600, color: '#86C89C' }}>{p.credits} tCO₂e/yr (est.)</span>
                         <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(255,255,255,0.15)', flexShrink: 0 }} />
                         <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)' }}>{p.cert}</span>
                       </div>
@@ -262,7 +265,7 @@ export default function HomePage() {
               </div>
               <div>
                 <p style={{ fontSize: 15, fontWeight: 700, color: '#1A1A18' }}>Green Earth is actively seeking carbon projects.</p>
-                <p style={{ fontSize: 13, color: 'rgba(0,0,0,0.55)' }}>Submit yours through Feasibility.Earth — free assessment, no commitment required.</p>
+                <p style={{ fontSize: 13, color: 'rgba(0,0,0,0.55)' }}>Submit yours through Feasibility.Earth — Green Earth covers the assessment cost.</p>
               </div>
             </div>
             <Link href="/open-call" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 22px', background: '#1B4332', color: '#fff', fontWeight: 700, fontSize: 14, borderRadius: 8, textDecoration: 'none', flexShrink: 0 }}>

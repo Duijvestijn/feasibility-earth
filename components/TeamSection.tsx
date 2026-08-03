@@ -9,7 +9,7 @@ const TEAM = [
     title: 'Head of Project Feasibility',
     // Buyer-facing: what his experience means for them, not what he does
     value: 'He has evaluated 100+ carbon project applications and led feasibility work on projects across Nigeria, Uganda, Cameroon, and Kazakhstan. He knows the specific failure modes that certification bodies flag — and catches them at the assessment stage, before they cost you capital.',
-    insight: '"The most expensive feasibility mistake is missing an additionality failure that was visible in the land-use data. I have seen it happen on projects that took 18 months and $400K to develop before the error surfaced. We catch it in week one."',
+    insight: 'The most expensive feasibility mistake is missing an additionality failure that was visible in the land-use data. I have seen it happen on projects that took 18 months and $400K to develop before the error surfaced. We catch it in week one.',
     color: '#1B4332',
   },
   {
@@ -17,7 +17,7 @@ const TEAM = [
     name: 'Angel Daniel Armas',
     title: 'Senior Carbon Analyst',
     value: 'Leads satellite analysis and CO₂ potential modelling. Has validated fNRB assumptions for cookstove projects against regional field data — the single largest source of systematic overcrediting in the market. His analysis is what makes the difference between a study that passes certification review and one that does not.',
-    insight: '"The industry average fNRB assumption for cookstove projects is around 80%. Regional field data consistently shows the real figure is 25–35%. That gap means projects issued at industry-standard assumptions are overcrediting by 2–3 times. We use the field data."',
+    insight: 'The industry average fNRB assumption for cookstove projects is around 80%. Regional field data consistently shows the real figure is 25–35%. That gap means projects issued at industry-standard assumptions are overcrediting by 2–3 times. We use the field data.',
     color: '#2D6A4F',
   },
   {
@@ -25,7 +25,7 @@ const TEAM = [
     name: 'Vaseem Khan',
     title: 'Remote Sensing & GIS Lead',
     value: 'Responsible for satellite data processing and the carbon stock modelling tools used in all assessments. Has built baseline carbon maps across four countries, giving our team proprietary regional datasets that most desk-based assessors do not have access to.',
-    insight: '"Baseline carbon assumptions drive a majority of the variance in credit volume estimates. We do not use global averages. We build baselines from regional data, and we validate them against on-ground measurements where available."',
+    insight: 'Baseline carbon assumptions drive a majority of the variance in credit volume estimates. We do not use global averages. We build baselines from regional data, and we validate them against on-ground measurements where available.',
     color: '#40916C',
   },
 ]
@@ -52,6 +52,11 @@ export default function TeamSection() {
             <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, color: '#1B4332', fontWeight: 700, textDecoration: 'none' }}>
               Tell us about your project <Arrow size={14} color="#1B4332" />
             </Link>
+            <div style={{ marginTop: 16 }}>
+              <Link href="/team" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#9CA3AF', fontWeight: 500, textDecoration: 'none' }}>
+                Meet the full team <Arrow size={12} color="#9CA3AF" />
+              </Link>
+            </div>
           </div>
 
           {/* Right: team cards */}

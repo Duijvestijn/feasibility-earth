@@ -7,6 +7,7 @@ const LINKS = [
   { href: '/how-it-works',  label: 'How It Works' },
   { href: '/methodology',   label: 'Methodology' },
   { href: '/insights',      label: 'Insights' },
+  { href: '/team',          label: 'Team' },
   { href: '/pricing',       label: 'Pricing' },
   { href: '/open-call',     label: 'Open Call', highlight: true },
   { href: '/contact',       label: 'Contact' },

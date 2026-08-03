@@ -17,5 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://feasibility.earth/insights/additionality-failure-carbon-projects', lastModified: new Date('2026-04-01'), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://feasibility.earth/insights/verra-vcs-vs-gold-standard-plan-vivo', lastModified: new Date('2026-07-01'), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://feasibility.earth/insights/satellite-data-carbon-project-assessment', lastModified: new Date('2026-07-01'), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://feasibility.earth/team', lastModified: new Date('2026-08-01'), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://feasibility.earth/team/selwyn-duijvestijn', lastModified: new Date('2026-08-01'), changeFrequency: 'monthly', priority: 0.6 },
+    { url: 'https://feasibility.earth/team/hilda-van-der-meulen', lastModified: new Date('2026-08-01'), changeFrequency: 'monthly', priority: 0.6 },
+    { url: 'https://feasibility.earth/team/nicholas-wall', lastModified: new Date('2026-08-01'), changeFrequency: 'monthly', priority: 0.6 },
+    { url: 'https://feasibility.earth/privacy', lastModified: new Date('2026-08-01'), changeFrequency: 'yearly', priority: 0.3 },
+    { url: 'https://feasibility.earth/terms', lastModified: new Date('2026-08-01'), changeFrequency: 'yearly', priority: 0.3 },
   ]
 }

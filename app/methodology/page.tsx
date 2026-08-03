@@ -73,7 +73,7 @@ const REPORT_SECTIONS = [
     pages: '8–12 pages',
     color: '#6B4226',
     intro: 'We assess the project against the current version of each applicable standard — not historical methodology documents. Standards are updated regularly; projects developed against outdated requirements may not satisfy current registration criteria.',
-    dataSource: 'Verra VCS Standard v4.0, Verra methodology versions current at assessment date, Gold Standard 2024, Plan Vivo 2026 Standard, ICVCM Core Carbon Principles',
+    dataSource: 'Verra VCS v5.0 (Dec 2025) · v4.7 transition to Jan 2027, Verra methodology versions current at assessment date, Gold Standard 2024 · Paris Agreement Alignment from 2026, Plan Vivo PV Climate V5 · Project Requirements v5.5, ICVCM Core Carbon Principles',
     subsections: [
       { title: 'Standard selection and rationale', desc: 'Assessment of which standard(s) the project can credibly pursue, based on: project type, geographic eligibility criteria, community benefit requirements, credit market preferences, and timeline/cost trade-offs. For projects that could satisfy multiple standards, a comparison is provided.' },
       { title: 'Methodology applicability confirmation', desc: 'Detailed assessment of whether the project meets the applicability conditions of the proposed methodology — including land eligibility, ecological parameters, geographic constraints, and legal requirements. Non-conformances are documented with their materiality.' },
@@ -250,13 +250,13 @@ export default function MethodologyPage() {
                   Assessed against standards as they are today — not as they were.
                 </h2>
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.60)', lineHeight: 1.9, marginBottom: 16 }}>
-                  Verra VCS, Gold Standard, and Plan Vivo all revised their methodology requirements significantly in 2024. Projects assessed against earlier versions may not satisfy current registration criteria. We work from the current published methodology version at the date of each assessment.
+                  Verra VCS, Gold Standard, and Plan Vivo all revised their methodology requirements significantly in 2024–2025. VCS v5.0 was published in December 2025; Gold Standard added Paris Agreement Alignment requirements applicable from 2026. Projects assessed against earlier versions may not satisfy current registration criteria. We work from the current published methodology version at the date of each assessment.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {[
-                    { name: 'Verra VCS', version: 'v4.0 (current)', note: 'VM0047, VM0042, AMS-II.G, VM0050 (cookstoves, Oct 2024)' },
-                    { name: 'Gold Standard', version: '2024 revision', note: 'TPDDTEC, LUF Activity Requirements, revised fNRB requirements' },
-                    { name: 'Plan Vivo', version: '2026 Standard', note: 'Community benefit-sharing, PV Carbon Standard v2.2' },
+                    { name: 'Verra VCS', version: 'v5.0 (Dec 2025)', note: 'v4.7 methodology transition active to Jan 2027 · VM0047, VM0042, VM0050 (Oct 2024)' },
+                    { name: 'Gold Standard', version: '2024 revision', note: 'Paris Agreement Alignment requirements applicable from 2026 · revised fNRB, LUF Activity Requirements' },
+                    { name: 'Plan Vivo', version: 'PV Climate V5', note: 'Project Requirements v5.5 · Community benefit-sharing · PV Carbon Standard' },
                     { name: 'ICVCM Core Carbon Principles', version: 'April 2023+', note: 'CCP eligibility assessment for institutional buyer alignment' },
                   ].map((std, i) => (
                     <div key={i} style={{ padding: '14px 18px', borderRadius: 10, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.09)' }}>

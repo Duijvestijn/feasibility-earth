@@ -52,25 +52,25 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
         <div className="fe-form-row">
           <div>
-            <label style={labelStyle}>First name</label>
-            <input type="text" placeholder="Your first name" value={fields.firstName} onChange={set('firstName')} style={inputStyle} />
+            <label htmlFor="firstName" style={labelStyle}>First name</label>
+            <input id="firstName" name="firstName" type="text" autoComplete="given-name" placeholder="Your first name" value={fields.firstName} onChange={set('firstName')} style={inputStyle} />
           </div>
           <div>
-            <label style={labelStyle}>Last name</label>
-            <input type="text" placeholder="Your last name" value={fields.lastName} onChange={set('lastName')} style={inputStyle} />
+            <label htmlFor="lastName" style={labelStyle}>Last name</label>
+            <input id="lastName" name="lastName" type="text" autoComplete="family-name" placeholder="Your last name" value={fields.lastName} onChange={set('lastName')} style={inputStyle} />
           </div>
         </div>
         <div>
-          <label style={labelStyle}>Work email *</label>
-          <input type="email" required placeholder="you@organisation.com" value={fields.email} onChange={set('email')} style={inputStyle} />
+          <label htmlFor="email" style={labelStyle}>Work email *</label>
+          <input id="email" name="email" type="email" autoComplete="email" required placeholder="you@organisation.com" value={fields.email} onChange={set('email')} style={inputStyle} />
         </div>
         <div>
-          <label style={labelStyle}>Organisation</label>
-          <input type="text" placeholder="Company or fund name" value={fields.organisation} onChange={set('organisation')} style={inputStyle} />
+          <label htmlFor="organisation" style={labelStyle}>Organisation</label>
+          <input id="organisation" name="organisation" type="text" autoComplete="organization" placeholder="Company or fund name" value={fields.organisation} onChange={set('organisation')} style={inputStyle} />
         </div>
         <div>
-          <label style={labelStyle}>Your role</label>
-          <select value={fields.role} onChange={set('role')} style={{ ...inputStyle, background: '#fff' }}>
+          <label htmlFor="role" style={labelStyle}>Your role</label>
+          <select id="role" name="role" value={fields.role} onChange={set('role')} style={{ ...inputStyle, background: '#fff' }}>
             <option value="">Select your role</option>
             <option value="Project developer">Project developer</option>
             <option value="Investor / fund manager">Investor / fund manager</option>
@@ -81,8 +81,8 @@ export default function ContactForm() {
           </select>
         </div>
         <div>
-          <label style={labelStyle}>Tell us about your project *</label>
-          <textarea required placeholder="Location, land size, project type, number of projects — whatever you know at this stage" rows={5} value={fields.message} onChange={set('message')} style={{ ...inputStyle, resize: 'vertical' }} />
+          <label htmlFor="message" style={labelStyle}>Tell us about your project *</label>
+          <textarea id="message" name="message" required placeholder="Location, land size, project type, number of projects — whatever you know at this stage" rows={5} value={fields.message} onChange={set('message')} style={{ ...inputStyle, resize: 'vertical' }} />
         </div>
         <label style={{ display: 'flex', gap: 10, alignItems: 'flex-start', cursor: 'pointer' }}>
           <input
@@ -104,7 +104,7 @@ export default function ContactForm() {
           {status === 'loading' ? 'Sending…' : <>Send — we will respond within one business day <Arrow size={15} color="#fff" /></>}
         </button>
         <p style={{ fontSize: 11, color: '#9CA3AF', textAlign: 'center', lineHeight: 1.6, margin: 0 }}>
-          This goes directly to our feasibility team. We do not pass your details to third parties.
+          This goes directly to our feasibility team. By submitting you agree to our <a href="/privacy" style={{ color: '#6B7280', textDecoration: 'underline' }}>Privacy Policy</a>.
         </p>
       </form>
     </div>
