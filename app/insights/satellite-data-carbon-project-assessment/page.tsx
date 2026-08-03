@@ -129,9 +129,9 @@ export default function ArticlePage() {
               </p>
 
               <div style={{ padding: '28px 28px', background: '#1B4332', borderRadius: 16, marginBottom: 36 }}>
-                <h3 className="font-display" style={{ fontSize: 22, fontWeight: 700, color: '#fff', marginBottom: 12 }}>Remote. Rigorous. Bankable.</h3>
+                <h3 className="font-display" style={{ fontSize: 22, fontWeight: 700, color: '#fff', marginBottom: 12 }}>Remote. Rigorous. Investor-ready.</h3>
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.70)', lineHeight: 1.85, marginBottom: 16 }}>
-                  Our full feasibility study is produced entirely from satellite data, regional databases, and methodology expertise. No site visit required. All data sources are documented and reproducible — the same standard a VVB auditor applies at validation.
+                  Our full feasibility study is produced from satellite data, regional databases, and methodology expertise. All data sources are documented and reproducible — the same standard a VVB auditor applies at validation. Where material field validation is required, we identify it in the report.
                 </p>
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.70)', lineHeight: 1.85, marginBottom: 20 }}>
                   See what the <Link href="/methodology" style={{ color: '#86C89C', textDecoration: 'underline' }}>seven assessment sections</Link> cover, or start with a $500 eligibility check.

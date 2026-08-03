@@ -35,7 +35,7 @@ const STEPS = [
   {
     day: 'Day 5', n: '03', title: 'A 70+ page report — and a personal debrief.',
     sub: 'Everything assessed. Nothing left unchecked.',
-    body: 'You receive a comprehensive 70+ page feasibility report covering every material aspect of your project — land baseline, additionality, carbon potential, certification pathway, risk register, financial projections, and development roadmap. All produced remotely from satellite data and expert analysis. No site visit required.',
+    body: 'You receive a comprehensive 70+ page pre-feasibility report covering every material aspect of your project — land baseline, additionality, carbon potential, certification pathway, risk register, financial projections, and development roadmap. Core assessment performed using satellite data and expert analysis. Where material evidence gaps require field validation, this is identified in the report.',
     checklist: [
       '70+ pages covering 7 core assessment areas',
       'Carbon credit potential with full confidence ranges',
@@ -62,7 +62,7 @@ export default function HowItWorksPage() {
               From land details to a 70+ page<br />report you can count on.
             </h1>
             <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.72)', maxWidth: 540, lineHeight: 1.75 }}>
-              You tell us about the land. We run a comprehensive independent assessment — every material factor checked remotely, no site visit required — and deliver a bankable report your team, investors, and certification bodies can rely on.
+              You tell us about the land. We run a comprehensive expert-led assessment — every material factor analysed using satellite data, regional databases, and methodology expertise — and deliver a decision-grade report your team, investors, and certification bodies can rely on.
             </p>
           </div>
         </section>

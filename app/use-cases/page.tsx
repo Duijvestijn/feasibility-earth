@@ -15,7 +15,7 @@ const CASES = [
     body: 'Planting trees on previously deforested or degraded land. Feasibility.Earth checks whether your land qualifies for an Afforestation / Reforestation (A/R) or Improved Forest Management (IFM) methodology.',
     suitableFor: ['Degraded land, former agricultural fields', 'Areas with low existing carbon stock', 'Regions with deforestation history (pre-1990 for VCS)'],
     metrics: [{ label: 'Typical CO₂', value: '5–40 tCO₂/ha/yr' }, { label: 'Project life', value: '20–100 years' }, { label: 'Std. methodology', value: 'VM0047 / AR-ACM0003' }],
-    example: 'Greenzone Reforestation Project, Congo Basin — 13,750 VCUs annually',
+    example: 'Greenzone Reforestation Project, Congo Basin — est. 13,750 tCO₂e/yr (under development)',
   },
   {
     id: 'agroforestry', title: 'Agroforestry', img: AGROFOR_IMG, color: '#2D6A4F',
@@ -23,7 +23,7 @@ const CASES = [
     body: 'Integrating trees into agricultural and pastoral systems. These projects simultaneously sequester carbon and support farmer livelihoods — often eligible under community-based standards like Plan Vivo.',
     suitableFor: ['Active smallholder farmland', 'Pastoral grazing land with tree integration potential', 'Community-based land management systems'],
     metrics: [{ label: 'Typical CO₂', value: '3–15 tCO₂/ha/yr' }, { label: 'Project life', value: '10–30 years' }, { label: 'Std. methodology', value: 'Plan Vivo · VM0017' }],
-    example: 'Bulindi Agroforestry & Chimpanzee Conservation, Uganda — 44,000 VERs annually',
+    example: 'Bulindi Agroforestry & Chimpanzee Conservation, Uganda — est. 44,000 tCO₂e/yr (under development)',
   },
   {
     id: 'arr', title: 'ARR Projects', img: KAZ_IMG, color: '#40916C',
@@ -31,7 +31,7 @@ const CASES = [
     body: 'Afforestation, Reforestation, and Revegetation on severely degraded or barren land — including dryland restoration, grassland rehabilitation, and riparian revegetation.',
     suitableFor: ['Barren or severely degraded land', 'Former desert or saline soil', 'Riparian and wetland areas'],
     metrics: [{ label: 'Typical CO₂', value: '2–20 tCO₂/ha/yr' }, { label: 'Project life', value: '20–60 years' }, { label: 'Std. methodology', value: 'VM0047 · CDM AR-ACM' }],
-    example: 'Aral Sea Afforestation, Kazakhstan — 31,250 VCUs from saxaul planting',
+    example: 'Aral Sea Afforestation, Kazakhstan — est. 31,250 tCO₂e/yr from saxaul planting (under development)',
   },
   {
     id: 'cookstoves', title: 'Cookstoves', img: COOK_IMG, color: '#6B4226',
@@ -39,7 +39,7 @@ const CASES = [
     body: 'Distributing energy-efficient cookstoves to households that currently cook on open fires or inefficient traditional stoves. Reduces fuel consumption and associated deforestation.',
     suitableFor: ['Rural households using firewood or charcoal', 'Areas with high deforestation driven by cooking fuel', 'Community programs with measurable distribution'],
     metrics: [{ label: 'Typical CO₂', value: '1–3 tCO₂/household/yr' }, { label: 'Project life', value: '5–10 years' }, { label: 'Std. methodology', value: 'GS TPDDTEC · AMS-II.G' }],
-    example: 'Sauki Clean Cookstoves, Nigeria — 60,000 VERs from 40,000 households',
+    example: 'Sauki Clean Cookstoves, Nigeria — est. 60,000 tCO₂e/yr from ~40,000 households (under development)',
   },
 ]
 

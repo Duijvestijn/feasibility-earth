@@ -40,7 +40,7 @@ const STAGES = [
     headline: 'A study built to withstand the scrutiny it will face.',
     body: 'Our full feasibility study is structured for the standards required by investors, development finance institutions, and international certification bodies — Verra VCS, Gold Standard, Plan Vivo. It is not a template exercise. It is built on the same methodology we apply to our own projects, by the same people who develop them.',
     img: AGROFOR_IMG,
-    outcome: 'A 70+ page pre-feasibility report — land analysis, additionality, carbon potential, risk register, financial projections, and development roadmap. Structured for investor review and certification pathway planning. All remote, no site visit.',
+    outcome: 'A 70+ page pre-feasibility report — land analysis, additionality, carbon potential, risk register, financial projections, and development roadmap. Structured for investor review and certification pathway planning. Core assessment remote; field validation identified where required.',
     highlight: true,
   },
   {

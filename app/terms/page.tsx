@@ -48,7 +48,8 @@ export default function TermsPage() {
 
               <div>
                 <h2 style={{ fontSize: 20, fontWeight: 700, color: '#1A1A18', marginBottom: 12 }}>Paid services</h2>
-                <p>For paid assessments (Eligibility Check — $500; Full Feasibility Study — $7,500), payment terms and deliverable scope are confirmed in writing before work begins. Fees are non-refundable once work has commenced.</p>
+                <p>For paid assessments (Eligibility Check — $500; Full Feasibility Study — $7,500), payment terms and deliverable scope are confirmed in writing before work begins.</p>
+                <p style={{ marginTop: 12 }}>For the Eligibility Check, the $500 fee is non-refundable once work has commenced. For the Full Feasibility Study, if the completed study concludes that the land does not qualify for a viable carbon project, 50% of the $7,500 fee is refunded. No refund is available once the report has been delivered.</p>
               </div>
 
               <div>

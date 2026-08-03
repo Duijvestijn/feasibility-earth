@@ -151,7 +151,7 @@ export default function MethodologyPage() {
                   { value: '70+', label: 'pages per report' },
                   { value: '7', label: 'assessment areas' },
                   { value: '30+', label: 'data sources' },
-                  { value: '100%', label: 'remote — no site visit' },
+                  { value: 'Remote', label: 'satellite + expert analysis' },
                 ].map((s, i) => (
                   <div key={i} style={{ padding: '16px 18px', background: 'rgba(255,255,255,0.06)', borderRadius: i === 0 ? '10px 0 0 10px' : i === 3 ? '0 10px 10px 0' : 0, border: '1px solid rgba(255,255,255,0.08)', borderLeft: i > 0 ? 'none' : '1px solid rgba(255,255,255,0.08)' }}>
                     <p className="font-display" style={{ fontSize: 26, fontWeight: 700, color: '#fff', lineHeight: 1, marginBottom: 4 }}>{s.value}</p>

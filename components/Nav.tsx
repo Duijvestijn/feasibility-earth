@@ -51,7 +51,7 @@ export default function Nav() {
         {/* CTA */}
         <div style={{ marginLeft: 'auto', gap: 10, alignItems: 'center' }} className="hidden md:flex">
           <Link href="https://app.feasibility.earth" target="_blank" className="btn-outline" style={{ padding: '9px 18px', fontSize: 14 }}>Log in</Link>
-          <Link href="/pricing" className="btn-primary" style={{ padding: '10px 18px', fontSize: 14 }}>Start a Study</Link>
+          <Link href="/pricing" className="btn-primary" style={{ padding: '10px 18px', fontSize: 14 }}>Start Study</Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -70,7 +70,7 @@ export default function Nav() {
           ))}
           <div style={{ display: 'flex', gap: 10, marginTop: 20, flexWrap: 'wrap' }}>
             <Link href="https://app.feasibility.earth" target="_blank" className="btn-outline" style={{ flex: 1, justifyContent: 'center', fontSize: 14 }}>Log in</Link>
-            <Link href="/pricing" className="btn-primary" style={{ flex: 1, justifyContent: 'center', fontSize: 14 }}>Start a Study</Link>
+            <Link href="/pricing" className="btn-primary" style={{ flex: 1, justifyContent: 'center', fontSize: 14 }}>Start Study</Link>
           </div>
         </div>
       )}

@@ -38,8 +38,14 @@ export default function NewsletterForm({ variant = 'light' }: { variant?: 'light
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+      <label htmlFor="newsletter-email" style={{ position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0 }}>
+        Email address
+      </label>
       <input
+        id="newsletter-email"
+        name="email"
         type="email"
+        autoComplete="email"
         required
         value={email}
         onChange={e => setEmail(e.target.value)}

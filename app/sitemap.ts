@@ -21,7 +21,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://feasibility.earth/team/selwyn-duijvestijn', lastModified: new Date('2026-08-01'), changeFrequency: 'monthly', priority: 0.6 },
     { url: 'https://feasibility.earth/team/hilda-van-der-meulen', lastModified: new Date('2026-08-01'), changeFrequency: 'monthly', priority: 0.6 },
     { url: 'https://feasibility.earth/team/nicholas-wall', lastModified: new Date('2026-08-01'), changeFrequency: 'monthly', priority: 0.6 },
-    { url: 'https://feasibility.earth/privacy', lastModified: new Date('2026-08-01'), changeFrequency: 'yearly', priority: 0.3 },
-    { url: 'https://feasibility.earth/terms', lastModified: new Date('2026-08-01'), changeFrequency: 'yearly', priority: 0.3 },
   ]
 }
