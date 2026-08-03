@@ -64,7 +64,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <div style={{ borderTop: '1px solid #E2DDD6', background: '#FAFAF8', padding: '16px 24px 24px' }}>
+        <div style={{ borderTop: '1px solid #E2DDD6', background: '#FAFAF8', padding: '16px 24px 24px', animation: 'navSlideDown 0.2s cubic-bezier(0.22,1,0.36,1) both', overflow: 'hidden' }}>
           {LINKS.map(l => (
             <Link key={l.href} href={l.href} onClick={() => setOpen(false)} style={{ display: 'block', padding: '12px 0', fontSize: 15, fontWeight: 500, color: l.highlight ? '#D4A017' : '#1A1A18', textDecoration: 'none', borderBottom: '1px solid #F0EDE8' }}>{l.label}</Link>
           ))}

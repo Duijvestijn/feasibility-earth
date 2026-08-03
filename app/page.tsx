@@ -102,7 +102,7 @@ export default function HomePage() {
           <div className="fe-wrap" style={{ position: 'relative', zIndex: 1, padding: '100px 24px 100px' }}>
             <div style={{ maxWidth: 720 }}>
 
-              <h1 className="font-display" style={{ fontSize: 'clamp(44px, 6.5vw, 76px)', fontWeight: 700, color: '#fff', lineHeight: 1.02, marginBottom: 28 }}>
+              <h1 className="font-display" style={{ fontSize: 'clamp(48px, 7.5vw, 92px)', fontWeight: 800, color: '#fff', lineHeight: 0.98, letterSpacing: '-0.025em', marginBottom: 28 }}>
                 Assess before<br />you invest.
               </h1>
 
@@ -130,7 +130,7 @@ export default function HomePage() {
         </section>
 
         {/* THE PROBLEM — named, specific, financial */}
-        <section className="fe-section" style={{ background: '#0F2016' }}>
+        <section className="fe-section" style={{ background: '#060A07' }}>
           <div className="fe-wrap">
             <div style={{ maxWidth: 680, marginBottom: 52 }}>
               <h2 className="font-display" style={{ fontSize: 'clamp(26px,4vw,40px)', fontWeight: 700, color: '#fff', lineHeight: 1.18, marginBottom: 16 }}>
@@ -143,7 +143,7 @@ export default function HomePage() {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 16 }}>
               {MARKET_FAILURES.map((item, i) => (
-                <div key={i} style={{ padding: '32px 28px', borderRadius: 16, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                <div key={i} data-reveal data-reveal-delay={String(i * 80)} style={{ padding: '32px 28px', borderRadius: 16, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
                   <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(134,200,156,0.15)', border: '1px solid rgba(134,200,156,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 18 }}>
                     <span style={{ fontSize: 13, fontWeight: 800, color: '#86C89C' }}>{String(i + 1).padStart(2, '0')}</span>
                   </div>
@@ -176,8 +176,33 @@ export default function HomePage() {
 
               {/* Stage cards */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+
+                {/* Lifecycle progression strip */}
+                <div data-reveal style={{ padding: '18px 24px', borderRadius: 12, background: '#F0F4F1', border: '1px solid #DDE5E0', marginBottom: 6 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 0 }}>
+                    {[
+                      { n: '01', label: 'Eligibility Check', price: '$500', active: false },
+                      { n: '02', label: 'Full Feasibility Study', price: '$7,500', active: true },
+                      { n: '03', label: 'Project Development', price: 'by arrangement', active: false },
+                    ].map((step, i, arr) => (
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', flex: i < arr.length - 1 ? 1 : 'none' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+                          <div style={{ width: 34, height: 34, borderRadius: '50%', background: step.active ? '#1B4332' : '#fff', border: `2px solid ${step.active ? '#1B4332' : '#C8D4CC'}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                            <span style={{ fontSize: 11, fontWeight: 800, color: step.active ? '#fff' : '#5C7A65' }}>{step.n}</span>
+                          </div>
+                          <span style={{ fontSize: 10, fontWeight: 700, color: step.active ? '#1B4332' : '#7A9480', whiteSpace: 'nowrap', letterSpacing: '0.3px' }}>{step.label}</span>
+                          <span style={{ fontSize: 9.5, color: step.active ? '#40916C' : '#9AAB9F', fontWeight: 600 }}>{step.price}</span>
+                        </div>
+                        {i < arr.length - 1 && (
+                          <div style={{ flex: 1, height: 2, background: 'linear-gradient(90deg, #C8D4CC, #DDE5E0)', margin: '0 8px', marginBottom: 28 }} />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 {STAGES.map((stage, i) => (
-                  <div key={i} style={{ borderRadius: 16, border: stage.highlight ? '2px solid #1B4332' : '1px solid #E2DDD6', overflow: 'hidden', background: '#fff', boxShadow: stage.highlight ? '0 8px 32px rgba(27,67,50,0.12)' : '0 1px 6px rgba(0,0,0,0.04)' }}>
+                  <div key={i} data-reveal data-reveal-delay={String(i * 80)} style={{ borderRadius: 16, border: stage.highlight ? '2px solid #1B4332' : '1px solid #E2DDD6', overflow: 'hidden', background: '#fff', boxShadow: stage.highlight ? '0 8px 32px rgba(27,67,50,0.12)' : '0 1px 6px rgba(0,0,0,0.04)' }}>
                     {stage.highlight && <div style={{ height: 3, background: 'linear-gradient(90deg, #1B4332, #40916C)' }} />}
                     <div className="fe-stage-card-inner">
                       <div style={{ padding: '36px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -233,7 +258,7 @@ export default function HomePage() {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {GEG_PROJECTS.map((p, i) => (
-                  <div key={i} style={{ display: 'grid', gridTemplateColumns: '72px 1fr', borderRadius: 13, overflow: 'hidden', background: 'rgba(255,255,255,0.055)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <div key={i} data-reveal data-reveal-delay={String(i * 70)} style={{ display: 'grid', gridTemplateColumns: '72px 1fr', borderRadius: 13, overflow: 'hidden', background: 'rgba(255,255,255,0.055)', border: '1px solid rgba(255,255,255,0.08)' }}>
                     <div style={{ position: 'relative', minHeight: 76 }}>
                       <Image src={p.img} alt={p.name} fill style={{ objectFit: 'cover' }} />
                     </div>
@@ -288,7 +313,7 @@ export default function HomePage() {
               </div>
               <div className="fe-usecase-grid">
                 {USE_CASES.map((uc, i) => (
-                  <Link key={i} href={uc.href} className="fe-card" style={{ textDecoration: 'none', display: 'block' }}>
+                  <Link key={i} href={uc.href} data-reveal data-reveal-delay={String(i * 60)} className="fe-card" style={{ textDecoration: 'none', display: 'block' }}>
                     <div style={{ position: 'relative', height: 170 }}>
                       <Image src={uc.img} alt={uc.title} fill style={{ objectFit: 'cover' }} />
                       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(6,18,10,0.82) 0%, transparent 55%)' }} />

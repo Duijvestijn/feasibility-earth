@@ -174,6 +174,14 @@ export default function MethodologyPage() {
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.9, fontWeight: 500 }}>
                   These are methodology failures — and they start at the feasibility assessment stage. Our methodology is designed to identify them before you commit capital.
                 </p>
+                {/* Pull quote */}
+                <blockquote style={{ margin: '24px 0 0', padding: '20px 22px', background: 'rgba(64,145,108,0.09)', borderRadius: 12, border: '1px solid rgba(64,145,108,0.18)' }}>
+                  <div style={{ width: 28, height: 2, background: '#40916C', borderRadius: 2, marginBottom: 14 }} />
+                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.72)', lineHeight: 1.75, fontStyle: 'italic' }}>
+                    &ldquo;The satellite record is in some respects more reliable than field data for baseline purposes. A field team visiting a site today cannot tell you what the forest cover was in 2015. The Hansen dataset can — with documented methodology and the ability for a VVB auditor to reproduce every data point independently.&rdquo;
+                  </p>
+                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.38)', marginTop: 12, fontWeight: 600 }}>Vaseem Khan · Remote Sensing &amp; GIS Lead, Feasibility.Earth</p>
+                </blockquote>
               </div>
               <div style={{ position: 'relative', height: 260, borderRadius: 14, overflow: 'hidden' }}>
                 <Image src={SAT_IMG} alt="Satellite analysis" fill style={{ objectFit: 'cover' }} />
@@ -194,7 +202,7 @@ export default function MethodologyPage() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
               {REPORT_SECTIONS.map((section, si) => (
-                <div key={si} style={{ borderRadius: 14, border: '1px solid #E2DDD6', overflow: 'hidden', background: '#fff' }}>
+                <div key={si} data-reveal data-reveal-delay={String(si * 55)} style={{ borderRadius: 14, border: '1px solid #E2DDD6', overflow: 'hidden', background: '#fff' }}>
 
                   {/* Section header */}
                   <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', gap: 20, alignItems: 'center', padding: '24px 28px', background: '#FAFAF8', borderBottom: '1px solid #E8E4DF' }}>

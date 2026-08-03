@@ -78,16 +78,36 @@ export default function InsightsPage() {
         <section className="fe-section" style={{ background: '#FAFAF8' }}>
           <div className="fe-wrap" style={{ maxWidth: 820 }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {ARTICLES.map((article, i) => (
-                <Link key={i} href={`/insights/${article.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
-                  <div className="fe-card" style={{ padding: '32px 32px', display: 'grid', gridTemplateColumns: '1fr auto', gap: 24, alignItems: 'center' }}>
+
+              {/* Featured first article */}
+              <Link href={`/insights/${ARTICLES[0].slug}`} style={{ textDecoration: 'none', display: 'block' }} data-reveal>
+                <div className="fe-card" style={{ overflow: 'hidden' }}>
+                  <div style={{ background: 'linear-gradient(135deg, #0D1F15 0%, #1B4332 60%, #2D6A4F 100%)', padding: '44px 40px 40px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                      <span style={{ fontSize: 10, fontWeight: 700, padding: '3px 10px', borderRadius: 100, background: 'rgba(134,200,156,0.18)', color: '#86C89C', border: '1px solid rgba(134,200,156,0.2)', letterSpacing: '0.5px', textTransform: 'uppercase' }}>{ARTICLES[0].tag}</span>
+                      <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.38)' }}>{ARTICLES[0].date} · {ARTICLES[0].readTime} read</span>
+                      <span style={{ fontSize: 10, fontWeight: 600, padding: '2px 8px', borderRadius: 4, background: 'rgba(212,160,23,0.2)', color: '#D4A017', border: '1px solid rgba(212,160,23,0.25)' }}>Latest</span>
+                    </div>
+                    <h2 className="font-display" style={{ fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 700, color: '#fff', lineHeight: 1.22, marginBottom: 14, maxWidth: 640, letterSpacing: '-0.02em' }}>{ARTICLES[0].title}</h2>
+                    <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.58)', lineHeight: 1.78, maxWidth: 600, marginBottom: 24 }}>{ARTICLES[0].excerpt}</p>
+                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, fontWeight: 700, color: '#86C89C' }}>
+                      Read article <Arrow size={13} color="#86C89C" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Remaining articles */}
+              {ARTICLES.slice(1).map((article, i) => (
+                <Link key={i} href={`/insights/${article.slug}`} style={{ textDecoration: 'none', display: 'block' }} data-reveal data-reveal-delay={String(i * 60)}>
+                  <div className="fe-card" style={{ padding: '28px 32px', display: 'grid', gridTemplateColumns: '1fr auto', gap: 24, alignItems: 'center' }}>
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
                         <span className="fe-badge fe-badge-green" style={{ fontSize: 10 }}>{article.tag}</span>
                         <span style={{ fontSize: 11, color: '#9CA3AF' }}>{article.date} · {article.readTime} read</span>
                       </div>
-                      <h2 style={{ fontSize: 19, fontWeight: 700, color: '#1A1A18', lineHeight: 1.35, marginBottom: 10 }}>{article.title}</h2>
-                      <p style={{ fontSize: 14, color: '#5C5C58', lineHeight: 1.75 }}>{article.excerpt}</p>
+                      <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1A18', lineHeight: 1.35, marginBottom: 8 }}>{article.title}</h2>
+                      <p style={{ fontSize: 13.5, color: '#5C5C58', lineHeight: 1.75 }}>{article.excerpt}</p>
                     </div>
                     <div style={{ flexShrink: 0 }}>
                       <Arrow size={18} color="#1B4332" />

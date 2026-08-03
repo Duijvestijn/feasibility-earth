@@ -60,9 +60,14 @@ body {
 .fe-card {
   background: #fff; border-radius: 16px;
   border: 1px solid var(--fe-border); overflow: hidden;
-  transition: box-shadow .2s, transform .2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.04);
+  transition: box-shadow .22s ease, transform .22s ease, border-color .22s ease;
 }
-.fe-card:hover { box-shadow: 0 8px 32px rgba(27,67,50,.1); transform: translateY(-2px); }
+.fe-card:hover {
+  box-shadow: 0 8px 28px rgba(27,67,50,.11), 0 2px 8px rgba(27,67,50,.06);
+  transform: translateY(-2px);
+  border-color: #C8D4CC;
+}
 
 .fe-section    { padding: 96px 0; }
 .fe-section-sm { padding: 64px 0; }
@@ -78,6 +83,22 @@ body {
 
 @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
 .fe-fade-up { animation: fadeUp .6s ease forwards; }
+
+@keyframes navSlideDown { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
+
+/* ── Scroll reveal ──────────────────────────────────────────────── */
+.fe-reveal-pending {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.62s cubic-bezier(0.22, 1, 0.36, 1), transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fe-reveal-pending.fe-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .fe-reveal-pending { opacity: 1; transform: none; transition: none; }
+}
 
 /* Footer link hover (avoids onMouseEnter in Server Components) */
 .fe-footer-link { color: rgba(255,255,255,0.7); text-decoration: none; transition: color .15s; }

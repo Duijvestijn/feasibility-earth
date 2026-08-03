@@ -3,7 +3,37 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer style={{ background: '#1B4332', color: 'rgba(255,255,255,0.6)' }}>
-      <div className="fe-wrap" style={{ padding: '60px 24px 36px' }}>
+
+      {/* Brand closing statement */}
+      <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '52px 0 44px' }}>
+        <div className="fe-wrap" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 32, flexWrap: 'wrap' }}>
+          <div style={{ maxWidth: 560 }}>
+            <p style={{ fontSize: 'clamp(22px,3.5vw,36px)', fontFamily: "'Bricolage Grotesque', system-ui, sans-serif", fontWeight: 700, color: '#fff', lineHeight: 1.18, letterSpacing: '-0.02em' }}>
+              Every carbon credit starts with<br />the right assessment.
+            </p>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'flex-end' }}>
+            <div style={{ display: 'flex', gap: 24 }}>
+              <div style={{ textAlign: 'center' }}>
+                <p style={{ fontSize: 28, fontWeight: 800, color: '#fff', lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}>4</p>
+                <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.42)', fontWeight: 600, marginTop: 4, letterSpacing: '0.5px' }}>COUNTRIES</p>
+              </div>
+              <div style={{ width: 1, background: 'rgba(255,255,255,0.12)', alignSelf: 'stretch' }} />
+              <div style={{ textAlign: 'center' }}>
+                <p style={{ fontSize: 28, fontWeight: 800, color: '#fff', lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}>149k</p>
+                <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.42)', fontWeight: 600, marginTop: 4, letterSpacing: '0.5px' }}>tCO₂e EST.</p>
+              </div>
+              <div style={{ width: 1, background: 'rgba(255,255,255,0.12)', alignSelf: 'stretch' }} />
+              <div style={{ textAlign: 'center' }}>
+                <p style={{ fontSize: 28, fontWeight: 800, color: '#fff', lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}>3</p>
+                <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.42)', fontWeight: 600, marginTop: 4, letterSpacing: '0.5px' }}>STANDARDS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="fe-wrap" style={{ padding: '48px 24px 36px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 40, marginBottom: 52 }}>
 
           {/* Brand */}
