@@ -1,6 +1,8 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import FaqAccordion from '@/components/FaqAccordion'
+import ReportSections from '@/components/ReportSections'
 
 function CheckIcon({ color = '#1B4332', size = 14 }: { color?: string; size?: number }) {
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -80,7 +82,10 @@ export default function PricingPage() {
             <div id="feasibility" className="fe-tier-card" style={{ marginBottom: 20, border: '2px solid #1B4332', background: '#fff', boxShadow: '0 12px 40px rgba(27,67,50,0.14)', position: 'relative' as const }}>
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'linear-gradient(90deg, #1B4332, #40916C)' }} />
               <div style={{ padding: '44px 36px', background: '#1B4332', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid rgba(255,255,255,0.1)' }}>
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>Step 02</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.45)' }}>Step 02</span>
+                  <span style={{ fontSize: 10, fontWeight: 700, padding: '3px 8px', borderRadius: 100, background: 'rgba(212,160,23,0.22)', color: '#F4C430', border: '1px solid rgba(212,160,23,0.28)', letterSpacing: '0.4px', textTransform: 'uppercase' as const, whiteSpace: 'nowrap' as const }}>Recommended</span>
+                </div>
                 <div className="font-display" style={{ fontSize: 52, fontWeight: 700, color: '#fff', lineHeight: 1, marginBottom: 6 }}>$7,500</div>
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', fontWeight: 600, marginBottom: 6 }}>Full Feasibility Study</p>
                 <p style={{ fontSize: 13, color: '#F4C430', fontWeight: 700, marginBottom: 16 }}>Investor-ready. Methodology-aligned.</p>
@@ -100,52 +105,7 @@ export default function PricingPage() {
               </div>
 
               <div style={{ padding: '36px 36px' }}>
-                <p style={{ fontSize: 12, fontWeight: 700, color: '#5C5C58', letterSpacing: '1px', textTransform: 'uppercase' as const, marginBottom: 20 }}>What the 70+ page report covers</p>
-
-                {[
-                  {
-                    section: 'Land & Baseline Analysis',
-                    items: ['10-year satellite land use history', 'NDVI vegetation index & biomass mapping', 'Deforestation rate analysis vs. regional benchmarks', 'Existing carbon stock estimation'],
-                  },
-                  {
-                    section: 'Additionality Assessment',
-                    items: ['Regulatory surplus test (current legislation)', 'Financial & investment barrier analysis', 'Performance benchmark vs. comparable activities', 'Additionality risk rating with evidence'],
-                  },
-                  {
-                    section: 'Carbon Potential',
-                    items: ['Annual CO₂ sequestration / avoidance estimate', 'Confidence ranges & sensitivity analysis', 'Projection over full project lifetime', 'Credit volume at scenario market prices'],
-                  },
-                  {
-                    section: 'Certification & Compliance',
-                    items: ['Recommended standard (Verra VCS, Gold Standard, Plan Vivo)', 'Gap analysis vs. current methodology requirements', 'Applicability conditions assessment', 'fNRB / baseline methodology validation'],
-                  },
-                  {
-                    section: 'Risk Register',
-                    items: ['Permanence risk & buffer pool estimate', 'Leakage risk assessment', 'Socioeconomic & political risk', 'Land ownership & tenure review'],
-                  },
-                  {
-                    section: 'Financial Projections',
-                    items: ['Revenue model at bear / base / bull carbon prices', 'Development cost estimates', 'Timeline to first credit issuance', 'Net present value range'],
-                  },
-                  {
-                    section: 'Development Pathway',
-                    items: ['Recommended next steps to PDD', 'Estimated PDD development cost & timeline', 'VVB engagement roadmap', 'MRV framework outline'],
-                  },
-                ].map((group, i) => (
-                  <div key={i} style={{ marginBottom: 16 }}>
-                    <p style={{ fontSize: 11, fontWeight: 700, color: '#1B4332', letterSpacing: '0.8px', textTransform: 'uppercase' as const, marginBottom: 8, paddingBottom: 6, borderBottom: '1px solid #E8E4DF' }}>{group.section}</p>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-                      {group.items.map((item, j) => (
-                        <div key={j} style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
-                          <div style={{ width: 16, height: 16, borderRadius: 4, background: '#EBF5EE', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
-                            <CheckIcon color="#1B4332" size={9} />
-                          </div>
-                          <span style={{ fontSize: 12.5, color: '#374151', lineHeight: 1.5 }}>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+                <ReportSections />
 
                 <div style={{ marginTop: 18, padding: '12px 14px', background: '#F0FDF4', borderRadius: 10, border: '1px solid #C5E8D3' }}>
                   <p style={{ fontSize: 12, fontWeight: 700, color: '#1B4332', marginBottom: 3 }}>Primarily remote. Field validation identified where needed.</p>
@@ -226,14 +186,7 @@ export default function PricingPage() {
         <section className="fe-section-sm" style={{ background: '#fff' }}>
           <div className="fe-wrap" style={{ maxWidth: 740 }}>
             <h2 className="font-display" style={{ fontSize: 32, fontWeight: 700, color: '#1A1A18', marginBottom: 36, textAlign: 'center' }}>Common questions</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-              {FAQS.map((faq, i) => (
-                <div key={i} style={{ background: '#FAFAF8', borderRadius: 12, border: '1px solid #E2DDD6', padding: '22px 26px' }}>
-                  <p style={{ fontSize: 15, fontWeight: 700, color: '#1A1A18', marginBottom: 10 }}>{faq.q}</p>
-                  <p style={{ fontSize: 14, color: '#5C5C58', lineHeight: 1.8 }}>{faq.a}</p>
-                </div>
-              ))}
-            </div>
+            <FaqAccordion items={FAQS} />
             <div style={{ background: '#1B4332', borderRadius: 16, padding: '32px', textAlign: 'center', marginTop: 28 }}>
               <p style={{ fontSize: 17, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Ready to get started?</p>
               <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', marginBottom: 22 }}>Begin with the $500 eligibility check — a clear answer in 2–3 business days.</p>

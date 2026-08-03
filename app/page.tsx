@@ -129,6 +129,20 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* TRUST BADGE STRIP */}
+        <div style={{ background: '#fff', borderBottom: '1px solid #E2DDD6', padding: '13px 0' }}>
+          <div className="fe-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              {['Verra VCS', 'Gold Standard', 'Plan Vivo', 'ISO 14064'].map(cert => (
+                <span key={cert} style={{ fontSize: 12, fontWeight: 600, padding: '4px 12px', borderRadius: 100, background: '#EBF5EE', color: '#1B4332', border: '1px solid #C5E8D3', whiteSpace: 'nowrap' as const }}>
+                  {cert}
+                </span>
+              ))}
+            </div>
+            <p style={{ fontSize: 12, color: '#9CA3AF', whiteSpace: 'nowrap' as const }}>4 countries · 149k tCO₂e assessed</p>
+          </div>
+        </div>
+
         {/* THE PROBLEM — named, specific, financial */}
         <section className="fe-section" style={{ background: '#060A07' }}>
           <div className="fe-wrap">
