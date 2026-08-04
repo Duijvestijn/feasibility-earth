@@ -133,7 +133,7 @@ export default function HowItWorksPage() {
               Ready to get started?
             </h2>
             <p style={{ fontSize: 16, color: '#5C5C58', marginBottom: 28, maxWidth: 420, margin: '0 auto 28px' }}>
-              A 70+ page independent feasibility report — everything assessed remotely. $7,500 flat fee.
+              A 70+ page expert-led pre-feasibility report. Core assessment remote; field validation identified where required. $7,500 flat fee.
             </p>
             <Link href="/pricing" className="btn-primary" style={{ fontSize: 16, padding: '14px 36px' }}>
               Start your study →

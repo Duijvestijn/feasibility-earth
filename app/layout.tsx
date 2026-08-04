@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import ScrollRevealScript from '@/components/ScrollRevealScript'
 import ScrollProgress from '@/components/ScrollProgress'
-import StickyBar from '@/components/StickyBar'
 import BackToTop from '@/components/BackToTop'
 import './globals.css'
 
@@ -94,7 +93,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <ScrollProgress />
         {children}
-        <StickyBar />
         <BackToTop />
         <ScrollRevealScript />
         <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8515463.js"></script>

@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import TeamSection from '@/components/TeamSection'
+import ReportPreviewSection from '@/components/ReportPreviewSection'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
@@ -30,7 +31,7 @@ const STAGES = [
     num: '01',
     label: 'Eligibility Assessment',
     headline: 'Confirm the opportunity exists before committing to it.',
-    body: 'Before resources are allocated, you need an independent answer: does this land actually qualify for a certified carbon project under current standards? We run a rigorous eligibility screen — drawing on satellite data and direct methodology experience — and give you a documented assessment you can build a decision on.',
+    body: 'Before resources are allocated, you need an expert-led answer: does this land actually qualify for a certified carbon project under current standards? We run a rigorous eligibility screen — drawing on satellite data and direct methodology experience — and give you a documented assessment you can build a decision on.',
     img: SAT_IMG,
     outcome: 'A written eligibility assessment. Clear recommendation on whether to proceed.',
   },
@@ -133,7 +134,7 @@ export default function HomePage() {
         <div style={{ background: '#fff', borderBottom: '1px solid #E2DDD6', padding: '13px 0' }}>
           <div className="fe-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {['Verra VCS', 'Gold Standard', 'Plan Vivo', 'ISO 14064'].map(cert => (
+              {['Verra VCS', 'Gold Standard', 'Plan Vivo'].map(cert => (
                 <span key={cert} style={{ fontSize: 12, fontWeight: 600, padding: '4px 12px', borderRadius: 100, background: '#EBF5EE', color: '#1B4332', border: '1px solid #C5E8D3', whiteSpace: 'nowrap' as const }}>
                   {cert}
                 </span>
@@ -143,32 +144,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* THE PROBLEM — named, specific, financial */}
-        <section className="fe-section" style={{ background: '#060A07' }}>
-          <div className="fe-wrap">
-            <div style={{ maxWidth: 680, marginBottom: 52 }}>
-              <h2 className="font-display" style={{ fontSize: 'clamp(26px,4vw,40px)', fontWeight: 700, color: '#fff', lineHeight: 1.18, marginBottom: 16 }}>
-                The quality crisis in carbon markets starts at feasibility.
-              </h2>
-              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', lineHeight: 1.85 }}>
-                Three things the strongest buyers and certification bodies now know — and are testing for.
-              </p>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 16 }}>
-              {MARKET_FAILURES.map((item, i) => (
-                <div key={i} data-reveal data-reveal-delay={String(i * 80)} style={{ padding: '32px 28px', borderRadius: 16, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
-                  <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(134,200,156,0.15)', border: '1px solid rgba(134,200,156,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 18 }}>
-                    <span style={{ fontSize: 13, fontWeight: 800, color: '#86C89C' }}>{String(i + 1).padStart(2, '0')}</span>
-                  </div>
-                  <h3 style={{ fontSize: 17, fontWeight: 700, color: '#fff', lineHeight: 1.35, marginBottom: 12 }}>{item.headline}</h3>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.52)', lineHeight: 1.8, marginBottom: 16 }}>{item.body}</p>
-                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', fontStyle: 'italic' }}>{item.source}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ReportPreviewSection />
 
         {/* WHAT WE DO — outcome framing, sticky left panel */}
         <section className="fe-section" style={{ background: '#FAFAF8' }}>
@@ -292,6 +268,32 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* WHY RIGOROUS — the quality problem in carbon markets */}
+        <section className="fe-section" style={{ background: '#060A07' }}>
+          <div className="fe-wrap">
+            <div style={{ maxWidth: 680, marginBottom: 52 }}>
+              <h2 className="font-display" style={{ fontSize: 'clamp(26px,4vw,40px)', fontWeight: 700, color: '#fff', lineHeight: 1.18, marginBottom: 16 }}>
+                The quality crisis in carbon markets starts at feasibility.
+              </h2>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', lineHeight: 1.85 }}>
+                Three things the strongest buyers and certification bodies now know — and are testing for.
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 16 }}>
+              {MARKET_FAILURES.map((item, i) => (
+                <div key={i} data-reveal data-reveal-delay={String(i * 80)} style={{ padding: '32px 28px', borderRadius: 16, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(134,200,156,0.15)', border: '1px solid rgba(134,200,156,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 18 }}>
+                    <span style={{ fontSize: 13, fontWeight: 800, color: '#86C89C' }}>{String(i + 1).padStart(2, '0')}</span>
+                  </div>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: '#fff', lineHeight: 1.35, marginBottom: 12 }}>{item.headline}</h3>
+                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.52)', lineHeight: 1.8, marginBottom: 16 }}>{item.body}</p>
+                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', fontStyle: 'italic' }}>{item.source}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* TEAM */}
         <TeamSection />
 
@@ -319,7 +321,7 @@ export default function HomePage() {
             <div className="fe-2col" style={{ alignItems: 'center' }}>
               <div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(24px,3vw,36px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.25, marginBottom: 16 }}>
-                  Four project types. All major standards.
+                  Four core project types. Three leading standards.
                 </h2>
                 <p style={{ fontSize: 15, color: '#5C5C58', lineHeight: 1.85 }}>
                   We assess reforestation, agroforestry, ARR, and cookstove projects against Verra VCS, Gold Standard, and Plan Vivo. Each type has distinct methodology requirements. Our team has direct development experience across all four.
