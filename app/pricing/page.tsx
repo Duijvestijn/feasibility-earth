@@ -49,11 +49,11 @@ export default function PricingPage() {
                 <div className="font-display" style={{ fontSize: 52, fontWeight: 700, color: '#1B4332', lineHeight: 1, marginBottom: 6 }}>$500</div>
                 <p style={{ fontSize: 15, color: '#40916C', fontWeight: 600, marginBottom: 24 }}>Eligibility Check</p>
                 <p style={{ fontSize: 13, color: '#5C5C58', lineHeight: 1.7, marginBottom: 24 }}>Is your land eligible for a carbon project? A clear answer in 2–3 business days.</p>
-                <Link href="https://app.feasibility.earth" target="_blank" className="btn-primary" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14 }}>
+                <Link href="https://buy.stripe.com/7sY14mdxZ1QNcfwfy04Rq0a" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14 }}>
                   Start eligibility check <ArrowRight size={14} color="#fff" />
                 </Link>
                 <p style={{ fontSize: 11, color: '#40916C', marginTop: 10, textAlign: 'center' as const, letterSpacing: '0.2px' }}>
-                  Opens app.feasibility.earth — takes 15 minutes
+                  Secure payment via Stripe · Report delivered in 2–3 business days
                 </p>
               </div>
               <div style={{ padding: '40px 40px' }}>
@@ -97,10 +97,10 @@ export default function PricingPage() {
                 </div>
 
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 24 }}>A complete in-depth study structured for investors, DFIs, and certification bodies. Delivered in 5 business days.</p>
-                <Link href="/contact" className="btn-amber" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14, textDecoration: 'none' }}>
-                  Request a full study <ArrowRight size={14} color="#1A1A18" />
+                <Link href="https://buy.stripe.com/fZu28q51teDz1AS99C4Rq0b" target="_blank" rel="noopener noreferrer" className="btn-amber" style={{ justifyContent: 'center', display: 'flex', gap: 8, fontSize: 14, textDecoration: 'none' }}>
+                  Order full study — $7,500 <ArrowRight size={14} color="#1A1A18" />
                 </Link>
-                <p style={{ marginTop: 10, fontSize: 11, color: 'rgba(255,255,255,0.65)', textAlign: 'center' as const }}>Our team reviews your project and follows up within 1 business day</p>
+                <p style={{ marginTop: 10, fontSize: 11, color: 'rgba(255,255,255,0.65)', textAlign: 'center' as const }}>Pay now · We contact you within 1 business day to start your study</p>
                 <p style={{ marginTop: 6, fontSize: 11, color: 'rgba(255,255,255,0.45)', textAlign: 'center' as const }}>50% refund if land does not qualify</p>
               </div>
 
@@ -190,7 +190,7 @@ export default function PricingPage() {
             <div style={{ background: '#1B4332', borderRadius: 16, padding: '32px', textAlign: 'center', marginTop: 28 }}>
               <p style={{ fontSize: 17, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Ready to get started?</p>
               <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', marginBottom: 22 }}>Begin with the $500 eligibility check — a clear answer in 2–3 business days.</p>
-              <Link href="https://app.feasibility.earth" target="_blank" className="btn-amber" style={{ fontSize: 14, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+              <Link href="https://buy.stripe.com/7sY14mdxZ1QNcfwfy04Rq0a" target="_blank" rel="noopener noreferrer" className="btn-amber" style={{ fontSize: 14, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                 Start eligibility check — $500 <ArrowRight size={14} color="#1A1A18" />
               </Link>
             </div>
