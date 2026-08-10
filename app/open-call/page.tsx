@@ -107,7 +107,7 @@ export default function OpenCallPage() {
             </div>
             <p style={{ fontSize: 13, color: '#9CA3AF', lineHeight: 1.7, marginTop: 20, textAlign: 'center' }}>
               The Open Call is Green Earth&apos;s project sourcing pipeline. Green Earth covers the assessment cost because it is evaluating projects for potential co-development — not offering a public service.{' '}
-              If you need an independent study for your own use (investor presentations, certification preparation, or due diligence), see our{' '}
+              If you need a specialist study for your own use (investor presentations, certification preparation, or due diligence), see our{' '}
               <Link href="/pricing" style={{ color: '#1B4332', textDecoration: 'underline' }}>paid service starting at $500</Link>.
             </p>
           </div>

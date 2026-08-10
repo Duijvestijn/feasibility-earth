@@ -22,7 +22,7 @@ const FAQS = [
       },
       {
         q: 'Who uses Feasibility.Earth?',
-        a: 'Carbon project developers who need a rigorous independent assessment before committing capital. Institutional investors and funds evaluating project pipelines. Corporate buyers conducting pre-acquisition due diligence on carbon assets. Development finance institutions requiring independent project validation. We work with both individual projects and institutional buyers screening multiple projects simultaneously.'
+        a: 'Carbon project developers who need a rigorous expert-led assessment before committing capital. Institutional investors and funds evaluating project pipelines. Corporate buyers conducting pre-acquisition due diligence on carbon assets. Development finance institutions requiring specialist project validation. We work with both individual projects and institutional buyers screening multiple projects simultaneously.'
       },
       {
         q: 'How is this different from a traditional consultancy?',

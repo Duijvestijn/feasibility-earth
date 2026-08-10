@@ -16,11 +16,11 @@ const TOC = [
 
 const RISK_ITEMS = [
   { label: 'Permanence', level: 'medium', impact: 'High', prob: 'Low' },
-  { label: 'Additionality', level: 'low', impact: 'High', prob: 'Low' },
+  { label: 'Additionality', level: 'low', impact: 'Medium', prob: 'Low' },
   { label: 'Leakage', level: 'low', impact: 'Medium', prob: 'Low' },
-  { label: 'Land tenure', level: 'medium', impact: 'High', prob: 'Medium' },
-  { label: 'Political risk', level: 'low', impact: 'Medium', prob: 'Low' },
-  { label: 'Market / price', level: 'medium', impact: 'High', prob: 'Medium' },
+  { label: 'Land tenure', level: 'medium', impact: 'High', prob: 'Low' },
+  { label: 'Political risk', level: 'low', impact: 'Low', prob: 'Low' },
+  { label: 'Market / price', level: 'medium', impact: 'Medium', prob: 'Medium' },
 ]
 
 const riskColor = (l: string) => l === 'high' ? '#DC2626' : l === 'medium' ? '#D97706' : '#16A34A'

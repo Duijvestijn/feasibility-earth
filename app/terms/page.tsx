@@ -43,7 +43,7 @@ export default function TermsPage() {
                 <h2 style={{ fontSize: 20, fontWeight: 700, color: '#1A1A18', marginBottom: 12 }}>Assessment reports</h2>
                 <p>Feasibility.Earth assessments are desktop pre-feasibility studies based on satellite data, publicly available datasets, and expert analysis. They are not a guarantee of project eligibility, registration, or credit issuance. Reports are provided for decision-support purposes only.</p>
                 <p style={{ marginTop: 12 }}>Reports may not reflect legal land tenure status, community consultation requirements, field conditions, or regulatory approvals — all of which are outside the scope of a remote desktop study and must be independently verified.</p>
-                <p style={{ marginTop: 12 }}>Feasibility.Earth is an independent Green Earth Group platform. Feasibility.Earth and Green Earth Group are not affiliated with or endorsed by Verra, Gold Standard, Plan Vivo, or any other certification body referenced in reports.</p>
+                <p style={{ marginTop: 12 }}>Feasibility.Earth is a Green Earth Group platform. Feasibility.Earth and Green Earth Group are not affiliated with or endorsed by Verra, Gold Standard, Plan Vivo, or any other certification body referenced in reports.</p>
               </div>
 
               <div>

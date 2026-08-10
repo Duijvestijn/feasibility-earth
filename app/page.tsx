@@ -140,7 +140,7 @@ export default function HomePage() {
                 </span>
               ))}
             </div>
-            <p style={{ fontSize: 12, color: '#9CA3AF', whiteSpace: 'nowrap' as const }}>4 countries · 149k tCO₂e assessed</p>
+            <p style={{ fontSize: 12, color: '#9CA3AF', whiteSpace: 'nowrap' as const }}>149,000 tCO₂e est. annual potential · 4 projects</p>
           </div>
         </div>
 
@@ -154,7 +154,7 @@ export default function HomePage() {
               {/* Sticky left */}
               <div className="fe-sticky-left">
                 <h2 className="font-display" style={{ fontSize: 'clamp(24px,3vw,36px)', fontWeight: 700, color: '#1A1A18', lineHeight: 1.25, marginBottom: 18 }}>
-                  A 70+ page report you can take to investors and certification bodies.
+                  Three levels of commitment. One decision framework.
                 </h2>
                 <p style={{ fontSize: 15, color: '#5C5C58', lineHeight: 1.85, marginBottom: 28 }}>
                   If your project has real carbon potential, you need more than an estimate. Our full feasibility study documents every material factor — land, additionality, carbon potential, risk, financials — in a format built for the scrutiny it will face. Start with a $500 eligibility check. If it qualifies, we produce the full report.

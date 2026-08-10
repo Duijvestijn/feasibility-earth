@@ -14,7 +14,7 @@ const CASES = [
     badge: 'Verra VCS · Gold Standard',
     body: 'Planting trees on previously deforested or degraded land. Feasibility.Earth checks whether your land qualifies for an Afforestation / Reforestation (A/R) or Improved Forest Management (IFM) methodology.',
     suitableFor: ['Degraded land, former agricultural fields', 'Areas with low existing carbon stock', 'Regions with deforestation history (pre-1990 for VCS)'],
-    metrics: [{ label: 'Typical CO₂', value: '5–40 tCO₂/ha/yr' }, { label: 'Project life', value: '20–100 years' }, { label: 'Std. methodology', value: 'VM0047 / AR-ACM0003' }],
+    metrics: [{ label: 'Typical CO₂', value: '5–40 tCO₂/ha/yr' }, { label: 'Project life', value: '20–100 years' }, { label: 'Std. methodology', value: 'VM0047 (Verra VCS)' }],
     example: 'Greenzone Reforestation Project, Congo Basin — est. 13,750 tCO₂e/yr (under development)',
   },
   {
@@ -22,15 +22,15 @@ const CASES = [
     badge: 'Plan Vivo · Verra VCS',
     body: 'Integrating trees into agricultural and pastoral systems. These projects simultaneously sequester carbon and support farmer livelihoods — often eligible under community-based standards like Plan Vivo.',
     suitableFor: ['Active smallholder farmland', 'Pastoral grazing land with tree integration potential', 'Community-based land management systems'],
-    metrics: [{ label: 'Typical CO₂', value: '3–15 tCO₂/ha/yr' }, { label: 'Project life', value: '10–30 years' }, { label: 'Std. methodology', value: 'Plan Vivo · VM0017' }],
+    metrics: [{ label: 'Typical CO₂', value: '3–15 tCO₂/ha/yr' }, { label: 'Project life', value: '10–30 years' }, { label: 'Std. methodology', value: 'Plan Vivo Standard' }],
     example: 'Bulindi Agroforestry & Chimpanzee Conservation, Uganda — est. 44,000 tCO₂e/yr (under development)',
   },
   {
     id: 'arr', title: 'ARR Projects', img: KAZ_IMG, color: '#40916C',
-    badge: 'Verra VCS · CDM',
+    badge: 'Verra VCS',
     body: 'Afforestation, Reforestation, and Revegetation on severely degraded or barren land — including dryland restoration, grassland rehabilitation, and riparian revegetation.',
     suitableFor: ['Barren or severely degraded land', 'Former desert or saline soil', 'Riparian and wetland areas'],
-    metrics: [{ label: 'Typical CO₂', value: '2–20 tCO₂/ha/yr' }, { label: 'Project life', value: '20–60 years' }, { label: 'Std. methodology', value: 'VM0047 · CDM AR-ACM' }],
+    metrics: [{ label: 'Typical CO₂', value: '2–20 tCO₂/ha/yr' }, { label: 'Project life', value: '20–60 years' }, { label: 'Std. methodology', value: 'VM0047 (Verra VCS)' }],
     example: 'Aral Sea Afforestation, Kazakhstan — est. 31,250 tCO₂e/yr from saxaul planting (under development)',
   },
   {
@@ -38,7 +38,7 @@ const CASES = [
     badge: 'Gold Standard · CDM',
     body: 'Distributing energy-efficient cookstoves to households that currently cook on open fires or inefficient traditional stoves. Reduces fuel consumption and associated deforestation.',
     suitableFor: ['Rural households using firewood or charcoal', 'Areas with high deforestation driven by cooking fuel', 'Community programs with measurable distribution'],
-    metrics: [{ label: 'Typical CO₂', value: '1–3 tCO₂/household/yr' }, { label: 'Project life', value: '5–10 years' }, { label: 'Std. methodology', value: 'GS TPDDTEC · AMS-II.G' }],
+    metrics: [{ label: 'Typical CO₂', value: '1–3 tCO₂/household/yr' }, { label: 'Project life', value: '5–10 years' }, { label: 'Std. methodology', value: 'GS TPDDTEC · Verra VM0050' }],
     example: 'Sauki Clean Cookstoves, Nigeria — est. 60,000 tCO₂e/yr from ~40,000 households (under development)',
   },
 ]
